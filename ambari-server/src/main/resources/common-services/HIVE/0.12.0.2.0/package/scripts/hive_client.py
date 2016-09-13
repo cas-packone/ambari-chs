@@ -17,7 +17,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 """
-import sys
+import sys,os
 from resource_management import *
 from resource_management.libraries.functions import conf_select
 from resource_management.libraries.functions import stack_select
@@ -40,6 +40,15 @@ class HiveClient(Script):
     import params
     env.set_params(params)
     hive(name='client')
+    
+    service_packagedir = os.path.realpath(__file__).split('/scripts')[0]
+    cmd= format("cp -rf {service_packagedir}/scripts/hive-hbase-handler-1.2.1.jar /usr/hdp/current/hive-client/lib/")
+    Execute('echo "Running ' + cmd + '" as root')
+    Execute(cmd, ignore_failures=True)
+    
+    cmd= format("ln -sf /usr/hdp/current/hive-client/lib/hive-hbase-handler-1.2.1.jar /usr/hdp/current/hive-client/lib/hive-hbase-handler.jar")
+    Execute('echo "Running ' + cmd + '" as root')
+    Execute(cmd, ignore_failures=True)
 
 
 @OsFamilyImpl(os_family=OSConst.WINSRV_FAMILY)
