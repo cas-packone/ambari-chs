@@ -23,10 +23,10 @@ Em.I18n.translations = {
   'app.name.subtitle.experimental':'Packone Experimental',
   'app.reloadPopup.link': '重新加载页面',
   'app.reloadPopup.text': '尝试连接服务器...',
-  'app.reloadPopup.noClusterName.text': '获取集群名称失败，重试...',//'Failed to retrieve cluster name, trying to reload...'
+  'app.reloadPopup.noClusterName.text': '获取集群名称失败,重试...',//'Failed to retrieve cluster name, trying to reload...'
   'app.reloadPopup.header': '页面重新加载',//'Reload Page'
   'app.redirectIssuePopup.header': '登录跳转问题',//'Login Redirect Issue',
-  'app.redirectIssuePopup.body': '对于单点登录，保证Knox Gateway 和Ambari服务器在同一主机或者子域上'+//'For single sign-on, make sure that Knox Gateway and Ambari Server are located on the same host or subdomain.' +
+  'app.redirectIssuePopup.body': '对于单点登录,保证Knox Gateway 和Ambari服务器在同一主机或者子域上'+//'For single sign-on, make sure that Knox Gateway and Ambari Server are located on the same host or subdomain.' +
     '<br/>也可以使用Ambari本地用户登录'+//'<br/>Alternatively login as an Ambari local user using the local login page.<br />' +
     '<a href="{0}" target="_blank">{0}</a>',
 
@@ -51,15 +51,15 @@ Em.I18n.translations = {
 
   'app.settings.noData': '不能获得设置数据',//'Unable to retrieve settings data',
   'app.settings.no.view.privileges': '无访问权限',//'No view privileges',
-  'app.settings.no.cluster.privileges': '无集群权限','No cluster privileges',
-  'app.settings.admin.all.privileges': '该用户是Ambari管理员，拥有所有权限',//'This user is an Ambari Admin and has all privileges.',
+  'app.settings.no.cluster.privileges': '无集群权限',//'No cluster privileges',
+  'app.settings.admin.all.privileges': '该用户是Ambari管理员,拥有所有权限',//'This user is an Ambari Admin and has all privileges.',
   'app.settings.no.privileges': '该用户没有任何权限',//'This user does not have any privileges.',
   'app.settings.clusterRole': '集群角色',//'Cluster Role',
   'app.settings.viewPermissions': '访问许可',//'View Permissions',
 
   'app.aboutAmbari.getInvolved': '加入我们!',//Get involved
   'app.aboutAmbari.version': '版本',
-  'app.aboutAmbari.licensed': 'Apache许可证，版本授权 2.0',//Licensed under the Apache License, Version
+  'app.aboutAmbari.licensed': 'Apache许可证,版本授权 2.0',//Licensed under the Apache License, Version
 
   'apply':'应用',
   'and':'和',
@@ -405,7 +405,7 @@ Em.I18n.translations = {
   'popup.clusterCheck.Upgrade.fail.title': '需求',
   'popup.clusterCheck.Upgrade.fail.alert': '您 <strong>必须</strong> 满足这些需求才能继续往下执行.',
   'popup.clusterCheck.Upgrade.bypassed-failures.title': '错误可以被忽视',
-  'popup.clusterCheck.Upgrade.bypassed-failures.alert': '由于配置stack.upgrade.bypass.prechecks设置为true，错误可以被忽视。强烈建议仔细查看错误',//'Errors are allowed to be bypassed since config stack.upgrade.bypass.prechecks is set to true. It is strongly encouraged to look into these failures.',
+  'popup.clusterCheck.Upgrade.bypassed-failures.alert': '由于配置stack.upgrade.bypass.prechecks设置为true,错误可以被忽视。强烈建议仔细查看错误',//'Errors are allowed to be bypassed since config stack.upgrade.bypass.prechecks is set to true. It is strongly encouraged to look into these failures.',
   'popup.clusterCheck.Upgrade.warning.title': '警告',
   'popup.clusterCheck.Upgrade.warning.alert': '纠正这些警告不是必需的,但 <strong>建议</strong>纠正它.',
   'popup.clusterCheck.Upgrade.configsMerge.title': '改变配置',
@@ -534,18 +534,18 @@ Em.I18n.translations = {
 
   'installer.controls.slaveComponentGroups':'组数',//Groups
   'installer.controls.serviceConfigPopover.title':'{0}<br><small>{1}</small>',
-  'installer.controls.checkConnection.popover':'这一行动将检查{0}的主机和端口的可访问性，从Ambari Server主机',//This action will check accessibility of {0} host and port from Ambari Server host
+  'installer.controls.checkConnection.popover':'这一行动将检查{0}的主机和端口的可访问性,从Ambari Server主机',//This action will check accessibility of {0} host and port from Ambari Server host
   'installer.controls.serviceConfigMultipleHosts.other':'1 其它',//1 othe
   'installer.controls.serviceConfigMultipleHosts.others':'{0}其它',
   'installer.controls.serviceConfigMasterHosts.header':'{0} 主机数',//Hosts
   'installer.controls.addSlaveComponentGroupButton.title':'添加一个 {0} 组',
   //If you need different settings on certain {0}s, you can add a {1} group.<br>All {2}s within the same group will have the same set of settings.  You can create multiple groups
-  'installer.controls.addSlaveComponentGroupButton.content':'如果你需要对某些{ 0 }项有不同的设置，您可以添加{1}组。所有{2}等在同一组内将有一组相同的设置。您可以创建多个组.',
+  'installer.controls.addSlaveComponentGroupButton.content':'如果你需要对某些{ 0 }项有不同的设置,您可以添加{1}组。所有{2}等在同一组内将有一组相同的设置。您可以创建多个组.',
   'installer.controls.slaveComponentChangeGroupName.error':'该组名称已经存在',//group with this name already exist
 
   'installer.step0.header':'开始',//Get Started
   'installer.step0.body.header':'开始',//Get Started
-  'installer.step0.body':'该向导将引导您完成集群安装过程。首先，通过命名新集群启动.',//This wizard will walk you through the cluster installation process.  First, start by naming your new cluster
+  'installer.step0.body':'该向导将引导您完成集群安装过程。首先,通过命名新集群启动.',//This wizard will walk you through the cluster installation process.  First, start by naming your new cluster
   'installer.step0.clusterName':'命名您的集群',//Name your cluster
   'installer.step0.clusterName.tooltip.title':'群名称',//Cluster Name
   'installer.step0.clusterName.tooltip.content':'输入唯一的集群名称.',//Enter a unique cluster name
@@ -562,11 +562,11 @@ Em.I18n.translations = {
   'installer.step1.selectUseRepoOptions.public.networkLost.button':'不可用',//'Not Available',
   'installer.step1.selectUseRepoOptions.public.networkLost':'没有选中？',//'Why is this not selected?',
   'installer.step1.selectUseRepoOptions.public.networkLost.popup.title':'公共资源库选项没有选中',// 'Public Repository Option Not Selected',
-  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg': 'Ambari无法访问公共资源库，可能由于没有互联网环境，无法使用公共资源库进行安装，您的选择是：',//'Ambari is unable to confirm access to the Public Repositories, which means you might not have Internet access and will not be able to use the Public Repository option for installing the software. Your choices:',
+  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg': 'Ambari无法访问公共资源库,可能由于没有互联网环境,无法使用公共资源库进行安装,您的选择是：',//'Ambari is unable to confirm access to the Public Repositories, which means you might not have Internet access and will not be able to use the Public Repository option for installing the software. Your choices:',
   'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg1': '确定你的主机可以访问互联网',//'Configure your hosts for access to the Internet.',
-  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg2': '如果你使用网络代理，请参考Ambari文档查看配置Ambari使用代理',//'If you are using an Internet Proxy, refer to the Ambari Documentation on how to configure Ambari to use the Internet Proxy.',
+  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg2': '如果你使用网络代理,请参考Ambari文档查看配置Ambari使用代理',//'If you are using an Internet Proxy, refer to the Ambari Documentation on how to configure Ambari to use the Internet Proxy.',
   'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg3': '使用本地资源库选项',//'Use the Local Repositoy option.',
-  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg4': '如果没有网络并且选择此项，资源库基础URL会验证失败',//'If you do not have internet access and select this option, you will fail the Repository Base URL validation.',
+  'installer.step1.selectUseRepoOptions.public.networkLost.popup.msg4': '如果没有网络并且选择此项,资源库基础URL会验证失败',//'If you do not have internet access and select this option, you will fail the Repository Base URL validation.',
   'installer.step1.selectUseRepoOptions.public.select':'选择版本',//'Select Version',
   'installer.step1.selectUseRepoOptions.local':'使用本地资源库',//'Use Local Repository',
   'installer.step1.usePublicRepo.ReposList.empty':'没有其他版本',//'No other versions',
@@ -591,8 +591,8 @@ Em.I18n.translations = {
   'installer.step1.useLocalRepo.infoForm.alert.baseUrl': '提供该操作系统的基础URL',//'Provide Base URLs for the Operating Systems you are configuring.',
   'installer.step1.useLocalRepo.infoForm.alert.warning': '部分资源库验证失败。确定url正确或者跳过验证',//'Some of the repositories failed validation. Make changes to the base url or skip validation if you are sure that urls are correct',
   'installer.step1.advancedRepo.title':'高级选项库',//Advanced Repository Options
-  'installer.step1.advancedRepo.message':'自定义库基础URL下载堆栈软件包。如果你的主机没有接入互联网，你就必须创建堆栈资源库的本地镜像这是所有主机访问和使用此处的这些基础URL.',
-  'installer.step1.advancedRepo.importantMassage':'<b>重要:</b> 当使用本地镜像资源库，你只需要为你安装你的服务栈操作系统提供基础URL。取消所有其他资源库.',//When using local mirror repositories, you only need to provide Base URLs for the Operating System you are installing for your Stack. Uncheck all other repositories
+  'installer.step1.advancedRepo.message':'自定义库基础URL下载堆栈软件包。如果你的主机没有接入互联网,你就必须创建堆栈资源库的本地镜像这是所有主机访问和使用此处的这些基础URL.',
+  'installer.step1.advancedRepo.importantMassage':'<b>重要:</b> 当使用本地镜像资源库,你只需要为你安装你的服务栈操作系统提供基础URL。取消所有其他资源库.',//When using local mirror repositories, you only need to provide Base URLs for the Operating System you are installing for your Stack. Uncheck all other repositories
   'installer.step1.advancedRepo.localRepo.error.modifyUrl':'本地资源库中的URL必须修改',//Local repository URL must be modified,
   'installer.step1.advancedRepo.localRepo.error.noUrl':'对于本地资源库所需的基础URL',//Base URL required for a local repository
   'installer.step1.advancedRepo.localRepo.column.baseUrl':'基础URL',//Base URL
@@ -600,29 +600,29 @@ Em.I18n.translations = {
   'installer.step1.advancedRepo.localRepo.label.baseUrl':'资源库基础URL',//Repository Base URL
   'installer.step1.advancedRepo.localRepo.label.stack':'软件堆',//Stack
   'installer.step1.advancedRepo.localRepo.placeholder': '输入基础url或者删除该系统',//'Enter Base URL or remove this OS',
-  'installer.step1.advancedRepo.skipValidation.tooltip':'<b>警告:</b>这个提供给高级用户，如果你要跳过验证基础url，使用该项',//'<b>Warning:</b> This is for advanced users only. Use this option if you want to skip validation for Repository Base URLs.',
-  'installer.step1.advancedRepo.useRedhatSatellite.tooltip':'禁用分布式资源库，使用RedHat Satellite/Spacewalk替换',//'Disable distributed repositories and use RedHat Satellite/Spacewalk channels instead',
-  'installer.step1.advancedRepo.useRedhatSatellite.disabled.tooltip':'当使用公共资源库时，RedHat Satellite/Spacewalk不可用',//'Use of RedHat Satellite/Spacewalk is not available when is using Public Repositories',
+  'installer.step1.advancedRepo.skipValidation.tooltip':'<b>警告:</b>这个提供给高级用户,如果你要跳过验证基础url,使用该项',//'<b>Warning:</b> This is for advanced users only. Use this option if you want to skip validation for Repository Base URLs.',
+  'installer.step1.advancedRepo.useRedhatSatellite.tooltip':'禁用分布式资源库,使用RedHat Satellite/Spacewalk替换',//'Disable distributed repositories and use RedHat Satellite/Spacewalk channels instead',
+  'installer.step1.advancedRepo.useRedhatSatellite.disabled.tooltip':'当使用公共资源库时,RedHat Satellite/Spacewalk不可用',//'Use of RedHat Satellite/Spacewalk is not available when is using Public Repositories',
   'installer.step1.advancedRepo.skipValidation.message':'跳过资源库基础url验证（高级）',//'Skip Repository Base URL validation (Advanced)',
-  'installer.step1.advancedRepo.useRedhatSatellite.message': ''使用RedHat Satellite/Spacewalk,//'Use RedHat Satellite/Spacewalk',
-  'installer.step1.advancedRepo.useRedhatSatellite.warning': '选中<b>“Use RedHat Satellite/Spacewalk”</b>，' + //'By selecting to <b>“Use RedHat Satellite/Spacewalk”</b> for the software repositories, ' +
+  'installer.step1.advancedRepo.useRedhatSatellite.message': '使用RedHat Satellite/Spacewalk',//'Use RedHat Satellite/Spacewalk',
+  'installer.step1.advancedRepo.useRedhatSatellite.warning': '选中<b>“Use RedHat Satellite/Spacewalk”</b>,' + //'By selecting to <b>“Use RedHat Satellite/Spacewalk”</b> for the software repositories, ' +
     //'you are responsible for configuring the repository channel in Satellite/Spacewalk and confirming the repositories for the selected <b>stack version</b> are available on the hosts in the cluster. ' +
-    '在Satellite/Spacewalk配置资源库渠道，确认软件栈版本可用' +
+    '在Satellite/Spacewalk配置资源库渠道,确认软件栈版本可用' +
     //'Refer to the Ambari documentation for more information.',
-    '请参考Ambari文档'
+    '请参考Ambari文档',
   'installer.step1.addOs.disabled.tooltip':'已添加所有操作系',//'All Operating Systems have been added',
-  'installer.step1.attentionNeeded':'<b>注意:</b>在执行下一步，资源库基础URL在至少一个操作系统上是必须的',//'<b>Attention:</b> Repository Base URLs of at least one OS are REQUIRED before you can proceed. Please make sure they are in correct format with its protocol.',
+  'installer.step1.attentionNeeded':'<b>注意:</b>在执行下一步,资源库基础URL在至少一个操作系统上是必须的',//'<b>Attention:</b> Repository Base URLs of at least one OS are REQUIRED before you can proceed. Please make sure they are in correct format with its protocol.',
   'installer.step1.invalidURLAttention': '<b>注意:</b>在下一步钱确认所有资源库可用',//'<b>Attention:</b> Please make sure all repository URLs are valid before proceeding.',
   'installer.step1.checkAtLeastOneAttention': '<b>注意:</b>请检查资源库',//'<b>Attention:</b> Please check at least one repository.',
   'installer.step1.retryRepoUrls':'点击<b>重试</b>',// 'Click <b>here</b> to retry.',
 
   'installer.step2.header':'安装选项',//Install Options
-  'installer.step2.body':'输入要包含在集群中的主机列表，并提供你的SSH密钥。',//Enter the list of hosts to be included in the cluster and provide your SSH key.
+  'installer.step2.body':'输入要包含在集群中的主机列表,并提供你的SSH密钥。',//Enter the list of hosts to be included in the cluster and provide your SSH key.
   'installer.step2.targetHosts':'目标主机',//Target Hosts
-  'installer.step2.targetHosts.info':'输入使用完全限定域名（FQDN），每行一个主机列表',//Enter a list of hosts using the Fully Qualified Domain Name (FQDN), one per line
+  'installer.step2.targetHosts.info':'输入使用完全限定域名（FQDN）,每行一个主机列表',//Enter a list of hosts using the Fully Qualified Domain Name (FQDN), one per line
   'installer.step2.hostPattern.tooltip.title':'模式表达式',//Pattern Expressions
   //You can use pattern expressions to specify a number of target hosts. For example, to specify host01.domain thru host10.domain, enter host[01-10].domain in the target hosts textarea
-  'installer.step2.hostPattern.tooltip.content':'您可以使用模式表达式来指定多个目标主机。例如，要指定主机01的域到主机10的域，输入主机[01-10]。域在目标主机的文本框中.',
+  'installer.step2.hostPattern.tooltip.content':'您可以使用模式表达式来指定多个目标主机。例如,要指定主机01的域到主机10的域,输入主机[01-10]。域在目标主机的文本框中.',
   'installer.step2.hostName.error.required':'您必须至少指定一个主机名',//You must specify at least one host name
   'installer.step2.hostName.error.already_installed':'所有这些主机都已经集群的一部分',//All these hosts are already part of the cluster
   'installer.step2.hostName.error.notRequired':'主机名如果不使用SSH来自动配置的主机将被忽略',//Host Names will be ignored if not using SSH to automatically configure hosts
@@ -635,10 +635,10 @@ Em.I18n.translations = {
   // 'installer.step2.manualInstall.info':'By not using SSH to connect to the target hosts, you must manually install and' +
   //   ' start the Ambari Agent on each host in order for the wizard to perform the necessary configurations and' +
   //   ' software installs.',
-  'installer.step2.manualInstall.info':'不使用SSH连接到目标主机，你必须手动安装，并在每台主机上启动Ambari代理，以便为向导，以进行必要的配置和软件安装',
+  'installer.step2.manualInstall.info':'不使用SSH连接到目标主机,你必须手动安装,并在每台主机上启动Ambari代理,以便为向导,以进行必要的配置和软件安装',
   'installer.step2.advancedOptions.header':'高级选项',//Advanced Options
   'installer.step2.localRepo.label_use':'用一个',//Use a
-  'installer.step2.localRepo.label_instead':'而不是从互联网下载的软件包',//instead of downloading software packages from the Internet
+  'installer.step2.localRepo.label_instead':'代替互联网下载的软件包',//instead of downloading software packages from the Internet
   'installer.step2.localRepo.error.required':'需要本地库文件路径',//Local repository file path is required
   'installer.step2.localRepo.tooltip.title':'本地软件库',//Local Software Repository
   // 'installer.step2.localRepo.tooltip.content': 'The cluster install requires access to the Internet to fetch software ' +
@@ -646,7 +646,7 @@ Em.I18n.translations = {
   //   'packages from the remote repository over and over again. Other times, Internet access is not available from the ' +
   //  'hosts in your cluster. In these situations, you must set up a version of the repository that your machines can ' +
   //  'access locally and this is called a <b>Local Software Repository</b>',
-  'installer.step2.localRepo.tooltip.content': '集群安装需要访问互联网从远程仓库抓取软件。在某些情况下,没有充足的带宽，你需要一遍遍从远程库下载包。其他时候，上网不能获取到集群中的主机。在这些情况下，您必须设置一个版本，你的机器可以访问本地资源库，这被称为<b>本地软件库</b>',
+  'installer.step2.localRepo.tooltip.content': '集群安装需要访问互联网从远程仓库抓取软件。在某些情况下,没有充足的带宽,你需要一遍遍从远程库下载包。其他时候,上网不能获取到集群中的主机。在这些情况下,您必须设置一个版本,你的机器可以访问本地资源库,这被称为<b>本地软件库</b>',
   'installer.step2.javaHome.label' : '64位JDK路径',
   'installer.step2.javaHome.tooltip.title' : 'JAVA_HOME',
   'installer.step2.javaHome.tooltip.content' : 'Path to 64-bit JAVA_HOME. /usr/jdk/jdk1.6.0_31 是 Ambari默认的. 您可以覆盖这包含JDK特定路径. <br/> 注意: 该路径必须在<b>所有</b>在集群主机有效.',
@@ -661,14 +661,14 @@ Em.I18n.translations = {
   'installer.step2.install.perform_on_hosts':'在主机上',//on hosts
   'installer.step2.install.without_ssh':'并且不使用SSH ',//and do not use SSH
   'installer.step2.manualInstall.tooltip.title':'手动注册',//manual registration
-  'installer.step2.manualInstall.tooltip.content':'手动注册每个主机上的代理Ambari消除了对SSH的需要，并应继续在集群安装前进行.',//Manually registering the Ambari Agent on each host eliminates the need for SSH and should be performed prior to continuing cluster installation
+  'installer.step2.manualInstall.tooltip.content':'手动注册每个主机上的代理Ambari消除了对SSH的需要,并应继续在集群安装前进行.',//Manually registering the Ambari Agent on each host eliminates the need for SSH and should be performed prior to continuing cluster installation
   'installer.step2.manualInstall.tooltip.content_no_ssh':'手动每台主机上注册Ambari代理应继续集群安装之前进行.',//Manually registering the Ambari Agent on each host should be performed prior to continuing cluster installation
   'installer.step2.manualInstall.popup.header':'继续进行之前',//Before You Proceed
   'installer.step2.manualInstall.popup.body':'必须在每台主机上安装代理Ambari你要在继续之前管理.',//You must install Ambari Agents on each host you want to manage before you proceed
   'installer.step2.warning.popup.body':'<p>下面的主机名是无效的FQDN:</p><p> {0} </p><p>这可以在安装过程中会引起问题。 你想继续吗?</p>',//<p>The following hostnames are not valid FQDNs:</p><p> {0} </p><p>This may cause problems during installation. Do you want to continue?</p>
   'installer.step2.orUse':'或者使用',//Or use
   'installer.step2.registerAndConfirm':'注册和确认',//Register and Confirm
-  'installer.step2.evaluateStep.installedHosts':'这些主机已安装集群，将被忽略:',//These hosts are already installed on the cluster and will be ignored
+  'installer.step2.evaluateStep.installedHosts':'这些主机已安装集群,将被忽略:',//These hosts are already installed on the cluster and will be ignored
   'installer.step2.evaluateStep.continueConfirm':'你想继续吗?',//Do you want to continue
   'installer.step2.evaluateStep.hostRegInProgress':'主机注册目前正在进行中。 请稍后再试.',//Host Registration is currently in progress.  Please try again later
   'installer.step2.sshUser':'SSH用户帐户',//SSH User Account
@@ -683,36 +683,36 @@ Em.I18n.translations = {
   //The user account used to run the Ambari Agent daemon on the target host(s). This user must be set up with passwordless sudo access on all the target host(s)
   'installer.step2.agentUser.toolTip':'用于运行在目标主机在Ambari代理后台进程的用户帐户。此用户必须设置所有的目标主机上无密码访问',
   'installer.step2.bootStrap.error':'在主机上设置Ambari代理遇到错误.',//Errors were encountered while setting up Ambari Agents on the hosts
-  'installer.step2.bootStrap.inProgress':'请稍候，正在建立Ambari代理在主机上。这可以根据主机数量需要几分钟.',//Please wait while Ambari Agents are being set up on the hosts. This can take several minutes depending on the number of hosts
+  'installer.step2.bootStrap.inProgress':'请稍候,正在建立Ambari代理在主机上。这可以根据主机数量需要几分钟.',//Please wait while Ambari Agents are being set up on the hosts. This can take several minutes depending on the number of hosts
   'installer.step2.bootStrap.header':'设置Ambari代理',//Setting Up Ambari Agents
 
   'installer.step3.header':'确认主机',//Confirm Hosts
-  'installer.step3.body':'正在注册您的主机，请确认主机列表,你不希望在集群中存在的主机,您可以从主机列表上删除，',//Registering your hosts,Please confirm the host list and remove any hosts that you do not want to include in the cluster
+  'installer.step3.body':'正在注册您的主机,请确认主机列表,你不希望在集群中存在的主机,您可以从主机列表上删除,',//Registering your hosts,Please confirm the host list and remove any hosts that you do not want to include in the cluster
   'installer.step3.hostLog.popup.header':'注册日志 {0}',
   'installer.step3.hosts.remove.popup.header':'删除主机',//Remove Hosts
   'installer.step3.hosts.remove.popup.body':'您确定要删除选定的主机?',//Are you sure you want to remove the selected host(s)
   'installer.step3.hostInformation.popup.header':'检索主机信息错误',//Error in retrieving host Information
-  'installer.step3.hostInformation.popup.body' : '所有的自举主机注册，但是无法检索cpu和内存相关的信息',//All bootstrapped hosts registered but unable to retrieve cpu and memory related information
+  'installer.step3.hostInformation.popup.body' : '所有的自举主机注册,但是无法检索cpu和内存相关的信息',//All bootstrapped hosts registered but unable to retrieve cpu and memory related information
   //Host registered successfully, but the host operating system type NOT match the selected group in "Select Stack" step: Advanced Repository Option. You can go back to "Select Stack" step OR remove this host The host type is {0}, but you selected group {1} in step 1
-  'installer.step3.hostOsTypeCheck.popup.body' : '主机注册成功，但主机操作系统的类型不是在“选择协议栈”的步骤相匹配所选组：高级选项库。你可以回去“选择堆栈”的步骤或删除此主机的主机类型是{0}，但你所选组中第1步{1}.',
-  'installer.step3.hostWarningsPopup.report':'Show Report',
+  'installer.step3.hostOsTypeCheck.popup.body' : '主机注册成功,但主机操作系统的类型不是在“选择协议栈”的步骤相匹配所选组：高级选项库。你可以回去“选择堆栈”的步骤或删除此主机的主机类型是{0},但你所选组中第1步{1}.',
+  'installer.step3.hostWarningsPopup.report':'显示报告',//'Show Report',
   'installer.step3.hostWarningsPopup.report.header': '<p style="font-family: monospace">######################################<br># 主机检查报告<br>#<br># 生成: ',
-  'installer.step3.hostWarningsPopup.report.hosts': '<br>######################################<br><br>######################################<br># 主机<br>#<br># 主机的空间分隔的列表，其中有问题.<br>#只要使管理员可以很容易的主机名复制到脚本, 电子邮件等.<br>######################################<br>主机<br>',
+  'installer.step3.hostWarningsPopup.report.hosts': '<br>######################################<br><br>######################################<br># 主机<br>#<br># 主机的空间分隔的列表,其中有问题.<br>#只要使管理员可以很容易的主机名复制到脚本, 电子邮件等.<br>######################################<br>主机<br>',
   'installer.step3.hostWarningsPopup.report.jdk': '<br><br>######################################<br># JDK 检查 <br>#<br># 一个新行分隔的JDK问题清单.<br>######################################<br>JDK 问题<br>',
   'installer.step3.hostWarningsPopup.report.disk': '<br><br>######################################<br># 磁盘 <br>#<br># 磁盘问题的新行分隔的列表.<br>######################################<br>磁盘 问题<br>',
   'installer.step3.hostWarningsPopup.report.repositories': '<br><br>######################################<br># 库 <br>#<br># 库问题的新行分隔的列表.<br>######################################<br>库 问题<br>',
   'installer.step3.hostWarningsPopup.report.hostNameResolution': '<br><br>######################################<br># 主机名解析<br>#<br># 一个新行分隔的主机名解析问题清单.<br>######################################<br>主机名解析问题<br>',
   'installer.step3.hostWarningsPopup.report.thp': '<br><br>######################################<br># 透明的巨大的页面 <br>#<br># 一个空格分隔的列表的主机名透明的巨大的页面启用.<br>######################################<br>主机问题<br>',
   'installer.step3.hostWarningsPopup.report.firewall': '<br><br>######################################<br># 防火墙<br>#<br># 防火墙问题的新行分隔的列表.<br>######################################<br>防火墙<br>',
-  'installer.step3.hostWarningsPopup.report.fileFolders': '<br><br>######################################<br># 文件和文件夹<br>#<br># 文件以及哪些是不应该存在的文件夹的空间分隔的列表.<br># 只要使管理员可以轻松地复制到路径脚本，电子邮件等<br># 例: rm -r /etc/hadoop /etc/hbase<br>######################################<br>文件和文件夹<br>',
+  'installer.step3.hostWarningsPopup.report.fileFolders': '<br><br>######################################<br># 文件和文件夹<br>#<br># 文件以及哪些是不应该存在的文件夹的空间分隔的列表.<br># 只要使管理员可以轻松地复制到路径脚本,电子邮件等<br># 例: rm -r /etc/hadoop /etc/hbase<br>######################################<br>文件和文件夹<br>',
   'installer.step3.hostWarningsPopup.report.reverseLookup': '<br><br>######################################<br># 反向查找<br># <br># 主机名没有在反向DNS查找找到。这可能会导致不正确的行为. <br># 请检查DNS设置并修复问题.<br>######################################<br>反向查找<br>',
-  'installer.step3.hostWarningsPopup.report.process': '<br><br>######################################<br># 进程<br>#<br># 以逗号分隔的进程元组的列表，它不应该运行.<br># 只要使管理员可以轻松地复制到路径脚本，电子邮件等.<br>######################################<br>进程<br>',
-  'installer.step3.hostWarningsPopup.report.package': '<br><br>######################################<br># 包<br>#<br># 软件包的一个空间分隔的列表，它应该被卸载.<br># 只要使管理员可以轻松地复制到路径脚本，电子邮件等.<br># 例: yum remove hadoop-hdfs yarn<br>######################################<br>包<br>',
-  'installer.step3.hostWarningsPopup.report.service': '<br><br>######################################<br># 服务<br>#<br># 服务的空格分隔列表，它应该是启动并运行.<br>#只要使管理员可以轻松地复制到路径脚本，电子邮件等.<br># 例: services start ntpd httpd<br>######################################<br>服务<br>',
-  'installer.step3.hostWarningsPopup.report.user': '<br><br>######################################<br># 用户<br>#<br># 用户的空格分隔列表谁不应该存在.<br># 只要使管理员可以轻松地复制到路径脚本，电子邮件等.<br># 列: userdel hdfs<br>######################################<br>用户<br>',
+  'installer.step3.hostWarningsPopup.report.process': '<br><br>######################################<br># 进程<br>#<br># 以逗号分隔的进程元组的列表,它不应该运行.<br># 只要使管理员可以轻松地复制到路径脚本,电子邮件等.<br>######################################<br>进程<br>',
+  'installer.step3.hostWarningsPopup.report.package': '<br><br>######################################<br># 包<br>#<br># 软件包的一个空间分隔的列表,它应该被卸载.<br># 只要使管理员可以轻松地复制到路径脚本,电子邮件等.<br># 例: yum remove hadoop-hdfs yarn<br>######################################<br>包<br>',
+  'installer.step3.hostWarningsPopup.report.service': '<br><br>######################################<br># 服务<br>#<br># 服务的空格分隔列表,它应该是启动并运行.<br>#只要使管理员可以轻松地复制到路径脚本,电子邮件等.<br># 例: services start ntpd httpd<br>######################################<br>服务<br>',
+  'installer.step3.hostWarningsPopup.report.user': '<br><br>######################################<br># 用户<br>#<br># 用户的空格分隔列表谁不应该存在.<br># 只要使管理员可以轻松地复制到路径脚本,电子邮件等.<br># 列: userdel hdfs<br>######################################<br>用户<br>',
   'installer.step3.hostWarningsPopup.report.folder': '\\ /folder',
   'installer.step3.hostWarningsPopup.checks': '发现主机检查',//Host Checks found
-  'installer.step3.hostWarningsPopup.notice':'手动解决问题后，请点击<b>检查重新运行</b>.'+//After manually resolving the issues, click <b>Rerun Checks</b>
+  'installer.step3.hostWarningsPopup.notice':'手动解决问题后,请点击<b>检查重新运行</b>.'+//After manually resolving the issues, click <b>Rerun Checks</b>
   '<br>手动解决 <b>每一个主机</b>的问题后, 运行主机清理脚本 (必须是Python 2.6 货更高的):'+
   '<br><div class="code-snippet">python /usr/lib/python2.6/site-packages/ambari_agent/HostCleanup.py --silent --skip=users</div>' +
   '<div class="alert alert-warn"><b>注意</b>: Clean up of Firewall and Transparent Huge Page issues are not supported by the HostCleanup script.</div>' +
@@ -724,8 +724,8 @@ Em.I18n.translations = {
   'installer.step3.hostWarningsPopup.jdk.message':'下列注册主机已涉及到JDK的问题',//The following registered hosts have issues related to JDK
   'installer.step3.hostWarningsPopup.repositories':'资料库问题',//Repository Issues
   'installer.step3.hostWarningsPopup.repositories.name':'资源库OS不可用',//Repository for OS not available
-  'installer.step3.hostWarningsPopup.repositories.context':'主机（{0}）为{1}操作系统类型，但在“选择协议栈”的步骤选择的资源库是{2}。选择资源库不支持此主机的操作系统类型.',//Host ({0}) is {1} OS type, but the repositories chosen in "Select Stack" step was {2}. Selected repositories do not support this host OS type
-  'installer.step3.hostWarningsPopup.repositories.message': '下列注册主机有从“选择堆栈”的步骤选择可用的库不同的操作系统类型。你可以回去“选择堆栈”的步骤，选择另一个操作系统库<b>或</b>删除主机.',//The following registered hosts have different Operating System types from the available Repositories chosen in "Select Stack" step. You can go back to "Select Stack" step to select another OS repository <b>or</b> remove the host
+  'installer.step3.hostWarningsPopup.repositories.context':'主机（{0}）为{1}操作系统类型,但在“选择协议栈”的步骤选择的资源库是{2}。选择资源库不支持此主机的操作系统类型.',//Host ({0}) is {1} OS type, but the repositories chosen in "Select Stack" step was {2}. Selected repositories do not support this host OS type
+  'installer.step3.hostWarningsPopup.repositories.message': '下列注册主机有从“选择堆栈”的步骤选择可用的库不同的操作系统类型。你可以回去“选择堆栈”的步骤,选择另一个操作系统库<b>或</b>删除主机.',//The following registered hosts have different Operating System types from the available Repositories chosen in "Select Stack" step. You can go back to "Select Stack" step to select another OS repository <b>or</b> remove the host
   'installer.step3.hostWarningsPopup.disk':'磁盘问题',//Disk Issues
   'installer.step3.hostWarningsPopup.disk.name':'没有足够的磁盘空间 ',//Not enough disk space
   'installer.step3.hostWarningsPopup.disk.context1':'在主机上没有足够的磁盘空间（{0}）.',//Not enough disk space on host ({0})
@@ -734,7 +734,7 @@ Em.I18n.translations = {
   'installer.step3.hostWarningsPopup.thp':'空白页问题',//Transparent Huge Pages Issues
   'installer.step3.hostWarningsPopup.thp.name':'空白页',//Transparent Huge Pages
   'installer.step3.hostWarningsPopup.thp.context':'{0}',
-  'installer.step3.hostWarningsPopup.thp.message':'下面的主机有空白页（THP）启用。 THP应禁用，以避免潜在的Hadoop的性能问题.',//The following hosts have Transparent Huge Pages (THP) enabled. THP should be disabled to avoid potential Hadoop performance issues
+  'installer.step3.hostWarningsPopup.thp.message':'下面的主机有空白页（THP）启用。 THP应禁用,以避免潜在的Hadoop的性能问题.',//The following hosts have Transparent Huge Pages (THP) enabled. THP should be disabled to avoid potential Hadoop performance issues
   'installer.step3.hostWarningsPopup.firewall':'防火墙问题',
   'installer.step3.hostWarningsPopup.firewall.message':'Firewall is running on the following hosts. Please configure the firewall to allow communications on the ports documented in the <i>Configuring Ports</i> section of  the <a target=\"_blank\" href=\"http://ambari.apache.org/current/installing-hadoop-using-ambari/content/\">Ambari documentation</a>',
   'installer.step3.hostWarningsPopup.process':'进程问题',//Process Issues
@@ -776,7 +776,7 @@ Em.I18n.translations = {
   'installer.step3.hostWarningsPopup.resolution.validation.name': '主机名解析问题',//Hostname Resolution Issues
   'installer.step3.hostWarningsPopup.resolution.validation.error': '主机名解析',//Hostname resolution
   'installer.step3.hostWarningsPopup.resolution.validation': '主机名解析验证',//Hostname resolution validation
-  'installer.step3.hostWarningsPopup.resolution.validation.message': '并非所有的主机可以解决其他主机的主机名。确保主机解析正常运行上的所有主机，然后再继续.',//Not all hosts could resolve hostnames of other hosts. Make sure that host resolution works properly on all hosts before continuing
+  'installer.step3.hostWarningsPopup.resolution.validation.message': '并非所有的主机可以解决其他主机的主机名。确保主机解析正常运行上的所有主机,然后再继续.',//Not all hosts could resolve hostnames of other hosts. Make sure that host resolution works properly on all hosts before continuing
   'installer.step3.hostWarningsPopup.resolution.validation.empty': '主机名解析问题',//hostname resolution issues
   'installer.step3.hostWarningsPopup.resolution.validation.context': '{0} 无法解析: {1}.',//could not resolve
   'installer.step3.hostWarningsPopup.action.exists':'存在',//Exists on
@@ -798,7 +798,7 @@ Em.I18n.translations = {
   'installer.step3.warningsWindow.noWarnings':'没有警告',//No warnings
   'installer.step3.hosts.noHosts':'没有主机显示',//No hosts to display
   'installer.step3.warnings.popup.header':'主机检查',//Host Checks
-  'installer.step3.warnings.description':'针对上述主机进行检查，遇到一些警告.',//Some warnings were encountered while performing checks against the above hosts
+  'installer.step3.warnings.description':'针对上述主机进行检查,遇到一些警告.',//Some warnings were encountered while performing checks against the above hosts
   'installer.step3.warnings.linkText':'点击此处查看警告.',//Click here to see the warnings
   'installer.step3.noWarnings.linkText':'点击此处查看检查结果.',//Click here to see the check results
   'installer.step3.warnings.noWarnings':'在{0}注册的主机通过了所有主机检查.',//All host checks passed on {0} registered hosts
@@ -810,7 +810,7 @@ Em.I18n.translations = {
   'installer.step3.warnings.missingHosts':'没有注册的主机',//There is no registered host
   'installer.step3.warning.registeredHosts': '{0} 其他注册主机',//Other Registered Hosts
   'installer.step3.warning.loading':'正在检查主机的潜在问题,请稍后...',//Please wait while the hosts are being checked for potential problems
-  'installer.step3.registeredHostsPopup': '这些是已经注册到服务器的主机，但不会出现在主机要添加列表.',//These are the hosts that have registered with the server, but do not appear in the list of hosts that you are adding
+  'installer.step3.registeredHostsPopup': '这些是已经注册到服务器的主机,但不会出现在主机要添加列表.',//These are the hosts that have registered with the server, but do not appear in the list of hosts that you are adding
   'installer.step3.removeSelected':'删除选择',//'Remove Selected
   'installer.step3.retryFailed':'重试失败',//Retry Failed
   'installer.step3.hosts.status.registering':'注册',//Registering
@@ -825,13 +825,13 @@ Em.I18n.translations = {
   'installer.step4.header':'选择服务',//Choose Services
   'installer.step4.body':'选择您想要安装在集群上的服务.',//Choose which services you want to install on your cluster
   'installer.step4.fsCheck.popup.header':'文件系统所需',//File System Required
-  'installer.step4.fsCheck.popup.body':'您没有选择一个文件系统，但需要一个。我们会自动添加{0}。 可以吗?',//You did not select a File System but one is required. We will automatically add {0}. Is this OK
+  'installer.step4.fsCheck.popup.body':'您没有选择一个文件系统,但需要一个。我们会自动添加{0}。 可以吗?',//You did not select a File System but one is required. We will automatically add {0}. Is this OK
   'installer.step4.multipleDFS.popup.header':'多个文件系统选择',//Multiple File Systems Selected
   'installer.step4.multipleDFS.popup.body':'你选择了多个文件系统。我们会自动选择只有{0}。 可以吗?',//You selected more than one file system. We will automatically select only {0}. Is this OK
   'installer.step4.serviceCheck.popup.header':'{0} 需要',//Needed
-  'installer.step4.serviceCheck.popup.body':'您没有选择{0}，但它是由您选择其他服务所需。我们会自动添加{0}。 可以吗?',//You did not select {0}, but it is needed by other services you selected. We will automatically add {0}. Is this OK
+  'installer.step4.serviceCheck.popup.body':'您没有选择{0},但它是由您选择其他服务所需。我们会自动添加{0}。 可以吗?',//You did not select {0}, but it is needed by other services you selected. We will automatically add {0}. Is this OK
   'installer.step4.ambariMetricsCheck.popup.header':'功能有警告',//Limited Functionality Warning
-  'installer.step4.ambariMetricsCheck.popup.body':'Ambari指标从集群中收集指标，并使其可用于Ambari。如果不安装Ambari Metrics服务，指标将无法从Ambari访问。你确定你想不Ambari指标继续?',//Ambari Metrics collects metrics from the cluster and makes them available to Ambari.  If you do not install Ambari Metrics service, metrics will not be accessible from Ambari.  Are you sure you want to proceed without Ambari Metrics
+  'installer.step4.ambariMetricsCheck.popup.body':'Ambari指标从集群中收集指标,并使其可用于Ambari。如果不安装Ambari Metrics服务,指标将无法从Ambari访问。你确定你想不Ambari指标继续?',//Ambari Metrics collects metrics from the cluster and makes them available to Ambari.  If you do not install Ambari Metrics service, metrics will not be accessible from Ambari.  Are you sure you want to proceed without Ambari Metrics
   'installer.step4.rangerRequirements.popup.header': 'Ranger 需求',//Ranger Requirements
   //'installer.step4.rangerRequirements.popup.body.requirements': '<ol><li>You must have an <strong>MySQL/Oracle/Postgres/MSSQL/SQL Anywhere Server</strong> database instance running to be used by Ranger.</li>' +
   //  '<li>In Assign Masters step of this wizard, you will be prompted to specify which host for the Ranger Admin. On that host, you <strong>must have DB Client installed</strong> for Ranger to access to the database. (Note: This is applicable for only Ranger 0.4.0)</li>' +
@@ -839,7 +839,7 @@ Em.I18n.translations = {
   //  '<li>Execute the following command on the Ambari Server host. Replace <code>database-type</code> with <strong>mysql|oracle|postgres|mssql|sqlanywhere</strong> and <code>/jdbc/driver/path</code> based on the location of corresponding JDBC driver:' +
   // '<pre>ambari-server setup --jdbc-db={database-type} --jdbc-driver={/jdbc/driver/path}</pre></li></ol>',
   'installer.step4.rangerRequirements.popup.body.requirements': '<ol><li>你必须有个一提供给Ranger使用的 Anywhere 数据库服务,如:<strong>MySQL/Oracle/Postgres/MSSQL/SQL  Server</strong> .</li>' +
-  '<li>此向导的分配master一步，系统会提示您指定Ranger管理员的主机。在该主机上, 你 <strong>必须安装Ranger数据库客户端</strong> 访问数据库. (注意: 这只适用于 Ranger 0.4.0)</li>' +
+  '<li>此向导的分配master一步,系统会提示您指定Ranger管理员的主机。在该主机上, 你 <strong>必须安装Ranger数据库客户端</strong> 访问数据库. (注意: 这只适用于 Ranger 0.4.0)</li>' +
   '<li>确保为DB Admin用户访问在DB服务器从任何主机启用.</li>'+
   '<li>在Ambari Server主机上执行以下命令. 代码 <code>数据库类型</code> 如: <strong>mysql|oracle|postgres|mssql|sqlanywhere</strong> 和  <code>/jdbc/driver/path</code> 根据相应的JDBC驱动程序的位置:' +
   '<pre>ambari-server setup --jdbc-db={database-type} --jdbc-driver={/jdbc/driver/path}</pre></li></ol>',
@@ -855,10 +855,10 @@ Em.I18n.translations = {
   'installer.step5.hiveGroup':'HiveServer2, WebHCat Server, MySQL Server',
   'installer.step5.validationIssuesAttention.header': '验证问题',//Validation Issues
   'installer.step5.validationIssuesAttention': '主组件分配有一个需要注意的问题.',//Master component assignments have issues that need attention
-  'installer.step5.error.host.invalid': '你选择的主机可能（1）不可用的主机名，（2）跟其他主机冲突，（3）在维护模式',//'The host you choose could (1) have an invalid host name; (2) be conflicting with another selection; or (3) be in maintenance mode',
+  'installer.step5.error.host.invalid': '你选择的主机可能（1）不可用的主机名,（2）跟其他主机冲突,（3）在维护模式',//'The host you choose could (1) have an invalid host name; (2) be conflicting with another selection; or (3) be in maintenance mode',
 
   'installer.step6.header':'分配slave和客户端',//Assign Slaves and Clients
-  'installer.step6.body':'分配slave和客户端组件到你想要运行的主机运行它们.<br/>被分配的主部件的主机，只显示<i class=icon-asterisks>&#10037;</i>',//Assign slave and client components to hosts you want to run them on.<br/>Hosts that are assigned master components are shown with <i class=icon-asterisks>&#10037;</i>
+  'installer.step6.body':'分配slave和客户端组件到你想要运行的主机运行它们.<br/>被分配的主部件的主机,只显示<i class=icon-asterisks>&#10037;</i>',//Assign slave and client components to hosts you want to run them on.<br/>Hosts that are assigned master components are shown with <i class=icon-asterisks>&#10037;</i>
   'installer.step6.body.clientText': ' <br/>&quot;客户端&quot; 即将安装 ',
   'installer.step6.error.mustSelectOne':'每个组件您必须至少指定一台主机.',//You must assign at least one host to each component
   'installer.step6.error.mustSelectOneForHost':'您必须指定至少一个slave/客户端组件.',//You must assign at least one slave/client component to each
@@ -888,23 +888,23 @@ Em.I18n.translations = {
   'installer.step7.popup.adjustedValue':'矫正值',//Adjusted Value
   'installer.step7.popup.rddWarning.header':'警告: {0}上的磁盘空间不足 ',//disk space low
   //A minimum of 16GB is recommended for the Ganglia Server logs but the disk mount "{0}" on {1} does not have enough space ({2} free). Go to the Misc tab and change Ganglia rrdcached base directory with more than 16GB of disk space. If you proceed without changing it, {1} will likely run out of disk space and become inoperable
-  'installer.step7.popup.rddWarning.body':'Ganglia Server日志安装磁盘“{0}”系统推荐最低16GB空间：{1}没有足够的空间（{2}免费）。转到其他选项卡，改变Ganglia rrdcached 基本目录在磁盘空间16GB以上。如果继续不改变它，{1}可能会用尽磁盘空间，无法操作.',
+  'installer.step7.popup.rddWarning.body':'Ganglia Server日志安装磁盘“{0}”系统推荐最低16GB空间：{1}没有足够的空间（{2}免费）。转到其他选项卡,改变Ganglia rrdcached 基本目录在磁盘空间16GB以上。如果继续不改变它,{1}可能会用尽磁盘空间,无法操作.',
   'installer.step7.popup.mySQLWarning.header':'错误: 新的 MySQL数据库Hive冲突',//New MySQL Database for Hive Conflict
   //You cannot install a \"New MySQL Database\" for Hive on the same host as the Ambari Server MySQL Server. Please go back to <b>Assign Masters</b> and reassign Hive to another host <b>OR</b> choose \"Existing MySQL Database\" option to specify the Database Credentials and URL for the Ambari Server MySQL Server instance. If you choose \"Existing MySQL Database\" option, you need to perform the Hive prerequisite steps to prepare the MySQL Server instance for Hive
-  'installer.step7.popup.mySQLWarning.body':'你不能在同一主机上作为Ambari MySQL服务器的同时安装配置单元\"新的MySQL数据库\"服务。请返回<b>分配master</b>并重新分配蜂巢到另一台主机<b>或</b>选择\"现有的MySQL数据库\"选项来指定Ambari服务器的MySQL Server实例的数据库凭据和URL 。如果你选择\"现有的MySQL数据库\"选项，您需要执行Hive前提步骤准备MySQL服务器实例.',
+  'installer.step7.popup.mySQLWarning.body':'你不能在同一主机上作为Ambari MySQL服务器的同时安装配置单元\"新的MySQL数据库\"服务。请返回<b>分配master</b>并重新分配蜂巢到另一台主机<b>或</b>选择\"现有的MySQL数据库\"选项来指定Ambari服务器的MySQL Server实例的数据库凭据和URL 。如果你选择\"现有的MySQL数据库\"选项,您需要执行Hive前提步骤准备MySQL服务器实例.',
   'installer.step7.popup.mySQLWarning.button.gotostep5': '转到指定的位置',//Go to Assign Masters
   'installer.step7.popup.mySQLWarning.button.dismiss': '退出',//Dismiss
   'installer.step7.popup.mySQLWarning.confirmation.header': '确认: 转到指定位置',//Confirmation: Go to Assign Masters
-  'installer.step7.popup.mySQLWarning.confirmation.body': '你会被带回\"分配master\"这一步，将失去当前所有的自定义。 你确定?',//You will be brought back to the \"Assign Masters\" step and will lose all your current customizations. Are you sure
+  'installer.step7.popup.mySQLWarning.confirmation.body': '你会被带回\"分配master\"这一步,将失去当前所有的自定义。 你确定?',//You will be brought back to the \"Assign Masters\" step and will lose all your current customizations. Are you sure
   'installer.step7.popup.database.connection.header': '数据连接警告',//Database Connectivity Warning
-  'installer.step7.popup.database.connection.body': '您还没有运行或通过数据库连接测试：{0}。强烈建议您在继续操作，以防止在部署过程中失败的前通过连接测试.',//You have not run or passed the database connection test for: {0}. It is highly recommended that you pass the connection test before proceeding to prevent failures during deployment
+  'installer.step7.popup.database.connection.body': '您还没有运行或通过数据库连接测试：{0}。强烈建议您在继续操作,以防止在部署过程中失败的前通过连接测试.',//You have not run or passed the database connection test for: {0}. It is highly recommended that you pass the connection test before proceeding to prevent failures during deployment
   'installer.step7.popup.validation.failed.header': '一致性检查失败',//Consistency Check Failed
   'installer.step7.popup.validation.failed.body': '有些服务是没有正确配置。你必须根据推荐值更改高亮配置.',//Some services are not properly configured. You have to change the highlighted configs according to the recommended values
-  'installer.step7.popup.validation.request.failed.body': '由于未知错误配置更改无法验证一致性。您的更改尚未保存。你想继续，并保存更改?',//The configuration changes could not be validated for consistency due to an unknown error.  Your changes have not been saved yet.  Would you like to proceed and save the changes
+  'installer.step7.popup.validation.request.failed.body': '由于未知错误配置更改无法验证一致性。您的更改尚未保存。你想继续,并保存更改?',//The configuration changes could not be validated for consistency due to an unknown error.  Your changes have not been saved yet.  Would you like to proceed and save the changes
   'installer.step7.popup.validation.warning.header': '配置',//Configurations
   'installer.step7.popup.validation.warning.body': '一些服务配置不正确配置。我们建议您查看和更改突出显示的配置值。你确定想要在不纠正这些配置的情况下继续执行?',//Some service configurations are not configured properly. We recommend you review and change the highlighted configuration values. Are you sure you want to proceed without correcting configurations
   'installer.step7.popup.validation.error.body': 'Service configurations resulted in validation errors. Please address them before proceeding.',
-  'installer.step7.popup.oozie.derby.warning': '不建议在生产中使用Derby。随着Derby，Oozie的服务器高可用性和并发连接支持将无法使用.',//Derby is not recommended for production use. With Derby, Oozie Server HA and concurrent connection support will not be available
+  'installer.step7.popup.oozie.derby.warning': '不建议在生产中使用Derby。随着Derby,Oozie的服务器高可用性和并发连接支持将无法使用.',//Derby is not recommended for production use. With Derby, Oozie Server HA and concurrent connection support will not be available
   'installer.step7.oozie.database.new': '新Derby数据库',//New Derby Database
   'installer.step7.hive.database.new.mysql': '新的 MySQL 数据库',//'New MySQL Database
   'installer.step7.hive.database.new.postgres': '新的 PostgreSQL 数据库',//New PostgreSQL Database
@@ -921,7 +921,7 @@ Em.I18n.translations = {
   'installer.step7.preInstallChecks.checksPopup.header':'预安装检查',//Pre Install Checks
 
 
-  'installer.step7.assign.master.body':'分配 <strong>{0}</strong> 到 {1}， 你想运行在 {2}上.',//'Assign <strong>{0}</strong> to {1} you want to run {2} on.',
+  'installer.step7.assign.master.body':'分配 <strong>{0}</strong> 到 {1}, 你想运行在 {2}上.',//'Assign <strong>{0}</strong> to {1} you want to run {2} on.',
   'installer.step7.assign.master.dependent.component.body':'If not present {0} will also be installed on the selected host. ',
   'installer.step7.missing.service.header':'缺失服务',
   'installer.step7.missing.service.body': '{0} 服务应该添加在节点 {1}',//'{0} service should be added to the cluster to {1}.',
@@ -931,7 +931,7 @@ Em.I18n.translations = {
 
   'installer.step8.header': '复审',//Review
   'installer.step8.body': '安装前请复审您的配置',//Please review the configuration before installation
-  'installer.step8.kerberors.warning': '<strong>因为Kerberos已手动安装在集群上，当此操作完成 你必须创建/分配主体和keytabs.</strong>',//Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished
+  'installer.step8.kerberors.warning': '<strong>因为Kerberos已手动安装在集群上,当此操作完成 你必须创建/分配主体和keytabs.</strong>',//Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished
   'installer.step8.deployPopup.message':'准备部署：{0}{1}的任务完成.',//Preparing to Deploy: {0} of {1} tasks completed
   'installer.step8.hosts':'主机数 ',//hosts
   'installer.step8.host':'主机 ',//host
@@ -1010,8 +1010,8 @@ Em.I18n.translations = {
   'installer.step10.header':'概要 ',//Summary
   'installer.step10.body':'这里是安装过程概要.',//Here is the summary of the install process
   'installer.step10.staleServicesRestartRequired':'新的增值服务等业务需要正常运行您可能还需要重新启动' +// You may also need to restart other services for the newly added
-  '（例如，HDFS和YARN/ MapReduce的需要增加了Oozie后重新启动） ' +//services to function properly (for example, HDFS and YARN/MapReduce need to be restarted after adding Oozie). After closing this
-  '关闭此向导后，请重新启动在服务名称旁边有重启标识的全部服务.',//wizard, please restart all services that have the restart indicator <i class="icon-refresh"></i> next to the service name
+  '（例如,HDFS和YARN/ MapReduce的需要增加了Oozie后重新启动） ' +//services to function properly (for example, HDFS and YARN/MapReduce need to be restarted after adding Oozie). After closing this
+  '关闭此向导后,请重新启动在服务名称旁边有重启标识的全部服务.',//wizard, please restart all services that have the restart indicator <i class="icon-refresh"></i> next to the service name
   'installer.step10.hostsSummary':'该集群有{0}台主机',//The cluster consists of {0} hosts
   'installer.step10.installedAndStarted':'在 {0} 上安装并运行新的服务 ',//Installed and started services successfully on {0} new
   'installer.step10.installed':'在 {0} 上成功安装新的服务 ',//Installed services successfully on {0} new
@@ -1039,15 +1039,15 @@ Em.I18n.translations = {
   'form.cancel':'取消',//Cancel
   'form.passwordRetype':'重新输入密码',//Retype Password
   'form.saveSuccess':'保存成功.',//Successfully saved
-  'form.saveError':'对不起，出现错误.',//Sorry, errors occurred
+  'form.saveError':'对不起,出现错误.',//Sorry, errors occurred
   'form.item.placeholders.typePassword':'密码类型',//Type password
 
   'form.validator.invalidIp':'请输入有效的IP地址',//Please enter valid ip address
-  'form.validator.configKey':'无效的密钥。只有字母数字，连字符，下划线，星号和句号.',//Invalid Key. Only alphanumerics, hyphens, underscores, asterisks and periods are allowed
-  'form.validator.configGroupName':'无效的组名。只有字母数字，连字符，空格和下划线允许.',//Invalid Group Name. Only alphanumerics, hyphens, spaces and underscores are allowed
-  'form.validator.alertGroupName':'无效警告组名称。只允许有字母数字，连字符，空格和下划线.',//Invalid Alert Group Name. Only alphanumerics, hyphens, spaces and underscores are allowed
-  'form.validator.alertNotificationName':'错误警告通知名称。只支持字母数字、#、空格、下划线',//'Invalid Alert Notification Name. Only alphanumerics, hyphens, spaces and underscores are allowed.',
-  'form.validator.configKey.specific':'"{0}"是无效的键。只允许有字母数字，连字符，下划线，星号和句号 .',//is invalid Key. Only alphanumerics, hyphens, underscores, asterisks and periods are allowed
+  'form.validator.configKey':'无效的密钥。只有字母数字,连字符,下划线,星号和句号.',//Invalid Key. Only alphanumerics, hyphens, underscores, asterisks and periods are allowed
+  'form.validator.configGroupName':'无效的组名。只有字母数字,连字符,空格和下划线允许.',//Invalid Group Name. Only alphanumerics, hyphens, spaces and underscores are allowed
+  'form.validator.alertGroupName':'无效警告组名称。只允许有字母数字,连字符,空格和下划线.',//Invalid Alert Group Name. Only alphanumerics, hyphens, spaces and underscores are allowed
+  'form.validator.alertNotificationName':'错误警告通知名称。只支持字母数字、连字符、空格、下划线',//'Invalid Alert Notification Name. Only alphanumerics, hyphens, spaces and underscores are allowed.',
+  'form.validator.configKey.specific':'"{0}"是无效的键。只允许有字母数字,连字符,下划线,星号和句号 .',//is invalid Key. Only alphanumerics, hyphens, underscores, asterisks and periods are allowed
 
   'alerts.add.header': '创建警告定义',//Create Alert Definition
   'alerts.add.step1.header': '选择类型',//Choose Type
@@ -1102,7 +1102,7 @@ Em.I18n.translations = {
   'alerts.definition.name': '警告定义名称',
   'alerts.saveChanges': '你有未保存的更改',//You have unsaved changes
 
-  'alert.definition.name.invalid': '错误输入，只支持字母数字，下划线，%，#，空格',//'Invalid input. Only alphanumerics, underscores, hyphens, percentage and spaces are allowed.',
+  'alert.definition.name.invalid': '错误输入,只支持字母数字,下划线,%,#,空格',//'Invalid input. Only alphanumerics, underscores, hyphens, percentage and spaces are allowed.',
   'alerts.definition.details.enable': '启用',//Enable
   'alerts.definition.details.disable': '禁用',//Disable
   'alerts.definition.details.enableDisable': '启用/禁用',//Enable / Disable
@@ -1124,12 +1124,12 @@ Em.I18n.translations = {
 
   'alerts.notifications.addCustomPropertyPopup.header': '添加属性',//Add Property
   'alerts.notifications.addCustomPropertyPopup.error.propertyExists': '自定义属性的名称已经存在',//Custom Property with current name already exists
-  'alerts.notifications.addCustomPropertyPopup.error.invalidPropertyName': '属性名称只能包含字母，数字和。 -_*字符',//Property name can only contain letters, numbers or . -_* characters
+  'alerts.notifications.addCustomPropertyPopup.error.invalidPropertyName': '属性名称只能包含字母,数字和。 -_*字符',//Property name can only contain letters, numbers or . -_* characters
 
 
   'wizard.progressPage.notice.completed':'请继续下一步.',//Please proceed to the next step
-  'wizard.progressPage.notice.failed':'您可以点击重试按钮，重试失败的任务.',//You can click on the Retry button to retry failed tasks
-  'wizard.singleRequest.progressPage.notice.failed': '请点击重试链接，重试失败的请求.',//Please click on the Retry link to retry the failed request
+  'wizard.progressPage.notice.failed':'您可以点击重试按钮,重试失败的任务.',//You can click on the Retry button to retry failed tasks
+  'wizard.singleRequest.progressPage.notice.failed': '请点击重试链接,重试失败的请求.',//Please click on the Retry link to retry the failed request
 
 
   'admin.advanced.caution':'本节仅适用于高级用户</br>请谨慎操作.',//This section is for advanced user only.<br/>Proceed with caution
@@ -1165,7 +1165,7 @@ Em.I18n.translations = {
   'admin.authentication.form.test.fail':'配置测试失败',//The configuration fails the test
 
 
-  'admin.kerberos.credentials.store.hint.supported': '勾选后，Ambari将存储管理员KDC凭据，以后,不管是主机和零部件的变化,它们都可以进入.',
+  'admin.kerberos.credentials.store.hint.supported': '勾选后,Ambari将存储管理员KDC凭据,以后,不管是主机和零部件的变化,它们都可以进入.',
   'admin.kerberos.credentials.store.hint.not.supported': 'Ambari没有配置存储凭据',//Ambari is not configured for storing credentials
   'admin.kerberos.credentials.store.label': '保存管理员凭据',//Save Admin Credentials
   'admin.kerberos.credentials.store.menu.label': '管理KDC证书',//Manage KDC Credentials
@@ -1179,7 +1179,7 @@ Em.I18n.translations = {
   'admin.kerberos.button.disable': '禁用 Kerberos',//Disable Kerberos
   'admin.kerberos.button.regenerateKeytabs': '生成Keytabs',// Regenerate Keytabs
   'admin.kerberos.wizard.exit.warning.msg': '配置Kerberos正在进行中。你真的要退出启用Kerberos向导?',//Configuring Kerberos is in progress. Do you really want to exit the Enable Kerberos Wizard
-  'admin.kerberos.wizard.exit.critical.msg': '配置Kerberos正在进行中 <strong>取消之前，您应该完成向导</strong> 你真的要退出启用Kerberos向导?',//Configuring Kerberos is in progress. <strong>Before dismissing, you should complete the wizard.</strong> Do you really want to exit the Enable Kerberos Wizard
+  'admin.kerberos.wizard.exit.critical.msg': '配置Kerberos正在进行中 <strong>取消之前,您应该完成向导</strong> 你真的要退出启用Kerberos向导?',//Configuring Kerberos is in progress. <strong>Before dismissing, you should complete the wizard.</strong> Do you really want to exit the Enable Kerberos Wizard
   'admin.kerberos.wizard.step1.header': '开始',//Get Started
   'admin.kerberos.wizard.step2.header': '配置Kerberos',//Configure Kerberos
   'admin.kerberos.wizard.step3.header': '安装和测试Kerberos 客户端',//Install and Test Kerberos Client
@@ -1190,7 +1190,7 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.step7.header': 'Kerberize 集群',//Kerberize Cluster
   'admin.kerberos.wizard.step8.header': '启动和测试服务',//Start and Test Services
   'admin.kerberos.wizard.step1.info.body': '欢迎来到Ambari安全向导。使用该向导在集群中启用Kerberos安全,让我们开始吧.',//Welcome to the Ambari Security Wizard. Use this wizard to enable kerberos security in your cluster. </br>Let\'s get started
-  'admin.kerberos.wizard.step1.alert.body': '注：此过程需要重新启动服务和集群停机时间。同时，根据您选择的选项，可能需要你的安全管理员的支持。请做好相应的计划.',//Note: This process requires services to be restarted and cluster downtime. As well, depending on the options you select, might require support from your Security administrators. Please plan accordingly
+  'admin.kerberos.wizard.step1.alert.body': '注：此过程需要重新启动服务和集群停机时间。同时,根据您选择的选项,可能需要你的安全管理员的支持。请做好相应的计划.',//Note: This process requires services to be restarted and cluster downtime. As well, depending on the options you select, might require support from your Security administrators. Please plan accordingly
   'admin.kerberos.wizard.step1.body.text': '您打算使用什么类型的KDC?',//What type of KDC do you plan on using
   'admin.kerberos.wizard.step1.option.kdc': '现有的MIT KDC',//Existing MIT KDC
   'admin.kerberos.wizard.step1.option.kdc.condition.1': 'Ambari服务器和集群主机对KDC和KDC管理主机进行网络接入.',//Ambari Server and cluster hosts have network access to both the KDC and KDC admin hosts
@@ -1201,12 +1201,12 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.step1.option.manual.condition.2': 'Kerberos客户端工具（如使用kinit）已经被安装在每个集群主机上',//Kerberos client utilities (such as kinit) have been installed on every cluster host
   'admin.kerberos.wizard.step1.option.manual.condition.3': 'Java加密扩展（JCE）已经建立在Ambari服务器主机和集群中的所有主机上',//The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster
   'admin.kerberos.wizard.step1.option.manual.condition.4': '该服务与Ambari主体将在KDC完成此向导之前手动创建',//The Service and Ambari Principals will be manually created in the KDC before completing this wizard
-  'admin.kerberos.wizard.step1.option.manual.condition.5': '服务和Ambari主体 ,keytabs将手动创建并分发到集群主机在完成此向导之前，',//The keytabs for the Service and Ambari Principals will be manually created and distributed to cluster hosts before completing this wizard
+  'admin.kerberos.wizard.step1.option.manual.condition.5': '服务和Ambari主体 ,keytabs将手动创建并分发到集群主机在完成此向导之前,',//The keytabs for the Service and Ambari Principals will be manually created and distributed to cluster hosts before completing this wizard
   'admin.kerberos.wizard.step1.option.ad': '现有的Active Directory',//Existing Active Directory
   'admin.kerberos.wizard.step1.option.ad.condition.1': 'Ambari服务器和集群主机具有对域控制器的网络访问.',//Ambari Server and cluster hosts have network access to the Domain Controllers
   'admin.kerberos.wizard.step1.option.ad.condition.2': '活动目录安全LDAP（LDAPS）连接已配置.',//Active Directory secure LDAP (LDAPS) connectivity has been configured
-  'admin.kerberos.wizard.step1.option.ad.condition.3': '活动目录用户容器主体已创建，是手头（例如 OU=Hadoop,OU=People,dc=apache,dc=org）',//Active Directory User container for principals has been created and is on-hand (e.g. OU=Hadoop,OU=People,dc=apache,dc=org)
-  'admin.kerberos.wizard.step1.option.ad.condition.4': '在前面提到的用户容器上“创建，删除和管理用户帐户”委派控制Active Directory管理手中的凭据.',//Active Directory administrative credentials with delegated control of “Create, delete, and manage user accounts” on the previously mentioned User container are on-hand
+  'admin.kerberos.wizard.step1.option.ad.condition.3': '活动目录用户容器主体已创建,是手头（例如 OU=Hadoop,OU=People,dc=apache,dc=org）',//Active Directory User container for principals has been created and is on-hand (e.g. OU=Hadoop,OU=People,dc=apache,dc=org)
+  'admin.kerberos.wizard.step1.option.ad.condition.4': '在前面提到的用户容器上“创建,删除和管理用户帐户”委派控制Active Directory管理手中的凭据.',//Active Directory administrative credentials with delegated control of “Create, delete, and manage user accounts” on the previously mentioned User container are on-hand
   'admin.kerberos.wizard.step1.option.ad.condition.5': 'Java加密扩展（JCE）已建立在Ambari服务器主机和集群中的所有主机上.',//The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster
   'admin.kerberos.wizard.step1.option.ipa': 'Existing IPA',
   'admin.kerberos.wizard.step1.option.ipa.condition.1': 'Cluster hosts are joined to the IPA domain and hosts are registered in DNS',
@@ -1222,8 +1222,8 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.progressPage.notice.inProgress': '请稍候集群正在采用Kerberos',//Please wait while cluster is being kerberized
   'admin.kerberos.wizard.step4.info.body': '正在为服务用户和Hadoop服务组件配置主体名称和密钥表位置.',//Configure principal name and keytab location for service users and hadoop service components
   'admin.kerberos.wizard.step5.info.body': '请在继续安装过程之前查看配置',//Please review the configuration before continuing the setup process
-  'admin.kerberos.wizard.step5.moreInfoNonManual.body': '使用 <b>下载 CSV 按钮</b>, 你可以下载，其中包含将自动Ambari创建的主体和keytabs列表的csv文件.',//Using the <b>Download CSV button</b>, you can download a csv file which contains a list of the principals and keytabs that will automatically be created by Ambari
-  'admin.kerberos.wizard.step5.moreInfoManual.body': '重要提示：使用<b>下载CSV</b>按钮来获得<b>必要</b>的由Ambari启用Kerberos集群中的主体和keytabs的列表。 <b>不要继续</b>，直到手动创建和分发的主体和keytabs到集群主机.',//Important: Use the <b>Download CSV</b> button to obtain a list of the <b>required</b> principals and keytabs that are needed by Ambari to enable Kerberos in the cluster. <b>Do not proceed</b> until you have manually created and distributed the principals and keytabs to the cluster hosts
+  'admin.kerberos.wizard.step5.moreInfoNonManual.body': '使用 <b>下载 CSV 按钮</b>, 你可以下载,其中包含将自动Ambari创建的主体和keytabs列表的csv文件.',//Using the <b>Download CSV button</b>, you can download a csv file which contains a list of the principals and keytabs that will automatically be created by Ambari
+  'admin.kerberos.wizard.step5.moreInfoManual.body': '重要提示：使用<b>下载CSV</b>按钮来获得<b>必要</b>的由Ambari启用Kerberos集群中的主体和keytabs的列表。 <b>不要继续</b>,直到手动创建和分发的主体和keytabs到集群主机.',//Important: Use the <b>Download CSV</b> button to obtain a list of the <b>required</b> principals and keytabs that are needed by Ambari to enable Kerberos in the cluster. <b>Do not proceed</b> until you have manually created and distributed the principals and keytabs to the cluster hosts
   'admin.kerberos.wizard.step5.kdc_type.label': 'KDC类型',//KDC Type
   'admin.kerberos.wizard.step5.kdc_host.label': 'KDC主机',//KDC Host
   'admin.kerberos.wizard.step5.realm.label': '域名',//Realm Name
@@ -1235,27 +1235,27 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.step5.group.label': 'Group user principals should be member of',
   'admin.kerberos.wizard.step6.task0.title' : '停止服务',//Stop Services
   'admin.kerberos.wizard.step6.task1.title' : '删除ATS',//Delete ATS
-  'admin.kerberos.wizard.step6.notice.inProgress': '请稍候，正在停止服务.',//Please wait while services are being stopped
+  'admin.kerberos.wizard.step6.notice.inProgress': '请稍候,正在停止服务.',//Please wait while services are being stopped
   'admin.kerberos.wizard.step6.notice.completed': '服务已停止成功.',//Services have been successfully stopped
   'admin.kerberos.wizard.step7.notice.inProgress': '请稍候集群正在采用Kerberos.',//Please wait while cluster is being kerberized
   'admin.kerberos.wizard.step7.notice.completed': 'Kerberos的已成功在集群上启用.',//Kerberos has successfully been enabled on the cluster
-  'admin.kerberos.wizard.step8.notice.inProgress': '请稍候，正在启动和测试服务.',//Please wait while services are being started and tested
+  'admin.kerberos.wizard.step8.notice.inProgress': '请稍候,正在启动和测试服务.',//Please wait while services are being started and tested
   'admin.kerberos.wizard.step8.notice.completed': '服务已在Kerberos环境中测试成功.',//Services have been successfully tested with kerberos environment
-  'admin.kerberos.wizard.step8.notice.failed': '有些服务无法启动，并成功地执行测试。点击重试重新尝试，或单击完成以关闭向导并手动修复.',//Some services failed to start and execute tests successfully. Click Retry to attempt again or click Complete to dismiss the wizard and fix manually
+  'admin.kerberos.wizard.step8.notice.failed': '有些服务无法启动,并成功地执行测试。点击重试重新尝试,或单击完成以关闭向导并手动修复.',//Some services failed to start and execute tests successfully. Click Retry to attempt again or click Complete to dismiss the wizard and fix manually
   'admin.kerberos.wizard.step8.task0.title' : '启动和测试服务',//Start and Test Services
 
-  'admin.kerberos.regenerate_keytabs.popup.body': '重新生成keytabs对于集群中的所有主机是一个破坏性操作，并且需要重新启动所有组件。或者，keytabs只能丢失主机和组件再生，此操作需要重新选择那些受影响的主机和服务.',//Regenerating keytabs for <strong>all</strong> hosts in the cluster is a disruptive operation, and requires all components to be restarted. Optionally, keytabs can be regenerated <strong>only</strong> for missing hosts and components, and this operation requires selectively restarting those affected hosts and services
+  'admin.kerberos.regenerate_keytabs.popup.body': '重新生成keytabs对于集群中的所有主机是一个破坏性操作,并且需要重新启动所有组件。或者,keytabs只能丢失主机和组件再生,此操作需要重新选择那些受影响的主机和服务.',//Regenerating keytabs for <strong>all</strong> hosts in the cluster is a disruptive operation, and requires all components to be restarted. Optionally, keytabs can be regenerated <strong>only</strong> for missing hosts and components, and this operation requires selectively restarting those affected hosts and services
   'admin.kerberos.regenerate_keytabs.checkbox.label': ' 只有产生缺失主机和零部件keytabs',//Only regenerate keytabs for missing hosts and components
-  'admin.kerberos.regenerate_keytabs.popup.restart.body': '密钥表生成完成后，依靠他们提供服务的<strong>必须</strong>重新启动。这可以自动完成或人工完成.',//After keytab regerate is complete, services relying on them <strong>must</strong> be restarted. This can be done automatically, or manually
+  'admin.kerberos.regenerate_keytabs.popup.restart.body': '密钥表生成完成后,依靠他们提供服务的<strong>必须</strong>重新启动。这可以自动完成或人工完成.',//After keytab regerate is complete, services relying on them <strong>must</strong> be restarted. This can be done automatically, or manually
   'admin.kerberos.regenerate_keytabs.checkbox.restart.label': '自动重新启动密钥表再生后的组件',//Automatically restart components after keytab regeneration
-  'admin.kerberos.service.alert.yarn': 'YARN日志和本地目录将被删除，ResourceManager的状态将被格式化为启用/禁用,这是Kerberos的一部分.',//YARN log and local dir will be deleted and ResourceManager state will be formatted as part of Enabling/Disabling Kerberos
+  'admin.kerberos.service.alert.yarn': 'YARN日志和本地目录将被删除,ResourceManager的状态将被格式化为启用/禁用,这是Kerberos的一部分.',//YARN log and local dir will be deleted and ResourceManager state will be formatted as part of Enabling/Disabling Kerberos
 
   'admin.kerberos.disable.step1.task0.title': '停止服务',//Stop Services
   'admin.kerberos.disable.step1.task1.title': 'Unkerberize集群',//Unkerberize Cluster
   'admin.kerberos.disable.step1.task2.title': '删除Kerberos',// Remove Kerberos
   'admin.kerberos.disable.step1.task3.title': '启动服务',//Start Services
   'admin.kerberos.disable.unkerberize.header': 'Unkerberize集群',//Unkerberize cluster
-  'admin.kerberos.disable.unkerberize.message': '你不能退出向导，集群是未采用Kerberos',//You cannot quit wizard while cluster is being unkerberized
+  'admin.kerberos.disable.unkerberize.message': '你不能退出向导,集群是未采用Kerberos',//You cannot quit wizard while cluster is being unkerberized
   'admin.kerberos.disable.inProgress': '请稍候集群正在不采用Kerberos',//Please wait while cluster is being unkerberized
   'admin.kerberos.disable.notice.completed': '服务在没有Kerberos环境中测试成功.',//Services have been successfully tested without kerberos environment
   'admin.kerberos.wizard.step1.notice.inProgress': '请稍候集群正在不采用Kerberos',//Please wait while cluster is being unkerberized
@@ -1272,23 +1272,23 @@ Em.I18n.translations = {
   'admin.rm_highAvailability.enabled':'ResourceManager HA 已经启用',//ResourceManager HA is enabled
   'admin.highAvailability.confirmRollbackHeader':'确认回滚',//Confirm Rollback
   'admin.highAvailability.confirmRollbackBody':'即将回滚在向导中完成所有操作',//This will rollback all operations that were done in HA wizard
-  'admin.highAvailability.confirmManualRollbackBody':'你正在使NameNode的HA的过程。如果现在退出，则必须按照说明书的指示作为Ambari用户指南的<i>回滚的NameNode HA</i>部分文件恢复到非HA设置。您确定要退出向导?',//You are in the process of enabling NameNode HA. If you exit now, you must follow manual instructions to revert back to the non-HA setup as documented in the Ambari User Guide\'s <i>Rolling Back NameNode HA</i> section.  Are you sure you want to exit the wizard
+  'admin.highAvailability.confirmManualRollbackBody':'你正在使NameNode的HA的过程。如果现在退出,则必须按照说明书的指示作为Ambari用户指南的<i>回滚的NameNode HA</i>部分文件恢复到非HA设置。您确定要退出向导?',//You are in the process of enabling NameNode HA. If you exit now, you must follow manual instructions to revert back to the non-HA setup as documented in the Ambari User Guide\'s <i>Rolling Back NameNode HA</i> section.  Are you sure you want to exit the wizard
   'admin.highAvailability.error.hostsNum':'你必须至少有3台主机在集群中启用的NameNode HA.',//You must have at least 3 hosts in your cluster to enable NameNode HA
   'admin.highAvailability.error.namenodeStarted':'NameNode的必须运行在启用NameNode的HA前.',//NameNode must be running before you enable NameNode HA
-  'admin.highAvailability.error.maintenanceMode':''激活NameNode HA，所有主节点的服务必须退出维护模式,//'In order to enable NameNode HA, all services, and hosts with master components need to be out of Maintenance Mode.',
+  'admin.highAvailability.error.maintenanceMode':'激活NameNode HA,所有主节点的服务必须退出维护模式',//'In order to enable NameNode HA, all services, and hosts with master components need to be out of Maintenance Mode.',
   'admin.highAvailability.error.zooKeeperNum':'在你的集群中,你最少有3台ZooKeeper 服务器中需要启动HA的NameNode.',//You must have at least 3 ZooKeeper Servers in your cluster to enable NameNode HA
   'admin.rm_highAvailability.error.hostsNum':'你必须至少有3台主机在集群中启用HA的ResourceManager.',//You must have at least 3 hosts in your cluster to enable ResourceManager HA
   'admin.rm_highAvailability.error.zooKeeperNum':'你必须有至少3 台ZooKeeper的服务器在集群中启用HA的ResourceManager.',//You must have at least 3 ZooKeeper Servers in your cluster to enable ResourceManager HA
-  'admin.rm_highAvailability.closePopup':'启用ResourceManager的HA向导正在进行中。您必须允许向导来完成Ambari是在可用状态。如果选择退出，则必须按照说明书的指示完成或恢复使ResourceManager的HA作为Ambari用户手册中记录。您确定要退出向导?',//Enable ResourceManager HA Wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert enabling ResourceManager HA as documented in the Ambari User Guide. Are you sure you want to exit the wizard
+  'admin.rm_highAvailability.closePopup':'启用ResourceManager的HA向导正在进行中。您必须允许向导来完成Ambari是在可用状态。如果选择退出,则必须按照说明书的指示完成或恢复使ResourceManager的HA作为Ambari用户手册中记录。您确定要退出向导?',//Enable ResourceManager HA Wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert enabling ResourceManager HA as documented in the Ambari User Guide. Are you sure you want to exit the wizard
 
   'admin.highAvailability.wizard.header':'启用的NameNode HA向导',//Enable NameNode HA Wizard
-  'admin.highAvailability.wizard.progressPage.notice.inProgress':'请稍候，正在部署NameNode的HA.',//Please wait while NameNode HA is being deployed
+  'admin.highAvailability.wizard.progressPage.notice.inProgress':'请稍候,正在部署NameNode的HA.',//Please wait while NameNode HA is being deployed
   'admin.highAvailability.wizard.progressPage.header':'部署',//Deploy
   'admin.highAvailability.wizard.step1.header':'开始',//Get Started
   'admin.highAvailability.wizard.step1.nameserviceid.tooltip.title':'Nameservice ID',
   'admin.highAvailability.wizard.step1.nameserviceid.tooltip.content':'这将是NameNode的HA集群的ID,例如.如果您设置名称服务ID为</b>mycluster</b>,对于HDFS逻辑URI将是<b> HDFS：// myCluster中</b>.',//This will be the ID for the NameNode HA cluster. For example, if you set Nameservice ID to <b>mycluster</b>, the logical URI for HDFS will be <b>hdfs://mycluster</b>
   'admin.highAvailability.wizard.step1.nameserviceid':'Nameservice ID',
-  'admin.highAvailability.wizard.step1.nameserviceid.error':'必须包含字母，数字和连字符。不能已连字符开始或结束.',//Must consist of letters, numbers, and hyphens. Cannot begin or end with a hyphen
+  'admin.highAvailability.wizard.step1.nameserviceid.error':'必须包含字母,数字和连字符。不能已连字符开始或结束.',//Must consist of letters, numbers, and hyphens. Cannot begin or end with a hyphen
   'admin.highAvailability.wizard.step2.header':'选择主机',//Select Hosts
   'admin.highAvailability.wizard.step3.header':'审阅',//Review
   'admin.highAvailability.wizard.step4.header':'创建检查点',//Create Checkpoint
@@ -1412,20 +1412,20 @@ Em.I18n.translations = {
   '<li>登录到主机的NameNode  <b>{1}</b>.</li>' +
   '<li>设置NameNode的安全模式（只读模式:' +
   '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
-  '<li>ONCE在安全模式下，创建一个检查点:' +
+  '<li>ONCE在安全模式下,创建一个检查点:' +
   '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
   '<li>您将进行一次Ambari检测到的NameNode处于安全模式和检查点已成功创建.</li>'+
-  '<div class="alert alert-warn">如果您运行之前，下一步按钮启用了“第4步：创建检查点”命令，这意味着有一个最近的检查点和你可能不进行“第4步：创建检查点”命令运行了</div>' +
+  '<div class="alert alert-warn">如果您运行之前,下一步按钮启用了“第4步：创建检查点”命令,这意味着有一个最近的检查点和你可能不进行“第4步：创建检查点”命令运行了</div>' +
   '</ol>',
   'admin.highAvailability.wizard.step3.confirm.host.body':'<b>确认您的主机的选择.</b>',//Confirm your host selections
   'admin.highAvailability.wizard.step3.confirm.config.body':'<div class="alert alert-info">' +
   '<b>回顾配置更改.</b></br>' +//Review Configuration Changes
-  '下面列出了将被向导对启用NameNode的HA配置更改。这些信息对于<b>查看仅</b>，而不是除了<b>编辑dfs.journalnode.edits.dir</b>的属性' +
+  '下面列出了将被向导对启用NameNode的HA配置更改。这些信息对于<b>查看仅</b>,而不是除了<b>编辑dfs.journalnode.edits.dir</b>的属性' +
   '</div>',
   'admin.highAvailability.wizard.step2.body':'选择将运行额外的NameNode的主机.<br/> 此外,' +
-  ' 选择要运行JournalNodes的主机，e编辑它存储的NameNod日志在容错方式.',//select the hosts to run JournalNodes, which store NameNode edit logs in a fault tolerant manner
+  ' 选择要运行JournalNodes的主机,e编辑它存储的NameNod日志在容错方式.',//select the hosts to run JournalNodes, which store NameNode edit logs in a fault tolerant manner
   'admin.highAvailability.wizard.step1.body':'该向导将引导您完成您的集群上实现的NameNode HA.<br/>' +//This wizard will walk you through enabling NameNode HA on your cluster
-  '一旦启用，你会除了你主动的NameNode运行备用的NameNode.<br/>' +//Once enabled, you will be running a Standby NameNode in addition to your Active NameNode
+  '一旦启用,你会除了你主动的NameNode运行备用的NameNode.<br/>' +//Once enabled, you will be running a Standby NameNode in addition to your Active NameNode
   '这样就可以自动执行故障切换的主备NameNode的配置.<br/><br/>' +//This allows for an Active-Standby NameNode configuration that automatically performs failover
   '以启用HA的过程涉及的组合的<b>自动化步骤</b>（将由向导处理）和 ' +//The process to enable HA involves a combination of <b>automated steps</b> (that will be handled by the wizard) and
   '<b>手动步骤</b>（你必须按顺序由向导的指示执行）.<br/><br/>' +//manual steps</b> (that you must perform in sequence as instructed by the wizard)
@@ -1438,7 +1438,7 @@ Em.I18n.translations = {
   'admin.rm_highAvailability.wizard.header': '启用ResourceManager的HA向导',//Enable ResourceManager HA Wizard
   'admin.rm_highAvailability.wizard.step1.header': '开始',//Get Started
   'admin.rm_highAvailability.wizard.step1.body':'该向导将引导您完成您的集群上实现的ResourceManager HA.<br/>' +//This wizard will walk you through enabling ResourceManager HA on your cluster
-  '一旦启用，你会除了你主动ResourceManager中运行一个备用的ResourceManager.<br/>' +//Once enabled, you will be running a Standby ResourceManager in addition to your Active ResourceManager
+  '一旦启用,你会除了你主动ResourceManager中运行一个备用的ResourceManager.<br/>' +//Once enabled, you will be running a Standby ResourceManager in addition to your Active ResourceManager
   '这样就可以自动执行故障切换的主备配置的ResourceManager.<br/><br/>' +//This allows for an Active-Standby ResourceManager configuration that automatically performs failover
   '<b>当向导使用NameNode HA时,你应该计划集群维护窗口和集群停机时间.</b>',//You should plan a cluster maintenance window and prepare for cluster downtime when enabling ResourceManager HA
   'admin.rm_highAvailability.wizard.step2.header': '选择主机',//Select Host
@@ -1458,13 +1458,13 @@ Em.I18n.translations = {
   'admin.rm_highAvailability.wizard.step4.task3.title': '配置HDFS',//Reconfigure HDFS
   'admin.rm_highAvailability.wizard.step4.task4.title': '配置HAWQ',//Reconfigure HAWQ
   'admin.rm_highAvailability.wizard.step4.task5.title': '启动所有的服务',//Start All Services
-  'admin.rm_highAvailability.wizard.step4.notice.inProgress':'请稍候，正在部署的ResourceManager HA.',//Please wait while ResourceManager HA is being deployed
+  'admin.rm_highAvailability.wizard.step4.notice.inProgress':'请稍候,正在部署的ResourceManager HA.',//Please wait while ResourceManager HA is being deployed
   'admin.rm_highAvailability.wizard.step4.notice.completed':'ResourceManager HA成功启用.',//ResourceManager HA has been enabled successfully
 
   'admin.rm_highAvailability.wizard.header': '启用ResourceManager的HA向导',//Enable ResourceManager HA Wizard
   'admin.rm_highAvailability.wizard.step1.header': '开始',//Get Started
   'admin.rm_highAvailability.wizard.step1.body':'该向导将引导您完成您的集群上实现的ResourceManager HA.<br/>' +//This wizard will walk you through enabling ResourceManager HA on your cluster
-  '一旦启用，你会除了你主动ResourceManager中运行一个备用的ResourceManager.<br/>' +//Once enabled, you will be running a Standby ResourceManager in addition to your Active ResourceManager
+  '一旦启用,你会除了你主动ResourceManager中运行一个备用的ResourceManager.<br/>' +//Once enabled, you will be running a Standby ResourceManager in addition to your Active ResourceManager
   '这样就可以自动执行故障切换的主备配置的ResourceManager.<br/><br/>' +//This allows for an Active-Standby ResourceManager configuration that automatically performs failover
   '<b>当向导使用NameNode HA时,你应该计划集群维护窗口和集群停机时间.</b>',//You should plan a cluster maintenance window and prepare for cluster downtime when enabling ResourceManager HA
   'admin.rm_highAvailability.wizard.step2.header': '选择主机',//Select Host
@@ -1484,7 +1484,7 @@ Em.I18n.translations = {
   'admin.rm_highAvailability.wizard.step4.task3.title': '配置HDFS',//Reconfigure HDFS
   'admin.rm_highAvailability.wizard.step4.task4.title': '配置HAWQ',//Reconfigure HAWQ
   'admin.rm_highAvailability.wizard.step4.task5.title': '启动所有的服务',//Start All Services
-  'admin.rm_highAvailability.wizard.step4.notice.inProgress':'请稍候，正在部署的ResourceManager HA.',//Please wait while ResourceManager HA is being deployed
+  'admin.rm_highAvailability.wizard.step4.notice.inProgress':'请稍候,正在部署的ResourceManager HA.',//Please wait while ResourceManager HA is being deployed
   'admin.rm_highAvailability.wizard.step4.notice.completed':'ResourceManager HA成功启用.',//ResourceManager HA has been enabled successfully
 
   'admin.security.title':'Kerberos安全性尚未启用',//Kerberos security has not been enabled
@@ -1503,7 +1503,7 @@ Em.I18n.translations = {
   'admin.security.step4.header': '保存并应用此配置',//Save and Apply Configuration
   'admin.security.step1.body.header': '重要提示:在配置Ambari来管理您的支持Kerberos的集群之前  ' +//Before configuring Ambari to manage your Kerberos-enabled cluster,
   '您必须在集群上执行以下手动步骤。一定要记录每个主机的密钥表文件和校长为每个Hadoop的服务的位置 ' +//you must perform the following manual steps on your cluster. Be sure to record the location of the keytab files for each host and the principals for each Hadoop service.
-  '这个信息是必需的，以便使用该向导。',// This information is required in order to use the wizard.
+  '这个信息是必需的,以便使用该向导。',// This information is required in order to use the wizard.
   'admin.security.step1.body.instruction1': '安装,配置和启动您的Kerberos KDC',//Install, configure and start your Kerberos KDC
   'admin.security.step1.body.instruction2': '安装并在集群中的每个主机上配置Kerberos客户端',//Install and configure the Kerberos client on every host in the cluster
   'admin.security.step1.body.instruction3': '创建Hadoop的服务和主机Kerberos主体',//Create Kerberos principals for Hadoop services and hosts
@@ -1511,20 +1511,20 @@ Em.I18n.translations = {
   'admin.security.step1.body.instruction5': 'YARN服务的<b>应用时间轴</b>Server组件将被 <span class="text-error"><b>删除</b></span>是这个HDP堆栈版本启用安全的一部分',//<b>Application Timeline Server</b> component of YARN service will be <span class="text-error"><b>deleted</b></span> as part of enabling security in this HDP stack version
   'admin.security.step2.body.header': '配置Kerberos安全性',//Configure Kerberos security properties
   'admin.security.step3.notice': '您需要继续之前创建Kerberos主体和keytabs<br />'+//You need to create Kerberos principals and keytabs before proceeding.
-  ' 下载CSV文件，并用它来创建一个脚本来生成对指定的主机的校长和keytabs一旦主体和keytabs被创建' +//Download the CSV file and use it to create a script to generate the principals and keytabs on specified hosts Once the principals and keytabs have been created,
-  '请点击<i>应用</i>继续，如果您需要更改配置，单击<i>返回</i>.',// click on <i>Apply</i> to continue. If you need to make configuration changes, click <i>Back</i>
+  ' 下载CSV文件,并用它来创建一个脚本来生成对指定的主机的校长和keytabs一旦主体和keytabs被创建' +//Download the CSV file and use it to create a script to generate the principals and keytabs on specified hosts Once the principals and keytabs have been created,
+  '请点击<i>应用</i>继续,如果您需要更改配置,单击<i>返回</i>.',// click on <i>Apply</i> to continue. If you need to make configuration changes, click <i>Back</i>
   'admin.security.step3.table.principal': '主体',//Principal
   'admin.security.step3.table.keytab': 'Keytab',
   'admin.security.step3.downloadCSV': '下载 CSV',//Download CSV
   'admin.security.step4.body.header': '应用Kerberos安全集群',//Applying kerberos security to the cluster
-  'admin.security.step4.body.success.header' : '基于Kerberos的安全性在集群上启用。请稍候，服务是在安全模式下启动的.',//Kerberos-based security has been enabled on your cluster. Please wait while services are started in secure mode
+  'admin.security.step4.body.success.header' : '基于Kerberos的安全性在集群上启用。请稍候,服务是在安全模式下启动的.',//Kerberos-based security has been enabled on your cluster. Please wait while services are started in secure mode
   'admin.security.step4.body.failure.header' : '无法在集群上启用基于Kerberos的安全。你的集群将保持在非安全模式下运行.',//Failed to enable Kerberos-based security on your cluster. Your cluster will keep running in non-secure mode
   'admin.security.step4.save.configuration.note':'此配置是通过启用/禁用安全向导创建',//This configuration is created by Enable/Disable security wizard
-  'admin.security.apply.configuration.error' : '未能安全配置应用到集群。请浏览到“配置服务”的步骤，并确保所有服务都用适当的值配置.',//Failed to apply secure configurations to the cluster. Please navigate to "Configure Services" step and make sure all services are configured with appropriate values
+  'admin.security.apply.configuration.error' : '未能安全配置应用到集群。请浏览到“配置服务”的步骤,并确保所有服务都用适当的值配置.',//Failed to apply secure configurations to the cluster. Please navigate to "Configure Services" step and make sure all services are configured with appropriate values
   'admin.security.disable.body.header' : '在集群上禁用Kerberos安全',//Disabling kerberos security on the cluster
-  'admin.security.disable.body.success.header': '基于Kerberos的安全性已在集群上被禁用。请稍候，服务在非安全模式下启动.',//Kerberos-based security has been disabled on your cluster. Please wait while services are started in non-secure mode
+  'admin.security.disable.body.success.header': '基于Kerberos的安全性已在集群上被禁用。请稍候,服务在非安全模式下启动.',//Kerberos-based security has been disabled on your cluster. Please wait while services are started in non-secure mode
   'admin.security.disable.body.failure.header': '无法禁用集群上基于Kerberos的安全性。你的集群将保持在安全模式下运行.',//Failed to disable Kerberos-based security on your cluster. Your cluster will keep running in secure mode
-  'admin.security.disable.onClose': '你在你的集群上禁用安全性的过程中，您确定要退出?',//You are in the process of disabling security on your cluster, Are you sure you want to quit
+  'admin.security.disable.onClose': '你在你的集群上禁用安全性的过程中,您确定要退出?',//You are in the process of disabling security on your cluster, Are you sure you want to quit
   'admin.removeSecurity.header': '禁用安全',//Disable Security
   'admin.security.applying.config.header': '应用配置',//Applying Configurations
   'admin.security.applying.config.body':'当正在应用配置的时候,您不能退出向导',//You cannot quit wizard while configurations are being applied
@@ -1564,7 +1564,7 @@ Em.I18n.translations = {
   'admin.cluster.repositories.popup.body.success':'Repo基础URL已成功保存.',//The Repo Base URL has been saved successfully
   'admin.cluster.repositories.popup.body.fail':'基础URL验证失败并没有被保存.',//The Base URL failed validation and has not been saved
   'admin.cluster.repositories.invalidURLAttention': '<b>注意:</b> 请确保所有库URL都保存之前有效.',//Please make sure all repository URLs are valid before saving
-  'admin.cluster.repositories.emptyURLattention':'<b>注意:</b>URL资源是必需的，然后才能保存.',// Repository URLs are REQUIRED before you can save
+  'admin.cluster.repositories.emptyURLattention':'<b>注意:</b>URL资源是必需的,然后才能保存.',// Repository URLs are REQUIRED before you can save
   'admin.cluster.repositories.skipValidation.tooltip':'<b>警告:</b> 只有高级用户才能使用这个选项。如果你想使用这个选择跳过基础URL验证是不行的',//This is for advanced users only. Use this option if you want to skip validation for Repository Base URLs
 
   'admin.misc.header': '服务用户和组',//Service Users and Groups
@@ -1596,12 +1596,12 @@ Em.I18n.translations = {
   'admin.stackVersions.version.notInstalled': "未安装",//Not Installed
   'admin.stackVersions.version.hostsInfoTooltip': "有{0}主机不需要安装的软件包：<LI>{1}维护模式</li> <li> {2}不要求</li>",//There are {0} hosts that do not need packages installed:<li>{1} Maintenance Mode</li><li>{2} Not Required</li>
   'admin.stackVersions.manageVersions': "管理版本",//Manage Versions
-  'admin.stackVersions.manageVersions.popup.body': '你即将离开<b>集群管理</b>的接口，并转到<b> Ambari管理</b>的接口。您可以通过跳转到信息中心链接, 在Ambari管理>集群 部分返回集群管理.',//You are about to leave the <b>Cluster Management</b> interface  and go to the <b>Ambari Administration</b> interface. You can return to cluster management by using the “Go to Dashboard” link in the Ambari Administration > Clusters section
+  'admin.stackVersions.manageVersions.popup.body': '你即将离开<b>集群管理</b>的接口,并转到<b> Ambari管理</b>的接口。您可以通过跳转到信息中心链接, 在Ambari管理>集群 部分返回集群管理.',//You are about to leave the <b>Cluster Management</b> interface  and go to the <b>Ambari Administration</b> interface. You can return to cluster management by using the “Go to Dashboard” link in the Ambari Administration > Clusters section
   'admin.stackVersions.version.installNow': "安装软件包",//Install Packages
   'admin.stackVersions.version.reinstall': "重新安装软件包",//Reinstall Packages
   'admin.stackVersions.version.performUpgrade': "执行升级",//Perform Upgrade
   'admin.stackVersions.version.upgrade.pause': "升级：需要采取的行动",//Upgrade: Action Required
-  'admin.stackVersions.version.upgrade.notFinalized.warning': "此次升级还没有最后确定。这个集群被证实是实用后，别忘了尽快完成升级（强烈建议在几天内完成）,在未格式化状态运行集群会导致HDFS上额外的资源需求.",//The upgrade has not been finalized yet. After the cluster is verified to be functional, do not forget to finalize the upgrade as soon as possible (within a couple of days is highly recommended) as running the cluster in unfinalized state causes extra resource requirements on HDFS
+  'admin.stackVersions.version.upgrade.notFinalized.warning': "此次升级还没有最后确定。这个集群被证实是实用后,别忘了尽快完成升级（强烈建议在几天内完成）,在未格式化状态运行集群会导致HDFS上额外的资源需求.",//The upgrade has not been finalized yet. After the cluster is verified to be functional, do not forget to finalize the upgrade as soon as possible (within a couple of days is highly recommended) as running the cluster in unfinalized state causes extra resource requirements on HDFS
   'admin.stackVersions.version.upgrade.running': "升级：正在进行",//Upgrade: In Process
   'admin.stackVersions.version.upgrade.aborted': "升级：中止",//Upgrade: Aborted
   'admin.stackVersions.version.upgrade.suspended': "升级：暂停",//Upgrade: Paused
@@ -1612,7 +1612,7 @@ Em.I18n.translations = {
   'admin.stackUpgrade.state.paused.fail.header': "暂停,升级失败",//Pause Upgrade failed
   'admin.stackUpgrade.state.paused.fail.body': "升级不能暂停。 稍后再试.",//Upgrade could not be paused. Try again later
   'admin.stackDowngrade.state.paused.fail.header': '终止下载更新失败',//"Pause Downgrade failed",
-  'admin.stackDowngrade.state.paused.fail.body': '下载更新不能被终止，请稍后再试',//"Downgrade could not be paused. Try again later.",
+  'admin.stackDowngrade.state.paused.fail.body': '下载更新不能被终止,请稍后再试',//"Downgrade could not be paused. Try again later.",
 
   'admin.stackVersions.version.upgrade.upgradeOptions.header': "升级选项",//Upgrade Options
   'admin.stackVersions.version.upgrade.upgradeOptions.bodyMsg.version': '您将要升级成<b>{0}</b>.',//You are about to perform an upgrade to <b>{0}</b>
@@ -1620,9 +1620,9 @@ Em.I18n.translations = {
   'admin.stackVersions.version.upgrade.upgradeOptions.bodyMsg.tolerance': "选择可选升级容错性:",//Select optional upgrade failure tolerance
   'admin.stackVersions.version.upgrade.upgradeOptions.tolerance.option1': "从组件故障中跳过所有",//Skip all Slave Component failures
   'admin.stackVersions.version.upgrade.upgradeOptions.tolerance.option2': "跳过所有业务检查故障",//Skip all Service Check failures
-  'admin.stackVersions.version.upgrade.upgradeOptions.tolerance.tooltip': "在一个大型集群上进行升级时，这些升级容错性选项是有用的，要最大限度地减少用户干预.",//These upgrade failure tolerance options are useful when performing an upgrade on a large cluster and you want to minimize user intervention
+  'admin.stackVersions.version.upgrade.upgradeOptions.tolerance.tooltip': "在一个大型集群上进行升级时,这些升级容错性选项是有用的,要最大限度地减少用户干预.",//These upgrade failure tolerance options are useful when performing an upgrade on a large cluster and you want to minimize user intervention
   'admin.stackVersions.version.upgrade.upgradeOptions.RU.title': "在线升级",//Rolling Upgrade
-  'admin.stackVersions.version.upgrade.upgradeOptions.RU.description': "升级服务仍然正常运行。影响减至最低，但升级慢.",//Services remain running while the upgrade is performed. Minimized disruption but slower upgrade
+  'admin.stackVersions.version.upgrade.upgradeOptions.RU.description': "升级服务仍然正常运行。影响减至最低,但升级慢.",//Services remain running while the upgrade is performed. Minimized disruption but slower upgrade
   'admin.stackVersions.version.upgrade.upgradeOptions.EU.title': "快速升级",//Express Upgrade
   'admin.stackVersions.version.upgrade.upgradeOptions.EU.description': "服务执行升级时停止。会导致停机,但是更快的升级.",//Services are stopped while the upgrade is performed. Incurs downtime, but faster upgrade
   'admin.stackVersions.version.upgrade.upgradeOptions.errors_bypassed': "Bypassed errors,<br/>proceed at your own risk.",
@@ -1656,15 +1656,15 @@ Em.I18n.translations = {
   'admin.stackUpgrade.preCheck.fail.message': "{0} Required {1}",
 
   'admin.stackUpgrade.finalize.later': "完成后",//Finalize Later
-  'admin.stackUpgrade.finalize.message.upgrade': "您的集群版本已经升级点击<b>完成</b>如果您准备完成升级并提交到新版本，我们强烈建议你运行你的集群上测试，以确保它是敲定之前全面投入运作，一旦升级确定你不能回到原来的版本." ,//Your cluster version has been upgraded Click on <b>Finalize</b> when you are ready to finalize the upgrade and commit to the new version  You are strongly encouraged to run tests on your cluster to ensure it is fully operational before finalizing. <b>You cannot go back to the original version once the upgrade is finalized.</b>",
-  'admin.stackUpgrade.finalize.message.downgrade': "您的集群版本已经降级，请点击<b>完成</b>当你准备敲定降级并提交到新版本，我们强烈建议您到集群，以确保它在运行测试是敲定之前全面运作，<b>您不能再回到原来的版本，一旦降级确定。</b>",//Your cluster version has been downgraded, Click on <b>Finalize</b> when you are ready to finalize the downgrade and commit to the new version, You are strongly encouraged to run tests on your cluster to ensure it is fully operational before finalizing,<b>You cannot go back to the original version once the downgrade is finalized.</b>
-  'admin.stackUpgrade.finalize.message.skippedServiceChecks': "在升级过程中，以下服务检查失败，被跳过:",//During the upgrade, checks for the following services failed and were skipped
+  'admin.stackUpgrade.finalize.message.upgrade': "您的集群版本已经升级点击<b>完成</b>如果您准备完成升级并提交到新版本,我们强烈建议你运行你的集群上测试,以确保它是敲定之前全面投入运作,一旦升级确定你不能回到原来的版本." ,//Your cluster version has been upgraded Click on <b>Finalize</b> when you are ready to finalize the upgrade and commit to the new version  You are strongly encouraged to run tests on your cluster to ensure it is fully operational before finalizing. <b>You cannot go back to the original version once the upgrade is finalized.</b>",
+  'admin.stackUpgrade.finalize.message.downgrade': "您的集群版本已经降级,请点击<b>完成</b>当你准备敲定降级并提交到新版本,我们强烈建议您到集群,以确保它在运行测试是敲定之前全面运作,<b>您不能再回到原来的版本,一旦降级确定。</b>",//Your cluster version has been downgraded, Click on <b>Finalize</b> when you are ready to finalize the downgrade and commit to the new version, You are strongly encouraged to run tests on your cluster to ensure it is fully operational before finalizing,<b>You cannot go back to the original version once the downgrade is finalized.</b>
+  'admin.stackUpgrade.finalize.message.skippedServiceChecks': "在升级过程中,以下服务检查失败,被跳过:",//During the upgrade, checks for the following services failed and were skipped
   'admin.stackUpgrade.finalize.message.testServices': "强烈建议您升级确定之前测试这些服务.",//You are strongly recommended to test these services before finalizing upgrade
   'admin.stackUpgrade.failedHosts.message': "升级没有成功",//Upgrade did not succeed on
   'admin.stackUpgrade.failedHosts.showHosts': "{0} 主机",//{0} hosts
   'admin.stackUpgrade.failedHosts.options': "您的选择:",//Your options
-  'admin.stackUpgrade.failedHosts.options.first': "<b>暂停升级</b>中，删除不健康的主机，并返回升级向导继续.",//<b>Pause Upgrade</b>, delete the unhealthy hosts and return to the Upgrade Wizard to Proceed
-  'admin.stackUpgrade.failedHosts.options.second': "执行<b>降级</b>中，这将恢复所有主机到以前的堆栈版本.",//Perform a <b>Downgrade</b>, which will revert all hosts to the previous stack version
+  'admin.stackUpgrade.failedHosts.options.first': "<b>暂停升级</b>中,删除不健康的主机,并返回升级向导继续.",//<b>Pause Upgrade</b>, delete the unhealthy hosts and return to the Upgrade Wizard to Proceed
+  'admin.stackUpgrade.failedHosts.options.second': "执行<b>降级</b>中,这将恢复所有主机到以前的堆栈版本.",//Perform a <b>Downgrade</b>, which will revert all hosts to the previous stack version
   'admin.stackUpgrade.failedHosts.options.third': "忽略这些失败和现在<b>继续</B>（后来调和失败）.",//Ignore these failures and <b>Proceed</b> for now (reconcile the failures later)
   'admin.stackUpgrade.failedHosts.header': "主机失败",//Failed Hosts
   'admin.stackUpgrade.failedHosts.subHeader': "{0}主机 升级失败",//pgrade failed on {0} hosts
@@ -1680,7 +1680,7 @@ Em.I18n.translations = {
   "<li>DO NOT make any drastic changes to service configurations</li></ul>" +
   "You <strong>MUST</strong> continue the {0} and finalize <strong>BEFORE</strong> performing <strong>ANY</strong> significant changes to the cluster.",
   'admin.stackUpgrade.downgrade.proceed': "降级继续",//Proceed with Downgrade
-  'admin.stackUpgrade.downgrade.body': "你确定要中止升级过程，并降级到的<b>{0}</b>?",//Are you sure you wish to abort the upgrade process and downgrade to <b>{0}</b>
+  'admin.stackUpgrade.downgrade.body': "你确定要中止升级过程,并降级到的<b>{0}</b>?",//Are you sure you wish to abort the upgrade process and downgrade to <b>{0}</b>
   'admin.stackUpgrade.downgrade.retry.body': "你确定你想要重试降级到的<b>{0}</b>?",//Are you sure you wish to retry downgrade to <b>{0}</b>
   'admin.stackUpgrade.upgrade.confirm.body': "您将要执行升级到{0}.",//You are about to perform an upgrade to {0}
   'admin.stackUpgrade.upgrade.retry.confirm.body': "您将要重新尝试升级到{0}.",//You are about to retry an upgrade to {0}
@@ -1704,12 +1704,12 @@ Em.I18n.translations = {
   'admin.stackUpgrade.dialog.failed': "失败:",//Failed on
   'admin.stackUpgrade.dialog.manual.slaveComponentFailures.title': "属于组件故障",//Slave Component Failures
   'admin.stackUpgrade.dialog.manual.serviceCheckFailures.title': "服务检查失败",//Service Check Failures
-  'admin.stackUpgrade.dialog.manual.serviceCheckFailures.msg1': "以下服务检查失败，但被跳过:",//The following service checks failed but were skipped
+  'admin.stackUpgrade.dialog.manual.serviceCheckFailures.msg1': "以下服务检查失败,但被跳过:",//The following service checks failed but were skipped
   'admin.stackUpgrade.dialog.manual.serviceCheckFailures.msg2': "在继续操作之前.你必须暂停升级和解决上述选项的问题.",//You have the option to Pause Upgrade and fix the above issue(s) before proceeding
   'admin.stackUpgrade.dialog.manual': "需要手动步骤",//Manual steps required
   'admin.stackUpgrade.dialog.manualDone': "我已经完成上面的手动步骤.",//I have performed the manual steps above
-  'admin.stackUpgrade.dialog.closeProgress': "升级正在进行中。 \n如果关闭此窗口，将升级保持后台运行.",//Upgrade is in progress. \n If you dismiss this window, Upgrade will keep running in background
-  'admin.stackUpgrade.dialog.closePause': "升级已暂停。 \n如果你关闭此窗口，即可恢复以后升级.",//Upgrade is paused. \n If you dismiss this window, you can resume Upgrade later
+  'admin.stackUpgrade.dialog.closeProgress': "升级正在进行中。 \n如果关闭此窗口,将升级保持后台运行.",//Upgrade is in progress. \n If you dismiss this window, Upgrade will keep running in background
+  'admin.stackUpgrade.dialog.closePause': "升级已暂停。 \n如果你关闭此窗口,即可恢复以后升级.",//Upgrade is paused. \n If you dismiss this window, you can resume Upgrade later
   'admin.stackUpgrade.dialog.aborted': "升级被中止。 \n您也可以降级或重试升级.",//Upgrade is aborted. \n You can either downgrade or retry upgrade
   'admin.stackUpgrade.dialog.downgrade.aborted': "降级被中止。 \n您可以重试降级.",//Downgrade is aborted. \n You can retry downgrade
   'admin.stackUpgrade.dialog.suspended': "升级已暂停",//Upgrade is Paused
@@ -2005,7 +2005,7 @@ Em.I18n.translations = {
 
   'services.service.config.nothing.to.display': '无属性显示.',//No properties to display
   'services.service.config.final':'最后',//Final
-  'services.service.config.password.additionalDescription': '为了安全起见，密码更改将不会显示在配置版本比较',//For security purposes, password changes will not be shown in configuration version comparisons
+  'services.service.config.password.additionalDescription': '为了安全起见,密码更改将不会显示在配置版本比较',//For security purposes, password changes will not be shown in configuration version comparisons
   'services.service.config.secure.additionalDescription': 'This config can be changed from Kerberos page under Admin tab by privileged users.',
   'services.service.config.saved':'保存配置更改',//Save Configuration Changes
   'services.service.config.notSaved':'无法保存配置更改',//Unable to Save Configuration Changes
@@ -2033,14 +2033,14 @@ Em.I18n.translations = {
   'services.service.config.addPropertyWindow.bulkMode' : '批量添加属性模式',//Bulk property add mode
   'services.service.config.addPropertyWindow.singleMode' : '单个属性添加模式',//Single property add mode
   'services.service.config.stopService.runningHostComponents':'{0}组件在{1}主机上运行',//{0} components on {1} hosts are running
-  'services.service.config.stopService.unknownHostComponents':'{0}组件在{1}主机上处于未知状态。这些组件实际上可能会运行，以后需要重新启动，以使更改生效.',//{0} components on {1} hosts are in unknown state.  These components might actually be running and need restarting later to make the changes effective
+  'services.service.config.stopService.unknownHostComponents':'{0}组件在{1}主机上处于未知状态。这些组件实际上可能会运行,以后需要重新启动,以使更改生效.',//{0} components on {1} hosts are in unknown state.  These components might actually be running and need restarting later to make the changes effective
   'services.service.config.confirmDirectoryChange':'您要进行的是更改核心服务目录{0}。在开始之前,如有任何更改,对您的操作是有绝对的影响的,有必要采取手动步骤。你确定要继续?',//You are about to make changes to service directories that are core to {0}. Before you proceed, be absolutely certain of the implications and that you have taken necessary manual steps, if any, for the changes. Are you sure you want to proceed
   'services.service.config.configOverride.head':'配置重载',//Config Override
   'services.service.config.configOverride.body':'不能重载尚未保存一个配置.',//Cannot override a config that has not been saved yet
   'services.service.config.exitPopup.body':'您有未保存的更改。保存更改或放弃?',//You have unsaved changes. Save changes or discard
-  'services.service.config.exitChangesPopup.body':'你会被带回\"分配Slave和客户端\"这一步，将失去当前所有的自定义设置。 你确定?',//You will be brought back to the \"Assign Slaves and Clients\" step and will lose all your current customizations. Are you sure
+  'services.service.config.exitChangesPopup.body':'你会被带回\"分配Slave和客户端\"这一步,将失去当前所有的自定义设置。 你确定?',//You will be brought back to the \"Assign Slaves and Clients\" step and will lose all your current customizations. Are you sure
   'services.service.config.propertyFilterPopover.title':'属性过滤器',//Properties filter
-  'services.service.config.propertyFilterPopover.content':'输入关键字进行过滤属性名称属性值，或说明.',//Enter keywords to filter properties by property name, value, or description
+  'services.service.config.propertyFilterPopover.content':'输入关键字进行过滤属性名称属性值,或说明.',//Enter keywords to filter properties by property name, value, or description
   'services.service.config.hive.oozie.postgresql': '现有PostgreSQL数据库',//Existing PostgreSQL Database
   'services.service.config.database.connection.success': '连接 OK',//Connection
   'services.service.config.database.connection.inProgress': '检查连接',//Checking connectivity
@@ -2052,7 +2052,7 @@ Em.I18n.translations = {
   'services.service.config.database.btn.connecting': '连接中...',
   'services.service.config.database.msg.jdbcSetup': '要确保已运行:<br/>' +//Be sure you have run
   '<b>ambari-server setup --jdbc-db={0} --jdbc-driver=/path/to/{0}/{1}</b> ' +
-  '在Ambari Server主机上，使现有的JDBC驱动程序，并启用测试数据库连接.',//on the Ambari Server host to make the JDBC driver available and to enable testing the database connection
+  '在Ambari Server主机上,使现有的JDBC驱动程序,并启用测试数据库连接.',//on the Ambari Server host to make the JDBC driver available and to enable testing the database connection
   'services.service.config.configHistory.configGroup': '配置组',//Config Group
   'services.service.config.configHistory.rightArrow.tooltip': '显示早期版本',//Show earlier versions
   'services.service.config.configHistory.leftArrow.tooltip': '显示更高版本',//Show later versions
@@ -2093,7 +2093,7 @@ Em.I18n.translations = {
     '</ol>',
   'services.service.stop.HDFS.warningMsg.checkPointTooOld': 'The last HDFS checkpoint is older than {0} hours. Make sure that you have taken a checkpoint before proceeding. Otherwise, the NameNode(s) can take a very long time to start up.',
   'services.service.config_groups_popup.header':'管理{0}配置组',//Manage {0} Configuration Groups
-  'services.service.config_groups_popup.notice':'您可以通过管理{{服务名}}配置组及其成员的主机应用不同的集合{{服务名}}配置，主机组。属于{{服务名}}配置组主机具有相同的一组配置的{{服务名}}。每个主机属于一个{{服务名}}配置组.',//You can apply different sets of {{serviceName}} configurations to groups of hosts by managing {{serviceName}} Configuration Groups and their host membership.  Hosts belonging to a {{serviceName}} Configuration Group have the same set of configurations for {{serviceName}}. Each host belongs to one {{serviceName}} Configuration Group
+  'services.service.config_groups_popup.notice':'您可以通过管理{{服务名}}配置组及其成员的主机应用不同的集合{{服务名}}配置,主机组。属于{{服务名}}配置组主机具有相同的一组配置的{{服务名}}。每个主机属于一个{{服务名}}配置组.',//You can apply different sets of {{serviceName}} configurations to groups of hosts by managing {{serviceName}} Configuration Groups and their host membership.  Hosts belonging to a {{serviceName}} Configuration Group have the same set of configurations for {{serviceName}}. Each host belongs to one {{serviceName}} Configuration Group
   'services.service.config_groups_popup.rename':'重命名',//Rename
   'services.service.config_groups_popup.duplicate':'重复',//Duplicate
   'services.service.config_groups_popup.group_name_lable':'名称',//Name
@@ -2111,12 +2111,12 @@ Em.I18n.translations = {
   'services.service.config_groups.rename_config_group_popup.header':'重命名配置组',//Rename Configuration Group
   'services.service.config_groups.switchGroupTextFull':'切换到\'{0}\'主机配置组',//Switch to \'{0}\' host config group
   'services.service.config_groups.switchGroupTextShort':'切换到 \'{0}\'',
-  'services.reassign.closePopup':'移动{0}向导正在进行中。您必须允许向导来完成Ambari是在可用状态。如果选择退出，则必须按照说明书的指示完成或恢复移动{0}向导为Ambari用户手册中记录。您确定要退出向导?',//Move {0} wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert move {0} wizard as documented in the Ambari User Guide. Are you sure you want to exit the wizard
+  'services.reassign.closePopup':'移动{0}向导正在进行中。您必须允许向导来完成Ambari是在可用状态。如果选择退出,则必须按照说明书的指示完成或恢复移动{0}向导为Ambari用户手册中记录。您确定要退出向导?',//Move {0} wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert move {0} wizard as documented in the Ambari User Guide. Are you sure you want to exit the wizard
   'services.reassign.error.fewHosts':'您必须至少有2台主机在集群中运行移动向导.',//You must have at least 2 hosts in your cluster to run Move Wizard
 
   'services.reassign.step1.header':'开始使用',//Get Started
   'services.reassign.step1.message1': '该向导将引导您完成移动{0}.<br/>',//This wizard will walk you through moving {0}
-  'services.reassign.step1.message2': '该过程重新分配{0}涉及的组合的<b>自动化步骤</b>（将由向导处理）和<b>人工步骤</b>的（即，必须按顺序执行由指令向导）。<bbrr/></>',//The process to reassign {0} involves a combination of <b>automated steps</b> (that will be handled by the wizard) and <b>manual steps</b> (that you must perform in sequence as instructed by the wizard).<br/><br/>
+  'services.reassign.step1.message2': '该过程重新分配{0}涉及的组合的<b>自动化步骤</b>（将由向导处理）和<b>人工步骤</b>的（即,必须按顺序执行由指令向导）。<bbrr/></>',//The process to reassign {0} involves a combination of <b>automated steps</b> (that will be handled by the wizard) and <b>manual steps</b> (that you must perform in sequence as instructed by the wizard).<br/><br/>
   'services.reassign.step1.message3': '<br/><b>当你准备移动{0}时.所有需要的服务将会是重新启动向导的一部分。你应该计划集群维护窗口和集群停机时间.</b>',//All required services will be restarted as part of the wizard. You should plan a cluster maintenance window and prepare for cluster downtime when moving {0}
 
   'services.reassign.step2.header':'分配Master',//Assign Master
@@ -2217,7 +2217,7 @@ Em.I18n.translations = {
 	  '<li>从 <b>{1}</b> 拷贝内容到' +//On <b>{1}</b> copy the contents of
 	  '<div class="code-snippet"><b>/hadoop/oozie/data/oozie-db</b></div></li>' +
 	  '<li>目标主机 <b>{2}</b></li>' +
-	  '<li>如果该目录不存在，你可以通过运行一下代码创建' +//If the directory doesn\'t exists you can create by running
+	  '<li>如果该目录不存在,你可以通过运行一下代码创建' +//If the directory doesn\'t exists you can create by running
 	  '<div class="code-snippet">mkdir -p /hadoop/oozie/data/oozie-db</div></li>' +
 	  '<li>通过运行一下代码更新目录权限' +//Update directory permissions by running
 	  '<div class="code-snippet">chown -R oozie:{5} /hadoop/oozie/data</div></li>' +
@@ -2226,7 +2226,7 @@ Em.I18n.translations = {
 	  'services.reassign.step5.body.mysql_server':
 	  '<div class="alert alert-info">' +
 	  '<ol>' +
-	  '<li>在<B>{1} </ b>的使用终端，你可以导出Metastore DB（MySQL的),使用命令:' +//On <b>{1}</b> using a terminal you can export your Metastore DB (MYSQL) using
+	  '<li>在<B>{1} </ b>的使用终端,你可以导出Metastore DB（MySQL的),使用命令:' +//On <b>{1}</b> using a terminal you can export your Metastore DB (MYSQL) using
 	  '<div class="code-snippet">mysqldump db_name > backup-file.sql</div></li>' +
 	  '<li>将文件复制到目标主机的<b>{2} </b>的托管MySQL数据库</li>' +//Copy the file to the target host <b>{2}</b> hosting the MySQL DB
 	  '<li>执行这里面SQL<b> MySQL的<b>' +//Execute this SQL inside <b>mysql<b>
@@ -2306,7 +2306,7 @@ Em.I18n.translations = {
   'services.hbase.master.error':'HBase masters都不是有效的',//None of the HBase masters is active
 
   'alerts.actions.manage_alert_groups_popup.header':'管理警告 分组数',
-  'alerts.actions.manage_alert_groups_popup.notice':'您可以管理组的警告在此对话框中的每个服务。查看警告组的列表和它们配置的警告定义还可以添加/删除警告定义，并挑选通知该警告组.',//You can manage alert groups for each service in this dialog. View the list of alert groups and the alert definitions configured in them You can also add/remove alert definitions, and pick notification for that alert group
+  'alerts.actions.manage_alert_groups_popup.notice':'您可以管理组的警告在此对话框中的每个服务。查看警告组的列表和它们配置的警告定义还可以添加/删除警告定义,并挑选通知该警告组.',//You can manage alert groups for each service in this dialog. View the list of alert groups and the alert definitions configured in them You can also add/remove alert definitions, and pick notification for that alert group
   'alerts.actions.manage_alert_groups_popup.rename':'重命名',//Rename
   'alerts.actions.manage_alert_groups_popup.duplicate':'重复',
   'alerts.actions.manage_alert_groups_popup.group_name_lable':'名称',
@@ -2393,7 +2393,7 @@ Em.I18n.translations = {
   'hosts.bulkOperation.confirmation.hosts':'你确定你想要<strong>{0}</strong>下列{1}主机?',//Are you sure you want to <strong>{0}</strong> on the following {1} hosts
   'hosts.bulkOperation.confirmation.hostComponents':'你确定你想要<strong>{0}{1}</strong> 下列{2}主机?',//Are you sure you want to <strong>{0} {1}</strong> on the following {2} hosts
   'hosts.bulkOperation.passiveState.nothingToDo.body':'您选择的所有主机都已经处于维护模式.',//All hosts that you selected are already in Maintenance Mode
-  'hosts.bulkOperation.warningInfo.body':'在这些主机组件停止，退役将被跳过.',//Components on these hosts are stopped so decommission will be skipped
+  'hosts.bulkOperation.warningInfo.body':'在这些主机组件停止,退役将被跳过.',//Components on these hosts are stopped so decommission will be skipped
   'hosts.bulkOperation.host_components.passiveState.nothingToDo.body':'您选择的所有主机部件都已经处于维护模式',//All host components that you selected are already in Maintenance Mode
   'hosts.bulkOperation.confirmation.add.component':'You are going to <strong>{0} {1}</strong> on the following {2} hosts.',
   'hosts.bulkOperation.confirmation.add.component.skip':'The following hosts are skipped as they already have {0} installed.',
@@ -2491,13 +2491,13 @@ Em.I18n.translations = {
   'hosts.host.addComponent.NIMBUS': '添加 Nimbus 将要配置 <b>nimbus.seeds</b>, <b>topology.min.replication.count</b>, <b>topology.max.replication.wait.time.sec</b> properties if they are defined.',
   'hosts.host.addComponent.RANGER_KMS_SERVER': '添加 Ranger KMS 服务 可能要 重新配置这样的属性:<ul><li>hadoop.security.key.provider.path</li><li>dfs.encryption.key.provider.uri</li>',
   'hosts.host.addComponent.deleteHostWithZooKeeper':'删除本地的 ZooKeeper 服务器 可能要 重新配置这样的属性:<ul><li>ha.zookeeper.quorum</li><li>hbase.zookeeper.quorum</li><li>templeton.zookeeper.hosts</li><li>yarn.resourcemanager.zk-address</li><li>hive.zookeeper.quorum</li><li>hive.cluster.delegation.token.store.zookeeper.connectString</li></ul>',
-  'host.host.addComponent.popup.dependedComponents.body': '{0}需要{1}与它在同一台主机上安装一起。请首先添加它们，然后尝试添加{0}',//{0} requires {1} to be installed along with it on the same host. Please add them first and then try adding {0}
+  'host.host.addComponent.popup.dependedComponents.body': '{0}需要{1}与它在同一台主机上安装一起。请首先添加它们,然后尝试添加{0}',//{0} requires {1} to be installed along with it on the same host. Please add them first and then try adding {0}
   'host.host.addComponent.popup.dependedComponents.header': '组件的依赖',//Component dependencies
   'host.host.addComponent.popup.clients.dependedComponents.body': '{0}需要{1}能够与他们一起安装在同一台主机上。请先将它们添加',//{0} require {1} to be installed along with them on the same host. Please add them first
   'hosts.host.zooKeeper.configs.save.note': '此配置是zookeeper管理员的通过ambari在安装/删除组件在主机上创建',//This configuration is created by ambari while installing/deleting zookeeper component on a host
-  'hosts.host.addComponent.securityNote':'您正在安全模式下运行集群。你必须为{0}在{1}之前启动的密钥表。否则，该组件将无法正常启动.',//You are running your cluster in secure mode. You must set up the keytab for {0} on {1} before you proceed. Otherwise, the component will not be able to start properly
+  'hosts.host.addComponent.securityNote':'您正在安全模式下运行集群。你必须为{0}在{1}之前启动的密钥表。否则,该组件将无法正常启动.',//You are running your cluster in secure mode. You must set up the keytab for {0} on {1} before you proceed. Otherwise, the component will not be able to start properly
   'hosts.host.addComponent.popup.confirm':'确认添加',//Confirm Add
-  'hosts.host.manualKerberosWarning': '<br/><strong>因为Kerberos已手动安装在集群上，你必须创建/分配的主体长和keytabs当此操作完成.</strong>',//Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished
+  'hosts.host.manualKerberosWarning': '<br/><strong>因为Kerberos已手动安装在集群上,你必须创建/分配的主体长和keytabs当此操作完成.</strong>',//Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished
   'hosts.host.deleteComponent.popup.deleteNimbus':'删除 <i>Storm Nimbus</i> 将要配置 <b>nimbus.seeds</b>, <b>topology.min.replication.count</b>, <b>topology.max.replication.wait.time.sec</b> properties if they are defined.',
   'hosts.host.storm.configs.save.note': '此配置是通过ambari在安装/删除组件的时候在storm的主机上创建',//This configuration is created by ambari while installing/deleting storm component on a host
   'hosts.host.datanode.decommission':'停止使用DataNode',
@@ -2521,8 +2521,8 @@ Em.I18n.translations = {
   'hosts.host.deleteComponent.popup.deleteWebHCatServer':'删除 <i>WebHCat Server</i> 可能要 重新配置这样的属性:<ul><li>hive.metastore.uris</li><li>templeton.hive.properties</li></ul>',
   'hosts.host.configs.save.note': '此配置是通过ambari在安装/删除{0}组件的主机上创建',//This configuration is created by ambari while installing/deleting {0} component on a host
 
-  'hosts.component.passive.implied.host.mode.tooltip':'不能关闭维护模式，因为主机处于维护模式',//Cannot Turn Off Maintenance Mode because Host is in Maintenance Mode
-  'hosts.component.passive.implied.service.mode.tooltip':'不能关闭维护模式，因为{0}处于维护模式',//Cannot Turn Off Maintenance Mode because {0} is in Maintenance Mode
+  'hosts.component.passive.implied.host.mode.tooltip':'不能关闭维护模式,因为主机处于维护模式',//Cannot Turn Off Maintenance Mode because Host is in Maintenance Mode
+  'hosts.component.passive.implied.service.mode.tooltip':'不能关闭维护模式,因为{0}处于维护模式',//Cannot Turn Off Maintenance Mode because {0} is in Maintenance Mode
   'hosts.component.passive.mode':'组件处于维护模式',//Component is in Maintenance Mode
   'hosts.component.passive.short.mode':'维护模式',//Maintenance Mode
   'hosts.host.passive.mode':'主机处于维护模式',//Host is in Maintenance Mode
@@ -2547,18 +2547,18 @@ Em.I18n.translations = {
   'hosts.decommission.tooltip.warning':'不能{0}从{1}因为它未运行',//Cannot {0} since {1} is not running
   'hosts.delete.popup.body':'你确定要删除的主机的<i>{0}</i>?',//Are you sure you want to delete host <i>{0}</i>
   //By removing this host, Ambari will ignore future communications from this host. Software packages will not be removed from the host. The components on the host should not be restarted. If you wish to readd this host to the cluster, be sure to clean the host
-  'hosts.delete.popup.body.msg1':'通过消除该主机，Ambari会忽略从该主机未来的通信。软件包将不会从主机移除。在主机上的组件不应该被重新启动。如果你希望这台主机重新进行添加到集群，请务必主机卸载相应应用.',
-  'hosts.delete.popup.body.msg3':'如果该主机是托管服务器Zookeeper管理员，Zookeeper管理员应该重新启动服务。进入<i>服务</i>页.',//If this host was hosting a Zookeeper Server, the Zookeeper Service should be restarted. Go to the <i>Services</i> page
+  'hosts.delete.popup.body.msg1':'通过消除该主机,Ambari会忽略从该主机未来的通信。软件包将不会从主机移除。在主机上的组件不应该被重新启动。如果你希望这台主机重新进行添加到集群,请务必主机卸载相应应用.',
+  'hosts.delete.popup.body.msg3':'如果该主机是托管服务器Zookeeper管理员,Zookeeper管理员应该重新启动服务。进入<i>服务</i>页.',//If this host was hosting a Zookeeper Server, the Zookeeper Service should be restarted. Go to the <i>Services</i> page
   'hosts.delete.popup.body.msg4':'<b>警告!</b>删除最后的<i>{0}</i>的成分集群中？<br>删除集群中的最后一个组件可能会导致业务数据永久丢失.',// Delete the last <i>{0}</i> component[s] in the cluster?</br>Deleting the last components in the cluster could result in permanent loss of service data
   'hosts.delete.popup.body.msg5':'<b>警告!</b> 代理仍是心脏的跳动使主机仍然会存在于数据库中.',//The agent is still heartbeating so the Host will still exist in the database
-  'hosts.delete.popup.body.msg6':'要完全删除主机，使用ambari代理一步就可以了.',//To completely delete the Host, first stop ambari-agent on it
+  'hosts.delete.popup.body.msg6':'要完全删除主机,使用ambari代理一步就可以了.',//To completely delete the Host, first stop ambari-agent on it
   'hosts.delete.popup.body.msg7':'<b>WARNING!</b> {0} should be decommissioned first to prevent data loss.',
   'hosts.delete.popup.body.msg.unknownComponents':'该主机不会出现在线和Ambari通信,因为代理已丢失.',//This host does not appear to be online and Ambari communication with the Agent has been lost
   'hosts.delete.popup.header':'确认',//Confirmation
   'hosts.delete.popup.title':'删除主机',//Delete Host
   'hosts.delete.popup.unknownComponents':'以下组件具有未知状态:',//The following components have unknown status
   'hosts.cant.do.popup.title':'无法删除主机',//Unable to Delete Host
-  'hosts.cant.do.popup.masterList.body':'该主机不能删除，因为它具有以下组件:',//This host cannot be deleted since it has the following master components
+  'hosts.cant.do.popup.masterList.body':'该主机不能删除,因为它具有以下组件:',//This host cannot be deleted since it has the following master components
   'hosts.cant.do.popup.masterList.body.end':'要删除此主机.你必须首先将上面列出的所有主组件移动到另一个主机',//To delete this host, you must first move all the master components listed above to another host
   'hosts.cant.do.popup.nonDeletableList.body':'不支持下列{0}成分的缺失. ',//Deletion of the following {0} components is not supported
   'hosts.cant.do.popup.runningList.body':'下列组件正在运行该主机不能删除:',//This host cannot be deleted since the following components are running
@@ -2569,7 +2569,7 @@ Em.I18n.translations = {
   'hosts.assignRack':'分配机架',//Assign Rack
   'hosts.passiveMode.popup':'你确定要<b>打开{0}的维护模式</b>{1}?',//Are you sure you want to <b>Turn {0} Maintenance Mode</b> for {1}
   'hosts.passiveMode.popup.version.mismatch': '{ 0 }组件不是一个当前堆栈。把该主机退出维护模式之前,建议您升级组件{ 1 }',//{0} has components from a stack which is not current. Before bringing this host out of maintenance mode, it is recommended that you upgrade its components to {1}
-  'hosts.passiveMode.popup.version.mismatch.multiple': '有些主机不是一个当前堆栈。把这些主机退出维护模式之前，建议您升级它们的组件{0}',//Some hosts have components from a stack which is not current. Before bringing these hosts out of maintenance mode, it is recommended that you upgrade their components to {0}
+  'hosts.passiveMode.popup.version.mismatch.multiple': '有些主机不是一个当前堆栈。把这些主机退出维护模式之前,建议您升级它们的组件{0}',//Some hosts have components from a stack which is not current. Before bringing these hosts out of maintenance mode, it is recommended that you upgrade their components to {0}
   'hosts.combo.search.placebolder': 'Filter by host and component attributes or search by keyword ...',
   'hosts.combo.search.invalidCategory': 'is not a valid category.',
   'charts.horizon.chart.showText':'展示',//show
@@ -2636,7 +2636,7 @@ Em.I18n.translations = {
   'dashboard.widgets.browser.action.share': '共享',
   'dashboard.widgets.browser.action.share.confirmation': '您将要制作一个共享的部件。所有的集群运营商将能够修改或删除这个小工具。你确定你想分享这个小工具?',//You are about to make this a shared widget. All cluster operators will be able to modify or delete this widget. Are you sure you want to share this widget
   'dashboard.widgets.browser.shareIcon.tooltip': '共享',
-  'dashboard.widgets.browser.action.delete.shared.bodyMsg': '您将要永久删除<b>{0}</b>的小部件这个小工具是一个共享的小部件，这个操作会从共享的部件库中删除窗口小部件并删除所有用户的窗口小部件。<br/> <br/><b>您确定要永久删除此共享窗口小部件？</b>',//You are about to permanently delete the <b>{0}</b> widget This widget is a shared widget and this operation will delete the widget from the shared widget library and remove the widget from all users.<br /> <br /> <b>Are you sure you wish to permanently delete this shared widget?</b>
+  'dashboard.widgets.browser.action.delete.shared.bodyMsg': '您将要永久删除<b>{0}</b>的小部件这个小工具是一个共享的小部件,这个操作会从共享的部件库中删除窗口小部件并删除所有用户的窗口小部件。<br/> <br/><b>您确定要永久删除此共享窗口小部件？</b>',//You are about to permanently delete the <b>{0}</b> widget This widget is a shared widget and this operation will delete the widget from the shared widget library and remove the widget from all users.<br /> <br /> <b>Are you sure you wish to permanently delete this shared widget?</b>
   'dashboard.widgets.browser.action.delete.mine.bodyMsg': '您将要永久删除<b>{0}</b>的窗口小部件,此操作会从你的widget库中删除该Widget。<br/><br/><b>您确定要永久删除此窗口小部件？</b>',//You are about to permanently delete the <b>{0}</b> widget This operation will delete the widget from your widget library.<br /><br /><b>Are you sure you wish to permanently delete this widget?</b>
   'dashboard.widgets.browser.action.delete.btnMsg': '确认删除',//Confirm Delete
 
@@ -2678,7 +2678,7 @@ Em.I18n.translations = {
       'popupHeader': '自定义窗口小部件',//Customize Widget
       'hintInfo': {
         'common': '编辑百分比阈值来改变目前的饼图的颜色。<br/>0-{0}之间输入两个数字',//Edit the percentage thresholds to change the color of current pie chart. <br />Enter two numbers between 0 to {0
-        'hint1': '编辑阈值的百分比来改变当前插件的颜色。 <br/>假设所有的组件升级为100，所有DOWN为0。<br/>所以0-{0}之间输入两个数字',//Edit the percentage of thresholds to change the color of current widget. <br />Assume all components UP is 100, and all DOWN is 0. <br /> So enter two numbers between 0 to {0}
+        'hint1': '编辑阈值的百分比来改变当前插件的颜色。 <br/>假设所有的组件升级为100,所有DOWN为0。<br/>所以0-{0}之间输入两个数字',//Edit the percentage of thresholds to change the color of current widget. <br />Assume all components UP is 100, and all DOWN is 0. <br /> So enter two numbers between 0 to {0}
         'hint2': '编辑阈值来改变当前插件的颜色。<br/><br/>所以输入两个大于0数字.',//Edit the thresholds to change the color of current widget.<br /><br />So enter two numbers larger than 0
         'hint3': '编辑阈值来改变当前插件的颜色。<br/>单位是毫秒。 <br/>所以输入两个大于0数字. ',//Edit the thresholds to change the color of current widget.<br />The unit is milli-second. <br />So enter two numbers larger than 0
         'hint4': 'Edit the threshold value representing the number of {0} that are down to change the color of the widget. <br />If the number of {0} that are down is greater than the threshold, the widget will show warning in Red. <br />Choose a number between 0 and {1}. '
@@ -2690,7 +2690,7 @@ Em.I18n.translations = {
   'dashboard.services.hosts':'主机',
   'dashboard.services.uptime':'{0}',
   'dashboard.services.summary.slaves.live': 'Live',
-  'dashboard.services.hdfs.summary':'{0}{1}节点Live，使用{2}％的产能',//{0} of {1} nodes live, {2}% capacity used
+  'dashboard.services.hdfs.summary':'{0}{1}节点Live,使用{2}％的产能',//{0} of {1} nodes live, {2}% capacity used
   'dashboard.services.hdfs.nanmenode':'NameNode',
   'dashboard.services.hdfs.snanmenode':'备用 NameNode',
   'dashboard.services.hdfs.journalnodes':'JournalNodes',
@@ -2719,7 +2719,7 @@ Em.I18n.translations = {
   //This is the number of DataNodes that are dead as reported from the NameNode. Even if a DataNode process is up, NameNode might see the status as dead if the DataNode is not communicating with the NameNode as expected. This can be due situations such as a network issue or a hanging DataNode process due to excessive garbage collection
   'dashboard.services.hdfs.datanode.status.tooltip.dead': '这是datanode的数量从NameNode生活报道。即使一个DataNode的过程,然后会看到死亡的状态.如果DataNode与NameNode没有按预期的进行通信。这可能是由于情况如网络问题或挂起DataNode由于过度垃圾收集的过程.',
   //This is the number of DataNodes that are currently Decommissioning as reported from the NameNode. If there are not enough other DataNodes in the cluster to create the configured number of block replicas based on the dfs.replication property (typically 3), a DataNode can get stuck in decommissioning state until more DataNodes become available to the NameNode
-  'dashboard.services.hdfs.datanode.status.tooltip.decommission': '这是目前停用从NameNode的报告的DataNodes的数目。如果在集群中没有足够的其他的DataNodes来创建基于dfs.replication属性（通常为3）配置的号码块副本，一个的DataNode可以停留在停用状态，直到更多的DataNodes会提供给NameNode的.',
+  'dashboard.services.hdfs.datanode.status.tooltip.decommission': '这是目前停用从NameNode的报告的DataNodes的数目。如果在集群中没有足够的其他的DataNodes来创建基于dfs.replication属性（通常为3）配置的号码块副本,一个的DataNode可以停留在停用状态,直到更多的DataNodes会提供给NameNode的.',
 
 
   'dashboard.services.yarn.summary':'{0} of {1} nodes live',
@@ -2776,9 +2776,9 @@ Em.I18n.translations = {
 
   'dashboard.services.ranger.rangerTagsyncs':'Ranger Tagsyncs',
 
-  'dashboard.services.components.started':'started',
-  'dashboard.services.components.stopped':'stopped',
-  'dashboard.services.components.total':'in total',
+  'dashboard.services.components.started':'已启动',//'started',
+  'dashboard.services.components.stopped':'已停止',//'stopped',
+  'dashboard.services.components.total':'汇总',//'in total',
 
   'dashboard.services.hive.clients':'Hive 客户端',
   'dashboard.services.hive.client':'Hive客户端',
@@ -2817,7 +2817,7 @@ Em.I18n.translations = {
   'dashboard.configHistory.info-bar.save.popup.title': '保存配置',//Save Configuration
   'dashboard.configHistory.info-bar.makeCurrent.popup.title': '使当前确认',//Make Current Confirmation
   'dashboard.configHistory.info-bar.save.popup.placeholder': '你要怎么改?',//What did you change
-  'dashboard.configHistory.info-bar.save.popup.warningForPasswordChange': '此配置更改包括密码更改。密码更改将被保存，但为安全起见，密码更改将不会在配置版本的比较显示..',//This configuration change includes a password change. The password change will be saved but for security purposes, password changes will not be shown in configuration version comparisons
+  'dashboard.configHistory.info-bar.save.popup.warningForPasswordChange': '此配置更改包括密码更改。密码更改将被保存,但为安全起见,密码更改将不会在配置版本的比较显示..',//This configuration change includes a password change. The password change will be saved but for security purposes, password changes will not be shown in configuration version comparisons
   'dashboard.configHistory.info-bar.save.popup.notesForPasswordChange': ' 更改密码',//Password change
   'dashboard.configHistory.info-bar.revert.button': '使当前',//Make Current
   'dashboard.configHistory.info-bar.revert.versionButton': '让{0}当前',//Make {0} Current
@@ -2858,7 +2858,7 @@ Em.I18n.translations = {
   'rollingrestart.dialog.err.invalid.waitTime': '批次之间的无效等待时间：{0}',//Invalid wait time between batches: {0}
   'rollingrestart.dialog.err.invalid.toleratesize': '无效的失败宽容计数：{0}',//Invalid failure toleration count: {0}
   'rollingrestart.dialog.warn.datanode.batch.size': '重新启动一次超过一个DataNode不推荐。这样做会导致数据不可用的数据和/或可能损失积极写入HFDS.',//Restarting more than one DataNode at a time is not recommended. Doing so can lead to data unavailability and/or possible loss of data being actively written to HFDS
-  'rollingrestart.dialog.msg.serviceNotInMM':'注意: 这将触发警告。要抑制警告，{0}之前触发滚动重启开启维护模式',//This will trigger alerts. To suppress alerts, turn on Maintenance Mode for {0} prior to triggering a rolling restart
+  'rollingrestart.dialog.msg.serviceNotInMM':'注意: 这将触发警告。要抑制警告,{0}之前触发滚动重启开启维护模式',//This will trigger alerts. To suppress alerts, turn on Maintenance Mode for {0} prior to triggering a rolling restart
   'rollingrestart.dialog.msg.staleConfigsOnly': '只有重新启动{0}的陈旧CONFIGS',//Only restart {0}s with stale configs
   'rollingrestart.rest.context': '{0}等滚动重启 - 批{1}{2}',//Rolling Restart of {0}s - batch {1} of {2}
   'rollingrestart.context.allOnSelectedHosts':'重新启动在选定的主机所有部件',//Restart all components on the selected hosts
@@ -2870,13 +2870,13 @@ Em.I18n.translations = {
   'rollingrestart.context.selectedComponentOnSelectedHost':'{0}重新启动',
   'rollingrestart.context.default':'重新启动组件',//Restart components
 
-  'rolling.command.context': '定轧{0}声明“{1}” - 一批{2}的{3}',//Rolling set {0} to state "{1}" - batch {2} of {3}
-  'rolling.nothingToDo.header': '没事做',//Nothing to do
+  'rolling.command.context': '回滚集合{0}到状态"{1}" - 一批{2}的{3}',//Rolling set {0} to state "{1}" - batch {2} of {3}
+  'rolling.nothingToDo.header': '无操作',//Nothing to do
   'rolling.nothingToDo.body': '{0}所选主机已处于选择状态或处于维护模式.',//{0} on selected hosts are already in selected state or in Maintenance Mode
 
-  'widget.type.gauge.description': '一个视图来显示的指标，可以用百分比来表示.',//A view to display metrics that can be expressed in percentage
-  'widget.type.number.description': '一个视图来显示指标，可表示为可选的单位字段单号.',//A view to display metrics that can be expressed as a single number with optional unit field
-  'widget.type.graph.description': '一个视图来显示度量，可在折线图或区域图在一个时间范围来表示.',//A view to display metrics that can be expressed in line graph or area graph over a time range
+  'widget.type.gauge.description': '一个视图来显示的指标,可以用百分比来表示.',//A view to display metrics that can be expressed in percentage
+  'widget.type.number.description': '一个视图来显示指标,可表示为可选的单位字段单号.',//A view to display metrics that can be expressed as a single number with optional unit field
+  'widget.type.graph.description': '一个视图来显示度量,可在折线图或区域图在一个时间范围来表示.',//A view to display metrics that can be expressed in line graph or area graph over a time range
   'widget.type.template.description': '视图与模板的文字同时显示度量值.',//A view to display metric value along with a templated text
   'widget.create.wizard.header': '创建窗口小部件',//Create Widget
   'widget.create.wizard.step1.header': '选择类型',//Select Type
@@ -2884,9 +2884,9 @@ Em.I18n.translations = {
   'widget.create.wizard.step1.body.choose.tooltip': '点击选择',//Click to select
   'widget.create.wizard.step2.header': '指标和表达',//Metrics and Expression
   'widget.create.wizard.step2.template.header': '模板',//Template
-  'widget.create.wizard.step2.body.text':'定义表达式与任何指标和有效的运营商。< / br >在必要时使用括号.',//Define the expression with any metrics and valid operators. </br>Use parentheses when necessary
+  'widget.create.wizard.step2.body.text':'定义表达式与任何指标和有效的操作符。< / br >在必要时使用括号.',//Define the expression with any metrics and valid operators. </br>Use parentheses when necessary
   'widget.create.wizard.step2.body.template':'为使用任意数量的表达式和任何字符串的模板。表达式可以在模板中通过双大括号其名称引用.',//Define the template with any number of expressions and any string. An expression can be referenced from a template by enclosing its name with double curly braces
-  'widget.create.wizard.step2.body.warning':'注：有效的运算符+， - ，*，/',//Note: Valid operators are +, -, *, /
+  'widget.create.wizard.step2.body.warning':'注：有效的运算符+, - ,*,/',//Note: Valid operators are +, -, *, /
   'widget.create.wizard.step2.body.template.invalid.msg':'存在无效的表达式的名字。应该使用名称与双花括号表达式#。',//Invalid expression name existed. Should use name "Expression#" with double curly braces.
   'widget.create.wizard.step2.addExpression': '添加表达式',//Add Expression
   'widget.create.wizard.step2.addDataset': '添加数据集',//Add data set
@@ -2899,9 +2899,9 @@ Em.I18n.translations = {
   'widget.create.wizard.step3.sharing.msg': '分享此窗口小部件到部件库',//Share this widget in the widget library
   'widget.create.wizard.step3.header': '名称和说明',//Name and Description
   'widget.create.wizard.step3.name.invalid.msg': '窗口小部件名称太长。请输入窗口小部件名称少于129个字符.',//Widget name is too long. Please enter a widget name less than 129 characters
-  'widget.create.wizard.step3.name.invalidCharacter.msg': 'Invalid widget name. Only alphanumerics, underscores, hyphens, percentage and spaces are allowed.',
+  'widget.create.wizard.step3.name.invalidCharacter.msg': '错误组件名称,只支持字母数字、下划线、连接符、百分号和空格',//'Invalid widget name. Only alphanumerics, underscores, hyphens, percentage and spaces are allowed.',
   'widget.create.wizard.step3.description.invalid.msg': '说明太长。请输入一个描述少于2049个字符.',//Description is too long. Please enter a description less than 2049 characters
-  'widget.create.wizard.step3.description.invalidCharacter.msg': 'Invalid input. Only alphanumerics, underscores, hyphens, percentage and spaces are allowed.',
+  'widget.create.wizard.step3.description.invalidCharacter.msg': '错误的输入,只支持字母数字、下划线、连接符、百分号和空格',//'Invalid input. Only alphanumerics, underscores, hyphens, percentage and spaces are allowed.',
 
   'widget.edit.wizard.header': '编辑窗口小部件',//Edit Widget
 
@@ -2912,14 +2912,14 @@ Em.I18n.translations = {
 
   'dashboard.widgets.wizard.step2.dataSeries': '数据系列{0}',//Data Series {0}
   'dashboard.widgets.wizard.step2.addMetrics': '添加矩阵和运营商在这里...',//Add Metrics and operators here
-  'dashboard.widgets.wizard.step2.newMetric': '+ 新增指标',//Add Metric
-  'dashboard.widgets.wizard.step2.newOperator': '+ 添加操作',
-  'dashboard.widgets.wizard.step2.newNumber': '+ 添加数量',
+  'dashboard.widgets.wizard.step2.newMetric': '新增指标',//Add Metric
+  'dashboard.widgets.wizard.step2.newOperator': '添加操作',
+  'dashboard.widgets.wizard.step2.newNumber': '添加数量',
   'dashboard.widgets.wizard.step2.Component': '组件',
   'dashboard.widgets.wizard.step2.Metric': '指标',
   'dashboard.widgets.wizard.step2.selectComponent': '选择组件',
-  'dashboard.widgets.wizard.step2.selectMetric': '选择 指标',
-  'dashboard.widgets.wizard.step2.addMetric': '添加 指标',
+  'dashboard.widgets.wizard.step2.selectMetric': '选择指标',
+  'dashboard.widgets.wizard.step2.addMetric': '添加指标',
   'dashboard.widgets.wizard.step2.aggregateFunction': '聚集功能',//Aggregator Function
   'dashboard.widgets.wizard.step2.aggregateFunction.scanOps': '选择汇聚',//Select Aggregation
   'dashboard.widgets.wizard.step2.aggregateFunction.notFound': '没有发现聚合函数',//No aggregator function found
@@ -3014,23 +3014,23 @@ Em.I18n.translations = {
   'config.warnMessage.outOfBoundaries.less': '当前值小于 {0}, 不推荐',
   'config.warnMessage.llap_queue_capacity.max': 'LLAP will consume entire Yarn queue',
 
-  'errorMessage.config.required': 'This is required',
-  'errorMessage.config.number.integer': 'Must contain digits only',
-  'errorMessage.config.number.float': 'Must be a valid number',
-  'errorMessage.config.mail': 'Must be a valid email address',
-  'errorMessage.config.user': 'Value is not valid',
-  'errorMessage.config.password': 'Passwords do not match',
-  'errorMessage.config.directory.heterogeneous': 'dir format is wrong, can be "[{storage type}]/{dir name}"',
-  'errorMessage.config.directory.default': 'Must be a slash or drive at the start, and must not contain white spaces',
-  'errorMessage.config.directory.allowed': 'Can\'t start with "home(s)"',
-  'errorMessage.config.spaces.trailing': 'Cannot contain trailing whitespace',
-  'errorMessage.config.spaces.trim': 'Cannot contain leading or trailing whitespace',
+  'errorMessage.config.required': '这是必选',//'This is required',
+  'errorMessage.config.number.integer': '只能是数字',//'Must contain digits only',
+  'errorMessage.config.number.float': '必须有效数字',//'Must be a valid number',
+  'errorMessage.config.mail': '必须email地址',//'Must be a valid email address',
+  'errorMessage.config.user': '该值无效',//'Value is not valid',
+  'errorMessage.config.password': '密码不匹配',//'Passwords do not match',
+  'errorMessage.config.directory.heterogeneous': '路径格式错误,应该是"[{storage type}]/{dir name}"',//'dir format is wrong, can be "[{storage type}]/{dir name}"',
+  'errorMessage.config.directory.default': '必须/开始,不能包含空格',//'Must be a slash or drive at the start, and must not contain white spaces',
+  'errorMessage.config.directory.allowed': '不能以"home(s)"开始',//'Can\'t start with "home(s)"',
+  'errorMessage.config.spaces.trailing': '末尾不能包含空格',//'Cannot contain trailing whitespace',
+  'errorMessage.config.spaces.trim': '首尾不能包含空格',//'Cannot contain leading or trailing whitespace',
 
   'config.infoMessage.wrong.value.for.widget': '配置值不能转化为UI控件的值',
   'config.warnMessage.outOfBoundaries.greater': '当前值大于 {0}, 不推荐',
   'config.warnMessage.outOfBoundaries.less': '当前值小于 {0}, 不推荐',
 
-  'wizard.inProgress': '{0} in Progress',
+  'wizard.inProgress': '{0}正在执行',//'{0} in Progress',
 
   'alerts.instance.fullLogPopup.header': '实例响应',//'Instance Response',
   'admin.addHawqStandby.button.enable': 'Add HAWQ Standby Master',
