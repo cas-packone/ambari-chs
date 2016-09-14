@@ -1784,6 +1784,7 @@ Em.I18n.translations = {
   'services.service.actions.downloadClientConfigs.fail.popup.body.noErrorMessage':'{0}配置文件的生成失败. ',//Generation of {0} configurations file has failed
   'services.service.actions.downloadClientConfigs.fail.popup.body.errorMessage':'{0}配置文件的生成失败.{1}错误: <br /><pre><span class="text-error">{2}</span></pre>',//Generation of {0} configurations file has failed with {1} error: <br /><pre><span class="text-error">{2}</span></pre>
   'services.service.actions.downloadClientConfigs.fail.popup.body.question':'你想再试一次?',//Do you want to try again
+  'services.service.actions.deleteService':'删除服务',//'Delete Service',
   'services.service.actions.run.rebalancer':'运行平衡程序',//Run Rebalancer
   'services.service.actions.run.rebalanceHdfsNodes':'再平衡HDFS',//Rebalance HDFS
   'services.service.actions.run.rebalanceHdfsNodes.title':'HDFS 再平衡器',//HDFS Rebalance
