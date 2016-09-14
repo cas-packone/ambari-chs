@@ -96,6 +96,7 @@ limitations under the License.
     <value-attributes>
       <type>password</type>
       <overridable>false</overridable>
+      <hidden>HIVE_CLIENT,WEBHCAT_SERVER,HCAT,CONFIG_DOWNLOAD</hidden>
     </value-attributes>
     <on-ambari-upgrade add="true"/>
   </property>
@@ -212,7 +213,7 @@ limitations under the License.
     <name>hive.server2.max.start.attempts</name>
     <description>This number of times HiveServer2 will attempt to start before exiting, sleeping 60 seconds between retries.</description>
     <value>5</value>
-    <on-ambari-upgrade add="true"/>
+    <on-ambari-upgrade add="false"/>
   </property>
   <property>
     <name>hive.server2.authentication</name>
@@ -445,6 +446,7 @@ limitations under the License.
     </depends-on>
     <on-ambari-upgrade add="false"/>
   </property>
+  <!-- This property is removed in HDP 2.5 and higher. -->
   <property>
     <name>atlas.rest.address</name>
     <value>http://localhost:21000</value>

@@ -46,7 +46,7 @@ class HiveClient(Script):
     Execute('echo "Running ' + cmd + '" as root')
     Execute(cmd, ignore_failures=True)
     
-    cmd= format("ln -sf /usr/hdp/current/hive-client/lib/hive-hbase-handler-1.2.1.jar /usr/hdp/current/hive-client/lib/hive-hbase-handler.jar")
+    cmd= format("ln -sf /usr/hdp/current/hive-client/lib/hive-hbase-handler-1.2.1.jar hive-hbase-handler.jar")
     Execute('echo "Running ' + cmd + '" as root')
     Execute(cmd, ignore_failures=True)
 

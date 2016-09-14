@@ -48,12 +48,16 @@ from ambari_commons.os_family_impl import OsFamilyImpl
 
 from resource_management.core.exceptions import ComponentIsNotRunning
 from resource_management.libraries.functions.decorator import retry
+from resource_management.libraries.functions.security_commons import build_expectations, \
+  cached_kinit_executor, get_params_from_filesystem, validate_security_config_properties, \
+  FILE_TYPE_XML
 
 # Local Imports
 from setup_ranger_hive import setup_ranger_hive
 from hive_service_interactive import hive_service_interactive
 from hive_interactive import hive_interactive
 from hive_server import HiveServerDefault
+from setup_ranger_hive_interactive import setup_ranger_hive_interactive
 
 import traceback
 
@@ -119,7 +123,7 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
         raise Fail("Skipping START of Hive Server Interactive since LLAP app couldn't be STARTED.")
 
       # TODO : test the workability of Ranger and Hive2 during upgrade
-      # setup_ranger_hive(upgrade_type=upgrade_type)
+      setup_ranger_hive_interactive(upgrade_type=upgrade_type)
       hive_service_interactive('hiveserver2', action='start', upgrade_type=upgrade_type)
 
 
@@ -147,7 +151,65 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
       check_process_status(pid_file)
 
     def security_status(self, env):
-      HiveServerDefault.security_status(env)
+      import status_params
+      env.set_params(status_params)
+
+      if status_params.security_enabled:
+        props_value_check = {"hive.server2.authentication": "KERBEROS",
+                             "hive.metastore.sasl.enabled": "true",
+                             "hive.security.authorization.enabled": "true"}
+        props_empty_check = ["hive.server2.authentication.kerberos.keytab",
+                             "hive.server2.authentication.kerberos.principal",
+                             "hive.server2.authentication.spnego.principal",
+                             "hive.server2.authentication.spnego.keytab"]
+
+        props_read_check = ["hive.server2.authentication.kerberos.keytab",
+                            "hive.server2.authentication.spnego.keytab"]
+        hive_site_props = build_expectations('hive-site', props_value_check, props_empty_check,
+                                             props_read_check)
+
+        hive_expectations ={}
+        hive_expectations.update(hive_site_props)
+
+        security_params = get_params_from_filesystem(status_params.hive_server_interactive_conf_dir,
+                                                     {'hive-site.xml': FILE_TYPE_XML})
+        result_issues = validate_security_config_properties(security_params, hive_expectations)
+        if not result_issues: # If all validations passed successfully
+          try:
+            # Double check the dict before calling execute
+            if 'hive-site' not in security_params \
+              or 'hive.server2.authentication.kerberos.keytab' not in security_params['hive-site'] \
+              or 'hive.server2.authentication.kerberos.principal' not in security_params['hive-site'] \
+              or 'hive.server2.authentication.spnego.keytab' not in security_params['hive-site'] \
+              or 'hive.server2.authentication.spnego.principal' not in security_params['hive-site']:
+              self.put_structured_out({"securityState": "UNSECURED"})
+              self.put_structured_out({"securityIssuesFound": "Keytab file or principal are not set property."})
+              return
+
+            cached_kinit_executor(status_params.kinit_path_local,
+                                  status_params.hive_user,
+                                  security_params['hive-site']['hive.server2.authentication.kerberos.keytab'],
+                                  security_params['hive-site']['hive.server2.authentication.kerberos.principal'],
+                                  status_params.hostname,
+                                  status_params.tmp_dir)
+            cached_kinit_executor(status_params.kinit_path_local,
+                                  status_params.hive_user,
+                                  security_params['hive-site']['hive.server2.authentication.spnego.keytab'],
+                                  security_params['hive-site']['hive.server2.authentication.spnego.principal'],
+                                  status_params.hostname,
+                                  status_params.tmp_dir)
+            self.put_structured_out({"securityState": "SECURED_KERBEROS"})
+          except Exception as e:
+            self.put_structured_out({"securityState": "ERROR"})
+            self.put_structured_out({"securityStateErrorInfo": str(e)})
+        else:
+          issues = []
+          for cf in result_issues:
+            issues.append("Configuration file %s did not pass the validation. Reason: %s" % (cf, result_issues[cf]))
+          self.put_structured_out({"securityIssuesFound": ". ".join(issues)})
+          self.put_structured_out({"securityState": "UNSECURED"})
+      else:
+        self.put_structured_out({"securityState": "UNSECURED"})
 
     def restart_llap(self, env):
       """
@@ -169,7 +231,6 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
       SLIDER_APP_NAME = "llap0"
 
       stop_cmd = ["slider", "stop", SLIDER_APP_NAME]
-      Logger.info(format("Command: {stop_cmd}"))
 
       code, output, error = shell.call(stop_cmd, user=params.hive_user, stderr=subprocess.PIPE, logoutput=True)
       if code == 0:
@@ -177,18 +238,14 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
       elif code == 69 and output is not None and "Unknown application instance" in output:
         Logger.info(format("Application {SLIDER_APP_NAME} was already stopped on Slider"))
       else:
-        raise Fail(format("Could not stop application {SLIDER_APP_NAME} on Slider"))
+        raise Fail(format("Could not stop application {SLIDER_APP_NAME} on Slider. {error}\n{output}"))
 
       # Will exit with code 4 if need to run with "--force" to delete directories and registries.
-      destroy_cmd = ['slider', 'destroy', SLIDER_APP_NAME, "--force"]
-      code, output, error = shell.call(destroy_cmd, user=params.hive_user, stderr=subprocess.PIPE)
-      if code == 0:
-        Logger.info(format("Successfully removed slider app {SLIDER_APP_NAME}."))
-      else:
-        message = format("Could not remove slider app {SLIDER_APP_NAME}. Please retry this task.")
-        if error is not None:
-          message += " " + error
-        raise Fail(message)
+      Execute(('slider', 'destroy', SLIDER_APP_NAME, "--force"),
+              user=params.hive_user,
+              timeout=30,
+              ignore_failures=True,
+      )
 
     """
     Controls the start of LLAP.
@@ -210,7 +267,7 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
         llap_keytab_splits = params.hive_llap_keytab_file.split("/")
         Logger.debug("llap_keytab_splits : {0}".format(llap_keytab_splits))
         cmd += format(" --slider-keytab-dir .slider/keytabs/{params.hive_user}/ --slider-keytab "
-                      "{llap_keytab_splits[4]} --slider-principal {hive_headless_keytab}")
+                      "{llap_keytab_splits[4]} --slider-principal {params.hive_llap_principal}")
 
       # Append args.
       llap_java_args = InlineTemplate(params.llap_app_java_opts).get_content()
@@ -240,21 +297,18 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
           raise Fail("Did not find run.sh file in output: " + str(output))
 
         Logger.info(format("Run file path: {run_file_path}"))
-        if os.path.isfile(run_file_path):
-          Execute(run_file_path, user=params.hive_user)
-          Logger.info("Submitted LLAP app name : {0}".format(LLAP_APP_NAME))
+        Execute(run_file_path, user=params.hive_user)
+        Logger.info("Submitted LLAP app name : {0}".format(LLAP_APP_NAME))
 
-          # We need to check the status of LLAP app to figure out it got
-          # launched properly and is in running state. Then go ahead with Hive Interactive Server start.
-          status = self.check_llap_app_status(LLAP_APP_NAME, params.num_retries_for_checking_llap_status)
-          if status:
-            Logger.info("LLAP app '{0}' deployed successfully.".format(LLAP_APP_NAME))
-            return True
-          else:
-            Logger.error("LLAP app '{0}' deployment unsuccessful.".format(LLAP_APP_NAME))
-            return False
+        # We need to check the status of LLAP app to figure out it got
+        # launched properly and is in running state. Then go ahead with Hive Interactive Server start.
+        status = self.check_llap_app_status(LLAP_APP_NAME, params.num_retries_for_checking_llap_status)
+        if status:
+          Logger.info("LLAP app '{0}' deployed successfully.".format(LLAP_APP_NAME))
+          return True
         else:
-          raise Fail(format("Did not find run file {run_file_path}"))
+          Logger.error("LLAP app '{0}' deployment unsuccessful.".format(LLAP_APP_NAME))
+          return False
       except:
         # Attempt to clean up the packaged application, or potentially rename it with a .bak
         if run_file_path is not None and cleanup:
@@ -286,7 +340,7 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
       hive_interactive_kinit_cmd = format("{kinit_path_local} -kt {params.hive_server2_keytab} {params.hive_principal}; ")
       Execute(hive_interactive_kinit_cmd, user=params.hive_user)
 
-      llap_kinit_cmd = format("{kinit_path_local} -kt {params.hive_llap_keytab_file} {params.hive_headless_keytab}; ")
+      llap_kinit_cmd = format("{kinit_path_local} -kt {params.hive_llap_keytab_file} {params.hive_llap_principal}; ")
       Execute(llap_kinit_cmd, user=params.hive_user)
 
     """
@@ -296,7 +350,7 @@ class HiveServerInteractiveDefault(HiveServerInteractive):
       import status_params
       LLAP_APP_STATUS_CMD_TIMEOUT = 0
 
-      llap_status_cmd = format("{stack_root}/current/hive-server2-hive2/bin/hive --service llapstatus --name {app_name} -findAppTimeout {LLAP_APP_STATUS_CMD_TIMEOUT}")
+      llap_status_cmd = format("{stack_root}/current/hive-server2-hive2/bin/hive --service llapstatus --name {app_name} --findAppTimeout {LLAP_APP_STATUS_CMD_TIMEOUT}")
       code, output, error = shell.checked_call(llap_status_cmd, user=status_params.hive_user, stderr=subprocess.PIPE,
                                                logoutput=False)
       Logger.info("Received 'llapstatus' command 'output' : {0}".format(output))

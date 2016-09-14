@@ -37,9 +37,11 @@ from resource_management.libraries.functions.get_not_managed_resources import ge
 from resource_management.libraries.script.script import Script
 from resource_management.libraries.functions import StackFeature
 from resource_management.libraries.functions.stack_features import check_stack_feature
+from resource_management.libraries.functions.stack_features import get_stack_feature_version
 from resource_management.libraries.functions.get_port_from_url import get_port_from_url
 from resource_management.libraries.functions.expect import expect
 from resource_management.libraries import functions
+from resource_management.libraries.functions.setup_atlas_hook import has_atlas_in_cluster
 
 # Default log4j version; put config files under /etc/hive/conf
 log4j_version = '1'
@@ -55,6 +57,7 @@ stack_name_uppercase = stack_name.upper()
 agent_stack_retry_on_unavailability = config['hostLevelParams']['agent_stack_retry_on_unavailability']
 agent_stack_retry_count = expect("/hostLevelParams/agent_stack_retry_count", int)
 
+# Needed since this is an Atlas Hook service.
 cluster_name = config['clusterName']
 
 # node hostname
@@ -78,9 +81,13 @@ current_version = default("/hostLevelParams/current_version", None)
 # downgrade_from_version provides the source-version the downgrade is happening from
 downgrade_from_version = default("/commandParams/downgrade_from_version", None)
 
+# get the correct version to use for checking stack features
+version_for_stack_feature_checks = get_stack_feature_version(config)
+
 # Upgrade direction
 upgrade_direction = default("/commandParams/upgrade_direction", None)
-stack_supports_ranger_kerberos = check_stack_feature(StackFeature.RANGER_KERBEROS_SUPPORT, stack_version_formatted_major)
+stack_supports_ranger_kerberos = check_stack_feature(StackFeature.RANGER_KERBEROS_SUPPORT, version_for_stack_feature_checks)
+stack_supports_ranger_audit_db = check_stack_feature(StackFeature.RANGER_AUDIT_DB_SUPPORT, version_for_stack_feature_checks)
 
 # component ROLE directory (like hive-metastore or hive-server2-hive2)
 component_directory = status_params.component_directory
@@ -98,10 +105,18 @@ hive_user_home_dir = "/home/hive"
 # starting on stacks where HSI is supported, we need to begin using the 'hive2' schematool
 hive_server2_hive2_dir = None
 hive_server2_hive2_lib = None
-if check_stack_feature(StackFeature.HIVE_SERVER_INTERACTIVE, stack_version_unformatted):
-  hive_schematool_ver_bin = format('{stack_root}/{version}/hive2/bin')
-  hive_schematool_bin = format('{stack_root}/current/{component_directory}/bin')
+
+version = default("/commandParams/version", None)
+
+if check_stack_feature(StackFeature.HIVE_SERVER_INTERACTIVE, version_for_stack_feature_checks):
+  # the name of the hiveserver2-hive2 component
   hive_server2_hive2_component = status_params.SERVER_ROLE_DIRECTORY_MAP["HIVE_SERVER_INTERACTIVE"]
+
+  # when using the version, we can just specify the component as "hive2"
+  hive_schematool_ver_bin = format('{stack_root}/{version}/hive2/bin')
+
+  # use the schematool which ships with hive2
+  hive_schematool_bin = format('{stack_root}/current/{hive_server2_hive2_component}/bin')
 
   # <stack-root>/<version>/hive2 (as opposed to <stack-root>/<version>/hive)
   hive_server2_hive2_dir = format('{stack_root}/current/{hive_server2_hive2_component}')
@@ -142,6 +157,7 @@ hadoop_conf_dir = status_params.hadoop_conf_dir
 hadoop_bin_dir = status_params.hadoop_bin_dir
 webhcat_conf_dir = status_params.webhcat_conf_dir
 hive_conf_dir = status_params.hive_conf_dir
+hive_home_dir = status_params.hive_home_dir
 hive_config_dir = status_params.hive_config_dir
 hive_client_conf_dir = status_params.hive_client_conf_dir
 hive_server_conf_dir = status_params.hive_server_conf_dir
@@ -173,16 +189,16 @@ tarballs_mode = 0444
 
 purge_tables = "false"
 # Starting from stack version for feature hive_purge_table drop should be executed with purge
-if check_stack_feature(StackFeature.HIVE_PURGE_TABLE, stack_version_formatted_major):
+if check_stack_feature(StackFeature.HIVE_PURGE_TABLE, version_for_stack_feature_checks):
   purge_tables = 'true'
 
-if check_stack_feature(StackFeature.HIVE_WEBHCAT_SPECIFIC_CONFIGS, stack_version_formatted_major):
+if check_stack_feature(StackFeature.HIVE_WEBHCAT_SPECIFIC_CONFIGS, version_for_stack_feature_checks):
   # this is NOT a typo.  Configs for hcatalog/webhcat point to a
   # specific directory which is NOT called 'conf'
   hcat_conf_dir = format('{stack_root}/current/hive-webhcat/etc/hcatalog')
   config_dir = format('{stack_root}/current/hive-webhcat/etc/webhcat')
 
-if check_stack_feature(StackFeature.HIVE_METASTORE_SITE_SUPPORT, stack_version_formatted_major):
+if check_stack_feature(StackFeature.HIVE_METASTORE_SITE_SUPPORT, version_for_stack_feature_checks):
   hive_metastore_site_supported = True
 
 execute_path = os.environ['PATH'] + os.pathsep + hive_bin + os.pathsep + hadoop_bin_dir
@@ -313,7 +329,9 @@ hive_server2_authentication = config['configurations']['hive-site']['hive.server
 # ssl options
 hive_ssl = default('/configurations/hive-site/hive.server2.use.SSL', False)
 hive_ssl_keystore_path = default('/configurations/hive-site/hive.server2.keystore.path', None)
+hive_interactive_ssl_keystore_path = default('/configurations/hive-interactive-site/hive.server2.keystore.path', None)
 hive_ssl_keystore_password = default('/configurations/hive-site/hive.server2.keystore.password', None)
+hive_interactive_ssl_keystore_password = default('/configurations/hive-interactive-site/hive.server2.keystore.password', None)
 
 smokeuser = config['configurations']['cluster-env']['smokeuser']
 smoke_test_sql = format("{tmp_dir}/hiveserver2.sql")
@@ -325,7 +343,8 @@ fs_root = config['configurations']['core-site']['fs.defaultFS']
 security_enabled = config['configurations']['cluster-env']['security_enabled']
 
 kinit_path_local = get_kinit_path(default('/configurations/kerberos-env/executable_search_paths', None))
-hive_metastore_keytab_path =  config['configurations']['hive-site']['hive.metastore.kerberos.keytab.file']
+hive_metastore_keytab_path = config['configurations']['hive-site']['hive.metastore.kerberos.keytab.file']
+hive_metastore_principal = config['configurations']['hive-site']['hive.metastore.kerberos.principal']
 
 hive_server2_keytab = config['configurations']['hive-site']['hive.server2.authentication.kerberos.keytab']
 
@@ -339,13 +358,14 @@ hive_interactive_pid = status_params.hive_interactive_pid
 hive_conf_dirs_list = [hive_client_conf_dir]
 
 # These are the folders to which the configs will be written to.
+ranger_hive_component = status_params.SERVER_ROLE_DIRECTORY_MAP['HIVE_SERVER']
 if status_params.role == "HIVE_METASTORE" and hive_metastore_hosts is not None and hostname in hive_metastore_hosts:
   hive_conf_dirs_list.append(hive_server_conf_dir)
 elif status_params.role == "HIVE_SERVER" and hive_server_hosts is not None and hostname in hive_server_host:
   hive_conf_dirs_list.append(hive_server_conf_dir)
 elif status_params.role == "HIVE_SERVER_INTERACTIVE" and hive_server_interactive_hosts is not None and hostname in hive_server_interactive_hosts:
   hive_conf_dirs_list.append(status_params.hive_server_interactive_conf_dir)
-
+  ranger_hive_component = status_params.SERVER_ROLE_DIRECTORY_MAP['HIVE_SERVER_INTERACTIVE']
 # log4j version is 2 for hive2; put config files under /etc/hive2/conf
 if status_params.role == "HIVE_SERVER_INTERACTIVE":
   log4j_version = '2'
@@ -377,7 +397,7 @@ start_metastore_path = format("{tmp_dir}/start_metastore_script")
 hadoop_heapsize = config['configurations']['hadoop-env']['hadoop_heapsize']
 
 if 'role' in config and config['role'] in ["HIVE_SERVER", "HIVE_METASTORE"]:
-  if check_stack_feature(StackFeature.HIVE_ENV_HEAPSIZE, stack_version_formatted_major):
+  if check_stack_feature(StackFeature.HIVE_ENV_HEAPSIZE, version_for_stack_feature_checks):
     hive_heapsize = config['configurations']['hive-env']['hive.heapsize']
   else:
     hive_heapsize = config['configurations']['hive-site']['hive.heapsize']
@@ -500,18 +520,12 @@ metrics_collection_period = default("/configurations/ams-site/timeline.metrics.s
 ########################################################
 ############# Atlas related params #####################
 ########################################################
+#region Atlas Hooks
+hive_atlas_application_properties = default('/configurations/hive-atlas-application.properties', {})
 
-atlas_hosts = default('/clusterHostInfo/atlas_server_hosts', [])
-has_atlas = len(atlas_hosts) > 0
-classpath_addition = ""
-atlas_plugin_package = "atlas-metadata*-hive-plugin"
-atlas_ubuntu_plugin_package = "atlas-metadata.*-hive-plugin"
-
-if has_atlas:
-  atlas_conf_file = default('/configurations/atlas-env/metadata_conf_file', 'atlas-application.properties')
-  atlas_home_dir = os.environ['METADATA_HOME_DIR'] if 'METADATA_HOME_DIR' in os.environ else format('{stack_root}/current/atlas-server')
-  atlas_conf_dir = os.environ['METADATA_CONF'] if 'METADATA_CONF' in os.environ else '/etc/atlas/conf'
-  atlas_props = default('/configurations/application-properties', {})
+if has_atlas_in_cluster():
+  atlas_hook_filename = default('/configurations/atlas-env/metadata_conf_file', 'atlas-application.properties')
+#endregion
 
 ########################################################
 ########### WebHCat related params #####################
@@ -595,13 +609,13 @@ if has_hive_interactive:
   hive_llap_io_mem_size = config['configurations']['hive-interactive-site']['hive.llap.io.memory.size']
   llap_heap_size = config['configurations']['hive-interactive-env']['llap_heap_size']
   llap_app_name = config['configurations']['hive-interactive-env']['llap_app_name']
+  hive_llap_principal = None
   if security_enabled:
     hive_llap_keytab_file = config['configurations']['hive-interactive-site']['hive.llap.zk.sm.keytab.file']
-    hive_headless_keytab = config['configurations']['hive-interactive-site']['hive.llap.zk.sm.principal']
+    hive_llap_principal = (config['configurations']['hive-interactive-site']['hive.llap.zk.sm.principal']).replace('_HOST',hostname.lower())
   pass
 
 # ranger host
-stack_supports_ranger_audit_db = check_stack_feature(StackFeature.RANGER_AUDIT_DB_SUPPORT, stack_version_formatted_major)
 ranger_admin_hosts = default("/clusterHostInfo/ranger_admin_hosts", [])
 has_ranger_admin = not len(ranger_admin_hosts) == 0
 xml_configurations_supported = config['configurations']['ranger-env']['xml_configurations_supported']
@@ -610,8 +624,8 @@ xml_configurations_supported = config['configurations']['ranger-env']['xml_confi
 policymgr_mgr_url = config['configurations']['admin-properties']['policymgr_external_url']
 if 'admin-properties' in config['configurations'] and 'policymgr_external_url' in config['configurations']['admin-properties'] and policymgr_mgr_url.endswith('/'):
   policymgr_mgr_url = policymgr_mgr_url.rstrip('/')
-xa_audit_db_name = config['configurations']['admin-properties']['audit_db_name']
-xa_audit_db_user = config['configurations']['admin-properties']['audit_db_user']
+xa_audit_db_name = default('/configurations/admin-properties/audit_db_name', 'ranger_audits')
+xa_audit_db_user = default('/configurations/admin-properties/audit_db_user', 'rangerlogger')
 xa_db_host = config['configurations']['admin-properties']['db_host']
 repo_name = str(config['clusterName']) + '_hive'
 
@@ -626,6 +640,7 @@ policy_user = config['configurations']['ranger-hive-plugin-properties']['policy_
 
 if security_enabled:
   hive_principal = hive_server_principal.replace('_HOST',hostname.lower())
+  hive_keytab = config['configurations']['hive-site']['hive.server2.authentication.kerberos.keytab']
 
 #For curl command in ranger plugin to get db connector
 if has_ranger_admin:
@@ -691,7 +706,7 @@ if has_ranger_admin:
   if stack_supports_ranger_kerberos and security_enabled:
     hive_ranger_plugin_config['policy.download.auth.users'] = hive_user
     hive_ranger_plugin_config['tag.download.auth.users'] = hive_user
-    hive_ranger_plugin_config['policy.grant.revoke.auth.users'] = hive_user
+    hive_ranger_plugin_config['policy.grantrevoke.auth.users'] = hive_user
 
   if stack_supports_ranger_kerberos:
     hive_ranger_plugin_config['ambari.service.check.user'] = policy_user
@@ -706,7 +721,9 @@ if has_ranger_admin:
 
 
   xa_audit_db_is_enabled = False
-  xa_audit_db_password = unicode(config['configurations']['admin-properties']['audit_db_password']) if stack_supports_ranger_audit_db else None
+  xa_audit_db_password = ''
+  if not is_empty(config['configurations']['admin-properties']['audit_db_password']) and stack_supports_ranger_audit_db:
+    xa_audit_db_password = unicode(config['configurations']['admin-properties']['audit_db_password'])
   ranger_audit_solr_urls = config['configurations']['ranger-admin-site']['ranger.audit.solr.urls']
   if xml_configurations_supported and stack_supports_ranger_audit_db:
     xa_audit_db_is_enabled = config['configurations']['ranger-hive-audit']['xasecure.audit.destination.db']

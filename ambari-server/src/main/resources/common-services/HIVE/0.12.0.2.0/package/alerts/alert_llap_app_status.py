@@ -127,9 +127,11 @@ def execute(configurations={}, parameters={}, host_name=None):
       llap_app_name = configurations[LLAP_APP_NAME_KEY]
 
     if security_enabled:
-      llap_principal = HIVE_PRINCIPAL_DEFAULT
       if HIVE_PRINCIPAL_KEY in configurations:
         llap_principal = configurations[HIVE_PRINCIPAL_KEY]
+      else:
+        llap_principal = HIVE_PRINCIPAL_DEFAULT
+      llap_principal = llap_principal.replace('_HOST',host_name.lower())
 
       llap_keytab = HIVE_PRINCIPAL_KEYTAB_DEFAULT
       if HIVE_PRINCIPAL_KEYTAB_KEY in configurations:
@@ -148,7 +150,7 @@ def execute(configurations={}, parameters={}, host_name=None):
       kinit_lock = global_lock.get_lock(global_lock.LOCK_TYPE_KERBEROS)
       kinit_lock.acquire()
       try:
-        Execute(kinitcmd, user=hive_user,#status_params.hive_user,
+        Execute(kinitcmd, user=hive_user,
                 path=["/bin/", "/usr/bin/", "/usr/lib/hive/bin/", "/usr/sbin/"],
                 timeout=10)
       finally:
@@ -158,9 +160,9 @@ def execute(configurations={}, parameters={}, host_name=None):
 
     start_time = time.time()
     if STACK_ROOT in configurations:
-      llap_status_cmd = configurations[STACK_ROOT] + format("/current/hive-server2-hive2/bin/hive --service llapstatus --name {llap_app_name}  -findAppTimeout {LLAP_APP_STATUS_CMD_TIMEOUT}")
+      llap_status_cmd = configurations[STACK_ROOT] + format("/current/hive-server2-hive2/bin/hive --service llapstatus --name {llap_app_name}  --findAppTimeout {LLAP_APP_STATUS_CMD_TIMEOUT}")
     else:
-      llap_status_cmd = STACK_ROOT_DEFAULT + format("/current/hive-server2-hive2/bin/hive --service llapstatus --name {llap_app_name}")
+      llap_status_cmd = STACK_ROOT_DEFAULT + format("/current/hive-server2-hive2/bin/hive --service llapstatus --name {llap_app_name} --findAppTimeout {LLAP_APP_STATUS_CMD_TIMEOUT}")
 
     code, output, error = shell.checked_call(llap_status_cmd, user=hive_user, stderr=subprocess.PIPE,
                                              timeout=check_command_timeout,

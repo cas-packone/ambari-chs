@@ -66,6 +66,9 @@ def hive_interactive(name=None):
   exclude_list = ['hive.enforce.bucketing',
                   'hive.enforce.sorting']
 
+  # List of configs to be excluded from hive2 client, but present in Hive2 server.
+  exclude_list_for_hive2_client = ['javax.jdo.option.ConnectionPassword']
+
   # Copy Tarballs in HDFS.
   if params.stack_version_formatted_major and check_stack_feature(StackFeature.ROLLING_UPGRADE, params.stack_version_formatted_major):
     resource_created = copy_to_hdfs("tez_hive2",
@@ -122,6 +125,18 @@ def hive_interactive(name=None):
             group = params.user_group,
             mode = 0664)
 
+  '''
+  Merge properties from hiveserver2-interactive-site into hiveserver2-site
+  '''
+  merged_hiveserver2_interactive_site = {}
+  if 'hiveserver2-site' in params.config['configurations']:
+    merged_hiveserver2_interactive_site.update(params.config['configurations']['hiveserver2-site'])
+    Logger.info("Retrieved 'hiveserver2-site' for merging with 'hiveserver2-interactive-site'.")
+  else:
+    Logger.error("'hiveserver2-site' couldn't be retrieved from passed-in configurations.")
+  merged_hiveserver2_interactive_site.update(params.config['configurations']['hiveserver2-interactive-site'])
+
+
   # Create config files under /etc/hive2/conf and /etc/hive2/conf/conf.server:
   #   hive-site.xml
   #   hive-env.sh
@@ -131,11 +146,38 @@ def hive_interactive(name=None):
   #   hive-exec-log4j2.properties
   #   beeline-log4j2.properties
 
-  for conf_dir in params.hive_conf_dirs_list:
-      XmlConfig("hive-site.xml",
+  hive2_conf_dirs_list = params.hive_conf_dirs_list
+  hive2_client_conf_path = format("{stack_root}/current/{component_directory}/conf")
+
+  # Making copy of 'merged_hive_interactive_site' in 'merged_hive_interactive_site_copy', and deleting 'javax.jdo.option.ConnectionPassword'
+  # config from there, as Hive2 client shouldn't have that config.
+  merged_hive_interactive_site_copy = merged_hive_interactive_site.copy()
+  for item in exclude_list_for_hive2_client:
+    if item in merged_hive_interactive_site.keys():
+      del merged_hive_interactive_site_copy[item]
+
+  for conf_dir in hive2_conf_dirs_list:
+      if conf_dir == hive2_client_conf_path:
+        XmlConfig("hive-site.xml",
+                  conf_dir=conf_dir,
+                  configurations=merged_hive_interactive_site_copy,
+                  configuration_attributes=params.config['configuration_attributes']['hive-interactive-site'],
+                  owner=params.hive_user,
+                  group=params.user_group,
+                  mode=0644)
+      else:
+        XmlConfig("hive-site.xml",
+                  conf_dir=conf_dir,
+                  configurations=merged_hive_interactive_site,
+                  configuration_attributes=params.config['configuration_attributes']['hive-interactive-site'],
+                  owner=params.hive_user,
+                  group=params.user_group,
+                  mode=0644)
+
+      XmlConfig("hiveserver2-site.xml",
                 conf_dir=conf_dir,
-                configurations=merged_hive_interactive_site,
-                configuration_attributes=params.config['configuration_attributes']['hive-interactive-site'],
+                configurations=merged_hiveserver2_interactive_site,
+                configuration_attributes=params.config['configuration_attributes']['hiveserver2-interactive-site'],
                 owner=params.hive_user,
                 group=params.user_group,
                 mode=0644)
@@ -181,6 +223,12 @@ def hive_interactive(name=None):
          group=params.user_group,
          owner=params.hive_user,
          content=params.beeline_log4j2)
+
+      File(os.path.join(hive_server_interactive_conf_dir, "hadoop-metrics2-hiveserver2.properties"),
+           owner=params.hive_user,
+           group=params.user_group,
+           content=Template("hadoop-metrics2-hiveserver2.properties.j2")
+           )
 
       File(format("{hive_server_interactive_conf_dir}/hadoop-metrics2-llapdaemon.properties"),
            owner=params.hive_user,
