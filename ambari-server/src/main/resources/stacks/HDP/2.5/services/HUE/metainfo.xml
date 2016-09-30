@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<metainfo>
+  <schemaVersion>2.0</schemaVersion>
+  <services>
+    <service>
+      <name>HUE</name>
+      <displayName>Hue</displayName>
+      <comment>a Web interface for analyzing data with Apache Hadoop.</comment>
+      <version>2.6</version>
+      <components>
+        <component>
+          <name>hue_server</name>
+          <displayName>Hue Server</displayName>
+          <category>MASTER</category>
+		  <cardinality>1</cardinality>
+          <commandScript>
+            <script>scripts/hue.py</script>
+            <scriptType>PYTHON</scriptType>
+            <timeout>600</timeout>
+          </commandScript>
+        </component>
+     
+      </components>
+
+      <osSpecifics>
+        <osSpecific>
+          <osFamily>redhat5,redhat6,redhat7</osFamily>
+          <packages>
+            <package>
+              <name>hue</name>
+            </package>
+          </packages>
+        </osSpecific>
+      </osSpecifics>
+       <quickLinksConfigurations>
+        <quickLinksConfiguration>
+          <fileName>quicklinks.json</fileName>
+          <default>true</default>
+        </quickLinksConfiguration>
+      </quickLinksConfigurations>
+    </service>
+  </services>
+</metainfo>

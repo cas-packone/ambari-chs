@@ -1,0 +1,24 @@
+{
+  "name": "default",
+  "description": "default quick links configuration",
+  "configuration": {
+
+    "links": [
+      {
+        "name": "hue_ui",
+        "label": "HUE UI",
+        "requires_user_name": "false",
+        "component_name": "hue_server",
+        "url":"%@://%@:%@/",
+        "port":{
+          "http_property": "hue.server.http.port",
+          "http_default_port": "8000",
+          "https_property": "hue.server.https.port",
+          "https_default_port": "8000",
+          "regex": "^(\\d+)$",
+          "site": "hue"
+        }
+      }
+    ]
+  }
+}

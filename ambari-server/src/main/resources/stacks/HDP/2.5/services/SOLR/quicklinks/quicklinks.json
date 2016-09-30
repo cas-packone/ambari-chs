@@ -1,0 +1,24 @@
+{
+  "name": "default",
+  "description": "default quick links configuration",
+  "configuration": {
+
+    "links": [
+      {
+        "name": "SOLR_UI",
+        "label": "SOLR UI",
+        "requires_user_name": "false",
+        "component_name": "SOLR_MASTER",
+        "url":"%@://%@:%@/",
+        "port":{
+          "http_property": "solr.server.http.port",
+          "http_default_port": "8983",
+          "https_property": "solr.server.https.port",
+          "https_default_port": "8983",
+          "regex": "^(\\d+)$",
+          "site": "solr-config"
+        }
+      }
+    ]
+  }
+}
