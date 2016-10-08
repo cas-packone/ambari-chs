@@ -2746,7 +2746,7 @@ Em.I18n.translations = {
   'dashboard.services.hawq.hawqSegments':'HAWQ Segments',
   'dashboard.services.pxf.pxfHosts':'PXF',
 
-  'dashboard.services.flume.summary.title':'在安{1}主机上装{0}的Flume（{2}代理{3}）',//Flume installed on {0} host{1} ({2} agent{3})
+  'dashboard.services.flume.summary.title':'在{0}主机上安装Flume（{2}代理{3}）',//Flume installed on {0} host{1} ({2} agent{3})
   'dashboard.services.flume.summary.configure':'配置代理',//Configure Agents
   'dashboard.services.flume.agentsLabel': 'Flume',
   'dashboard.services.flume.agentLabel': 'Flume 组件',//Flume Component
