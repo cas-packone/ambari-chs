@@ -2094,7 +2094,7 @@ Em.I18n.translations = {
     '</ol>',
   'services.service.stop.HDFS.warningMsg.checkPointTooOld': 'The last HDFS checkpoint is older than {0} hours. Make sure that you have taken a checkpoint before proceeding. Otherwise, the NameNode(s) can take a very long time to start up.',
   'services.service.config_groups_popup.header':'管理{0}配置组',//Manage {0} Configuration Groups
-  'services.service.config_groups_popup.notice':'您可以通过管理{{服务名}}配置组及其成员的主机应用不同的集合{{服务名}}配置,主机组。属于{{服务名}}配置组主机具有相同的一组配置的{{服务名}}。每个主机属于一个{{服务名}}配置组.',//You can apply different sets of {{serviceName}} configurations to groups of hosts by managing {{serviceName}} Configuration Groups and their host membership.  Hosts belonging to a {{serviceName}} Configuration Group have the same set of configurations for {{serviceName}}. Each host belongs to one {{serviceName}} Configuration Group
+  'services.service.config_groups_popup.notice':'您可以通过管理{{serviceName}}配置组及其成员的主机应用不同的集合{{serviceName}}配置,主机组。属于{{serviceName}}配置组主机具有相同的一组配置的{{serviceName}}。每个主机属于一个{{serviceName}}配置组.',//You can apply different sets of {{serviceName}} configurations to groups of hosts by managing {{serviceName}} Configuration Groups and their host membership.  Hosts belonging to a {{serviceName}} Configuration Group have the same set of configurations for {{serviceName}}. Each host belongs to one {{serviceName}} Configuration Group
   'services.service.config_groups_popup.rename':'重命名',//Rename
   'services.service.config_groups_popup.duplicate':'重复',//Duplicate
   'services.service.config_groups_popup.group_name_lable':'名称',//Name
@@ -2820,8 +2820,8 @@ Em.I18n.translations = {
   'dashboard.configHistory.info-bar.save.popup.placeholder': '你要怎么改?',//What did you change
   'dashboard.configHistory.info-bar.save.popup.warningForPasswordChange': '此配置更改包括密码更改。密码更改将被保存,但为安全起见,密码更改将不会在配置版本的比较显示..',//This configuration change includes a password change. The password change will be saved but for security purposes, password changes will not be shown in configuration version comparisons
   'dashboard.configHistory.info-bar.save.popup.notesForPasswordChange': ' 更改密码',//Password change
-  'dashboard.configHistory.info-bar.revert.button': '使当前',//Make Current
-  'dashboard.configHistory.info-bar.revert.versionButton': '让{0}当前',//Make {0} Current
+  'dashboard.configHistory.info-bar.revert.button': '设置最新版本',//Make Current
+  'dashboard.configHistory.info-bar.revert.versionButton': '设置{0}为最新版本',//Make {0} Current
   'dashboard.configHistory.info-bar.view.button.disabled': '您正在查看此版本.',//You are currently viewing this version
   'dashboard.configHistory.info-bar.compare.button.disabled': '你不能比较的同一版本.',//You cannot compare against the same version
   'dashboard.configHistory.info-bar.revert.button.disabled': '这是当前版本.',//This is the current version
