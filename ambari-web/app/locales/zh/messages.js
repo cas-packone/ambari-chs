@@ -189,7 +189,7 @@ Em.I18n.translations = {
   'common.repositories':'仓库',
   'common.stack.versions':'堆栈版本',
   'common.versions':'版本',
-  'common.serviceAccounts': '服务器账户',
+  'common.serviceAccounts': '服务账户',
   'common.add': '添加',
   'common.edit': '编辑',
   'common.delete': '删除',
@@ -1182,7 +1182,7 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.exit.critical.msg': '配置Kerberos正在进行中 <strong>取消之前,您应该完成向导</strong> 你真的要退出启用Kerberos向导?',//Configuring Kerberos is in progress. <strong>Before dismissing, you should complete the wizard.</strong> Do you really want to exit the Enable Kerberos Wizard
   'admin.kerberos.wizard.step1.header': '开始',//Get Started
   'admin.kerberos.wizard.step2.header': '配置Kerberos',//Configure Kerberos
-  'admin.kerberos.wizard.step3.header': '安装和测试Kerberos 客户端',//Install and Test Kerberos Client
+  'admin.kerberos.wizard.step3.header': '安装和测试Kerberos客户端',//Install and Test Kerberos Client
   'admin.kerberos.wizard.step3.checkbox.ignoreAndProceed.label': '忽略错误并继续下一步骤',//Ignore errors and continue to next step
   'admin.kerberos.wizard.step4.header': '配置',//Configure Identities
   'admin.kerberos.wizard.step5.header': '确认配置',//Confirm Configuration
@@ -1332,7 +1332,7 @@ Em.I18n.translations = {
   'admin.highAvailability.wizard.step9.task3.title':'安装 PXF',//Install PXF
   'admin.highAvailability.wizard.step9.task4.title':'配置 HBase',//Reconfigure HBase
   'admin.highAvailability.wizard.step9.task5.title':'配置 Accumulo',//Reconfigure Accumulo
-  'admin.highAvailability.wizard.step9.task6.title':'配置 HAWQ',//econfigure HAWQ
+  'admin.highAvailability.wizard.step9.task6.title':'配置 HAWQ',//Reconfigure HAWQ
   'admin.highAvailability.wizard.step9.task7.title':'删除次要的NameNode',//Delete Secondary NameNode
   'admin.highAvailability.wizard.step9.task8.title':'启动所有的服务',//Start All Services
   'admin.highAvailability.wizard.step9.notice.completed':'NameNode的HA已成功启用.',//NameNode HA has been enabled successfully
@@ -1885,13 +1885,13 @@ Em.I18n.translations = {
   'services.service.info.metrics.ambariMetrics.regionServer.compactionQueueSize': '压实队列大小',//Compaction Queue Size
   'services.service.info.metrics.ambariMetrics.regionServer.displayNames.compactionQueueSize': '压实队列大小',//Compaction Queue Size
 
-  'services.service.info.metrics.flume.channelFillPercent':'通道填充百分比',//Channel Fill Percentage
-  'services.service.info.metrics.flume.channelSize':'通道大小',//Channel Size
-  'services.service.info.metrics.flume.sinkDrainSuccess':'沉没事件消耗数',//Sink Event Drain Count
-  'services.service.info.metrics.flume.sourceAccepted':'源事件接受计数',//Source Event Accepted Count
+  'services.service.info.metrics.flume.channelFillPercent':'Channel填充百分比',//Channel Fill Percentage
+  'services.service.info.metrics.flume.channelSize':'Channel大小',//Channel Size
+  'services.service.info.metrics.flume.sinkDrainSuccess':'Sink事件消耗数',//Sink Event Drain Count
+  'services.service.info.metrics.flume.sourceAccepted':'Source事件接受计数',//Source Event Accepted Count
   'services.service.info.metrics.flume.sinkConnectionFailed':'宿连接失败次数',//Sink Connection Failed Count
-  'services.service.info.metrics.flume.channelSizeMMA':'通道尺寸事件',//Channel Size Events
-  'services.service.info.metrics.flume.channelSizeSum':'通道尺寸事件总和',//Channel Size Event Sum
+  'services.service.info.metrics.flume.channelSizeMMA':'Channel尺寸事件',//Channel Size Events
+  'services.service.info.metrics.flume.channelSizeSum':'Channel尺寸事件总和',//Channel Size Event Sum
   'services.service.info.metrics.flume.incoming.mma':'接入事件比例',//Incoming Event Rate
   'services.service.info.metrics.flume.incoming.sum':'接入事件和',//Incoming Event Sum
   'services.service.info.metrics.flume.outgoing.mma':'断开事件比例',//Outgoing Event Rate
@@ -1900,13 +1900,13 @@ Em.I18n.translations = {
   'services.service.info.metrics.flume.cpu.user':'CPU(用户)',//CPU (User)
   'services.service.info.metrics.flume.jvmThreadsRunnable':'JVM运行的线程',//JVM Runnable Threads
   'services.service.info.metrics.flume.jvmHeapUsed':'JVM堆内存使用',//JVM Heap Memory Used
-  'services.service.info.metrics.flume.channelType':' 通道大小{0}',//Channel size
+  'services.service.info.metrics.flume.channelType':' Channel大小{0}',//Channel size
   'services.service.info.metrics.flume.incoming_mma':'接入 {0}',
   'services.service.info.metrics.flume.outgoing_mma':'断开 {0}',
-  'services.service.info.metrics.flume.sourceName':'来源 {0}',
+  'services.service.info.metrics.flume.sourceName':'Source {0}',
   'services.service.info.metrics.flume.hostName':'主机: {0}',
-  'services.service.info.metrics.flume.channelName':'通道 {0}',
-  'services.service.info.metrics.flume.sinkName':'沉没 {0}',
+  'services.service.info.metrics.flume.channelName':'Channel {0}',
+  'services.service.info.metrics.flume.sinkName':'Sink {0}',
 
   'services.service.info.metrics.hbase.clusterRequests':'集群请求',//Cluster Requests
   'services.service.info.metrics.hbase.clusterRequests.displayNames.requestCount':'请求总数',//Request Count
@@ -2096,7 +2096,7 @@ Em.I18n.translations = {
   'services.service.config_groups_popup.header':'管理{0}配置组',//Manage {0} Configuration Groups
   'services.service.config_groups_popup.notice':'您可以通过管理{{serviceName}}配置组及其成员的主机应用不同的集合{{serviceName}}配置,主机组。属于{{serviceName}}配置组主机具有相同的一组配置的{{serviceName}}。每个主机属于一个{{serviceName}}配置组.',//You can apply different sets of {{serviceName}} configurations to groups of hosts by managing {{serviceName}} Configuration Groups and their host membership.  Hosts belonging to a {{serviceName}} Configuration Group have the same set of configurations for {{serviceName}}. Each host belongs to one {{serviceName}} Configuration Group
   'services.service.config_groups_popup.rename':'重命名',//Rename
-  'services.service.config_groups_popup.duplicate':'重复',//Duplicate
+  'services.service.config_groups_popup.duplicate':'复制',//Duplicate
   'services.service.config_groups_popup.group_name_lable':'名称',//Name
   'services.service.config_groups_popup.group_desc_lable':'描述',//Description
   'services.service.config_groups_popup.properties':'属性',//Properties
@@ -2106,7 +2106,7 @@ Em.I18n.translations = {
   'services.service.config_groups_popup.addHost':'主机添加到选定的配置组',//Add hosts to selected Configuration Group
   'services.service.config_groups_popup.addHostDisabled':'没有可用的主机添加.',//There are no available hosts to add
   'services.service.config_groups_popup.removeHost':'从选择的配置组中删除主机',//Remove hosts from selected Configuration Group
-  'services.service.config_groups_popup.duplicateButton':'重复的配置组',//Duplicate Configuration Group
+  'services.service.config_groups_popup.duplicateButton':'复制新配置组',//Duplicate Configuration Group
   'services.service.config_groups.add_config_group_popup.header':'新建新的配置组',//Create New Configuration Group
   'services.service.config_groups.duplicate_config_group_popup.header':'重复配置组',//
   'services.service.config_groups.rename_config_group_popup.header':'重命名配置组',//Rename Configuration Group
@@ -2750,9 +2750,9 @@ Em.I18n.translations = {
   'dashboard.services.flume.summary.configure':'配置代理',//Configure Agents
   'dashboard.services.flume.agentsLabel': 'Flume',
   'dashboard.services.flume.agentLabel': 'Flume 组件',//Flume Component
-  'dashboard.services.flume.channels': '通道',
-  'dashboard.services.flume.sources': '来源',
-  'dashboard.services.flume.sinks': '沉没',
+  'dashboard.services.flume.channels': 'Channels',
+  'dashboard.services.flume.sources': 'Sources',
+  'dashboard.services.flume.sinks': 'Sinks',
   'dashboard.services.flume.agent': '代理',
 
   'dashboard.services.hbase.summary':'{0}的地区服务与{1}的负载均衡',//{0} region servers with {1} average load
@@ -2772,8 +2772,8 @@ Em.I18n.translations = {
   'dashboard.services.hbase.chart.label':'请求数',//Request Count
   'dashboard.services.hbase.masterWebUI':'Master Web UI',
   'dashboard.services.hbase.regions.transition':'区域过渡',//Regions In Transition
-  'dashboard.services.hbase.masterStarted':'Master 开始',
-  'dashboard.services.hbase.masterActivated':'Master 活性',
+  'dashboard.services.hbase.masterStarted':'Master已开始',
+  'dashboard.services.hbase.masterActivated':'Master已激活',
 
   'dashboard.services.ranger.rangerTagsyncs':'Ranger Tagsyncs',
 
@@ -2781,15 +2781,15 @@ Em.I18n.translations = {
   'dashboard.services.components.stopped':'已停止',//'stopped',
   'dashboard.services.components.total':'汇总',//'in total',
 
-  'dashboard.services.hive.clients':'Hive 客户端',
+  'dashboard.services.hive.clients':'Hive客户端',
   'dashboard.services.hive.client':'Hive客户端',
   'dashboard.services.hive.metastore':'Hive Metastore',
   'dashboard.services.hive.server2':'HiveServer2',
 
   'dashboard.services.oozie.clients':'Oozie 客户端数',
   'dashboard.services.oozie.client':'Oozie 客户端',
-  'dashboard.services.storm.supervisor': '管理者',//Supervisor
-  'dashboard.services.storm.supervisors': '管理者',//Supervisors
+  'dashboard.services.storm.supervisor': 'Supervisor',//Supervisor
+  'dashboard.services.storm.supervisors': 'Supervisors',//Supervisors
 
   'dashboard.services.configs.popup.stopService.header':'停止服务',//Stop service
   'dashboard.services.configs.popup.stopService.body' : '服务需要停止进行重新配置',//Service needs to be stopped for reconfiguration
@@ -2846,27 +2846,27 @@ Em.I18n.translations = {
   'rollingrestart.dialog.title': '重启 {0}s',
   'rollingrestart.dialog.primary': '触发滚动重启',//Trigger Rolling Restart
   'rollingrestart.notsupported.hostComponent': '不支持{0}组件滚动重启',//Rolling restart not supported for {0} components
-  'rollingrestart.dialog.msg.restart': '这将在同一时间启动{0的指定号码.',//This will restart a specified number of {0}s at a time
-  'rollingrestart.dialog.msg.noRestartHosts': '有没有{0} 做滚动重启',//There are no {0}s to do rolling restarts
+  'rollingrestart.dialog.msg.restart': '这将在同一时间启动{0}的指定号码.',//This will restart a specified number of {0}s at a time
+  'rollingrestart.dialog.msg.noRestartHosts': '没有{0}做滚动重启',//There are no {0}s to do rolling restarts
   'rollingrestart.dialog.msg.maintainance': '注意:{0}{1}在维护模式下不会重新启动',//{0} {1} in Maintenance Mode will not be restarted
   'rollingrestart.dialog.msg.maintainance.plural': '注意: {0} {1}等在维护模式下不会重新启动',//{0} {1}s in Maintenance Mode will not be restarted
   'rollingrestart.dialog.msg.componentsAtATime': '{0}在同一时间',//{0}s at a time
-  'rollingrestart.dialog.msg.timegap.prefix': '等待 ',
+  'rollingrestart.dialog.msg.timegap.prefix': '等待',
   'rollingrestart.dialog.msg.timegap.suffix': '批次之间秒 ',//seconds between batches
   'rollingrestart.dialog.msg.toleration.prefix': '默认',//Tolerate up to
   'rollingrestart.dialog.msg.toleration.suffix': '重启故障',//restart failures
   'rollingrestart.dialog.err.invalid.batchsize': '重启无效批量大小：{0}',//Invalid restart batch size: {0}
   'rollingrestart.dialog.err.invalid.waitTime': '批次之间的无效等待时间：{0}',//Invalid wait time between batches: {0}
   'rollingrestart.dialog.err.invalid.toleratesize': '无效的失败宽容计数：{0}',//Invalid failure toleration count: {0}
-  'rollingrestart.dialog.warn.datanode.batch.size': '重新启动一次超过一个DataNode不推荐。这样做会导致数据不可用的数据和/或可能损失积极写入HFDS.',//Restarting more than one DataNode at a time is not recommended. Doing so can lead to data unavailability and/or possible loss of data being actively written to HFDS
+  'rollingrestart.dialog.warn.datanode.batch.size': '重新启动一次超过一个DataNode不推荐。这样做会导致数据不可用的数据和/或可能损失积极写入HDFS.',//Restarting more than one DataNode at a time is not recommended. Doing so can lead to data unavailability and/or possible loss of data being actively written to HFDS
   'rollingrestart.dialog.msg.serviceNotInMM':'注意: 这将触发警告。要抑制警告,{0}之前触发滚动重启开启维护模式',//This will trigger alerts. To suppress alerts, turn on Maintenance Mode for {0} prior to triggering a rolling restart
-  'rollingrestart.dialog.msg.staleConfigsOnly': '只有重新启动{0}的陈旧CONFIGS',//Only restart {0}s with stale configs
-  'rollingrestart.rest.context': '{0}等滚动重启 - 批{1}{2}',//Rolling Restart of {0}s - batch {1} of {2}
+  'rollingrestart.dialog.msg.staleConfigsOnly': '只使用旧的配置文件重新启动{0}',//Only restart {0}s with stale configs
+  'rollingrestart.rest.context': '{0}等滚动重启 - 批{1}/{2}',//Rolling Restart of {0}s - batch {1} of {2}
   'rollingrestart.context.allOnSelectedHosts':'重新启动在选定的主机所有部件',//Restart all components on the selected hosts
   'rollingrestart.context.allForSelectedService':'重新启动所有组件{0}',//Restart all components for {0}
   'rollingrestart.context.allWithStaleConfigsForSelectedService':'重新启动陈旧的Configs所有组件{0}',//Restart all components with Stale Configs for {0}
   'rollingrestart.context.allClientsOnSelectedHost':'重新启动{0}上所有客户',//'Restart all clients on {0}
-  'rollingrestart.context.allWithStaleConfigsOnSelectedHost':'重新启动{0}上的组件与陈旧的配置文件',//Restart components with Stale Configs on {0}
+  'rollingrestart.context.allWithStaleConfigsOnSelectedHost':'重新启动{0}上的组件与旧的配置文件',//Restart components with Stale Configs on {0}
   'rollingrestart.context.allOnSelectedHost':'重新启动{0}的所有组件',//Restart all components on {0}
   'rollingrestart.context.selectedComponentOnSelectedHost':'{0}重新启动',
   'rollingrestart.context.default':'重新启动组件',//Restart components
@@ -2885,13 +2885,13 @@ Em.I18n.translations = {
   'widget.create.wizard.step1.body.choose.tooltip': '点击选择',//Click to select
   'widget.create.wizard.step2.header': '指标和表达',//Metrics and Expression
   'widget.create.wizard.step2.template.header': '模板',//Template
-  'widget.create.wizard.step2.body.text':'定义表达式与任何指标和有效的操作符。< / br >在必要时使用括号.',//Define the expression with any metrics and valid operators. </br>Use parentheses when necessary
+  'widget.create.wizard.step2.body.text':'定义表达式与任何指标和有效的操作符。</br>在必要时使用括号.',//Define the expression with any metrics and valid operators. </br>Use parentheses when necessary
   'widget.create.wizard.step2.body.template':'为使用任意数量的表达式和任何字符串的模板。表达式可以在模板中通过双大括号其名称引用.',//Define the template with any number of expressions and any string. An expression can be referenced from a template by enclosing its name with double curly braces
   'widget.create.wizard.step2.body.warning':'注：有效的运算符+, - ,*,/',//Note: Valid operators are +, -, *, /
   'widget.create.wizard.step2.body.template.invalid.msg':'存在无效的表达式的名字。应该使用名称与双花括号表达式#。',//Invalid expression name existed. Should use name "Expression#" with double curly braces.
   'widget.create.wizard.step2.addExpression': '添加表达式',//Add Expression
   'widget.create.wizard.step2.addDataset': '添加数据集',//Add data set
-  'widget.create.wizard.step2.body.gauge.overflow.warning':'溢出！计只能介于0和1之间的数字显示。',//Overflowed! Gauge can only display number between 0 and 1.
+  'widget.create.wizard.step2.body.gauge.overflow.warning':'溢出！Gauge只能介于0和1之间的数字显示。',//Overflowed! Gauge can only display number between 0 and 1.
   'widget.create.wizard.step2.allComponents': '所有的 {0}',//All {0}s
   'widget.create.wizard.step2.activeComponents': '有效的 {0}',//Active {0}
   'widget.create.wizard.step2.noMetricFound': '没有找到度量值',//No metric found
