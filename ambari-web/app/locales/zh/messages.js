@@ -114,7 +114,7 @@ Em.I18n.translations = {
   'common.downgrade':'降级',
   'common.description':'描述',
   'common.default':'默认',
-  'common.client':'客户端',
+  'common.client':'Client',//不能翻译
   'common.zookeeper':'ZooKeeper',
   'common.hbase':'HBase',
   'common.regionServer':'RegionServer',
@@ -165,7 +165,7 @@ Em.I18n.translations = {
   'common.stop':'停止',
   'common.pause':'暂停',
   'common.end':'结束',
-  'common.decommission':'停止使用',
+  'common.decommission':'退役',
   'common.recommission':'重新校验',
   'common.failure': '失败',
   'common.type': '类型',
@@ -249,7 +249,7 @@ Em.I18n.translations = {
   'common.advanced': '高级设置',
   'common.download': '下载',
   'common.current': '当前的',
-  'common.additional': '而外的',
+  'common.additional': '额外的',
   'common.time.start': '启动时间',
   'common.time.end': '结束时间',
   'common.hostLog.popup.logDir.path':'/var/lib/ambari-agent/data/',   // TODO, this hardcoded path needs to be removed.
@@ -269,7 +269,7 @@ Em.I18n.translations = {
   'common.custom': '自定义',
   'common.continueAnyway': '仍然继续',//Continue Anyway
   'common.property.undefined': "未定义",
-  'common.summary': "概要",
+  'common.summary': "总览",
   'common.configs': "配置文件",
   'common.configuration': "配置",
   'common.unknown': "未知的",
@@ -424,8 +424,8 @@ Em.I18n.translations = {
 
   'popup.invalid.KDC.header': '管理会话过期错误',//Admin session expiration error
   'popup.invalid.KDC.msg': ' 请输入管理员账户和密码.',//Please enter admin principal and password
-  'popup.invalid.KDC.admin.principal': '管理员主体',//
-  'popup.invalid.KDC.admin.password': '管理员密码',//
+  'popup.invalid.KDC.admin.principal': 'admin principal',//
+  'popup.invalid.KDC.admin.password': 'admin密码',//
 
   'popup.dependent.configs.header': '相关配置',//Dependent Configurations
   //Based on your configuration changes, Ambari is recommending the following dependent configuration changes.
@@ -936,7 +936,7 @@ Em.I18n.translations = {
 
   'installer.step8.header': '复审',//Review
   'installer.step8.body': '安装前请复审您的配置',//Please review the configuration before installation
-  'installer.step8.kerberors.warning': '<strong>因为Kerberos已手动安装在集群上,当此操作完成 你必须创建/分配主体和keytabs.</strong>',//Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished
+  'installer.step8.kerberors.warning': '<strong>因为Kerberos已手动安装在集群上,当此操作完成 你必须创建/分配principal和keytabs.</strong>',//Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished
   'installer.step8.deployPopup.message':'准备部署：{0}{1}的任务完成.',//Preparing to Deploy: {0} of {1} tasks completed
   'installer.step8.hosts':'主机数 ',//hosts
   'installer.step8.host':'主机 ',//host
@@ -1201,16 +1201,16 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.step1.option.kdc.condition.1': 'Ambari服务器和集群主机对KDC和KDC管理主机进行网络接入.',//Ambari Server and cluster hosts have network access to both the KDC and KDC admin hosts
   'admin.kerberos.wizard.step1.option.kdc.condition.2': 'KDC管理手中的凭证.',//KDC administrative credentials are on-hand
   'admin.kerberos.wizard.step1.option.kdc.condition.3': 'Java加密扩展（JCE）在Ambari服务器主机和集群中的所有主机上已建立.',//The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster
-  'admin.kerberos.wizard.step1.option.manual': '手动管理Kerberos主体和keytabs',//Manage Kerberos principals and keytabs manually
+  'admin.kerberos.wizard.step1.option.manual': '手动管理Kerberos principal和keytabs',//Manage Kerberos principals and keytabs manually
   'admin.kerberos.wizard.step1.option.manual.condition.1': '集群主机对KDC网络接入',//Cluster hosts have network access to the KDC
   'admin.kerberos.wizard.step1.option.manual.condition.2': 'Kerberos客户端工具（如使用kinit）已经被安装在每个集群主机上',//Kerberos client utilities (such as kinit) have been installed on every cluster host
   'admin.kerberos.wizard.step1.option.manual.condition.3': 'Java加密扩展（JCE）已经建立在Ambari服务器主机和集群中的所有主机上',//The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster
-  'admin.kerberos.wizard.step1.option.manual.condition.4': '该服务与Ambari主体将在KDC完成此向导之前手动创建',//The Service and Ambari Principals will be manually created in the KDC before completing this wizard
-  'admin.kerberos.wizard.step1.option.manual.condition.5': '服务和Ambari主体 ,keytabs将手动创建并分发到集群主机在完成此向导之前,',//The keytabs for the Service and Ambari Principals will be manually created and distributed to cluster hosts before completing this wizard
+  'admin.kerberos.wizard.step1.option.manual.condition.4': '该服务与Ambari principal将在KDC完成此向导之前手动创建',//The Service and Ambari Principals will be manually created in the KDC before completing this wizard
+  'admin.kerberos.wizard.step1.option.manual.condition.5': '服务和Ambari principal ,keytabs将手动创建并分发到集群主机在完成此向导之前,',//The keytabs for the Service and Ambari Principals will be manually created and distributed to cluster hosts before completing this wizard
   'admin.kerberos.wizard.step1.option.ad': '现有的Active Directory',//Existing Active Directory
   'admin.kerberos.wizard.step1.option.ad.condition.1': 'Ambari服务器和集群主机具有对域控制器的网络访问.',//Ambari Server and cluster hosts have network access to the Domain Controllers
   'admin.kerberos.wizard.step1.option.ad.condition.2': '活动目录安全LDAP（LDAPS）连接已配置.',//Active Directory secure LDAP (LDAPS) connectivity has been configured
-  'admin.kerberos.wizard.step1.option.ad.condition.3': '活动目录用户容器主体已创建,是手头（例如 OU=Hadoop,OU=People,dc=apache,dc=org）',//Active Directory User container for principals has been created and is on-hand (e.g. OU=Hadoop,OU=People,dc=apache,dc=org)
+  'admin.kerberos.wizard.step1.option.ad.condition.3': '活动目录用户容器 principal已创建,是手头（例如 OU=Hadoop,OU=People,dc=apache,dc=org）',//Active Directory User container for principals has been created and is on-hand (e.g. OU=Hadoop,OU=People,dc=apache,dc=org)
   'admin.kerberos.wizard.step1.option.ad.condition.4': '在前面提到的用户容器上“创建,删除和管理用户帐户”委派控制Active Directory管理手中的凭据.',//Active Directory administrative credentials with delegated control of “Create, delete, and manage user accounts” on the previously mentioned User container are on-hand
   'admin.kerberos.wizard.step1.option.ad.condition.5': 'Java加密扩展（JCE）已建立在Ambari服务器主机和集群中的所有主机上.',//The Java Cryptography Extensions (JCE) have been setup on the Ambari Server host and all hosts in the cluster
   'admin.kerberos.wizard.step1.option.ipa': '存在的IPA',//'Existing IPA',
@@ -1224,11 +1224,11 @@ Em.I18n.translations = {
   'admin.kerberos.wizard.step3.task1.title': '测试Kerberos客户端',//Test Kerberos Client
   'admin.kerberos.wizard.step3.notice.inProgress': '请等待....正在安装和测试Kerberos客户端',//Please wait while the Kerberos clients are being installed and tested
   'admin.kerberos.wizard.step3.notice.completed': 'Kerberos 服务已经安装完成.',//Kerberos service has been installed and tested successfully
-  'admin.kerberos.wizard.progressPage.notice.inProgress': '请稍候集群正在采用Kerberos',//Please wait while cluster is being kerberized
-  'admin.kerberos.wizard.step4.info.body': '正在为服务用户和Hadoop服务组件配置主体名称和密钥表位置.',//Configure principal name and keytab location for service users and hadoop service components
+  'admin.kerberos.wizard.progressPage.notice.inProgress': '请稍候集群正在启用Kerberos',//Please wait while cluster is being kerberized
+  'admin.kerberos.wizard.step4.info.body': '正在为服务用户和Hadoop服务组件配置 principal名称和密钥表位置.',//Configure principal name and keytab location for service users and hadoop service components
   'admin.kerberos.wizard.step5.info.body': '请在继续安装过程之前查看配置',//Please review the configuration before continuing the setup process
-  'admin.kerberos.wizard.step5.moreInfoNonManual.body': '使用 <b>下载 CSV 按钮</b>, 你可以下载,其中包含将自动Ambari创建的主体和keytabs列表的csv文件.',//Using the <b>Download CSV button</b>, you can download a csv file which contains a list of the principals and keytabs that will automatically be created by Ambari
-  'admin.kerberos.wizard.step5.moreInfoManual.body': '重要提示：使用<b>下载CSV</b>按钮来获得<b>必要</b>的由Ambari启用Kerberos集群中的主体和keytabs的列表。 <b>不要继续</b>,直到手动创建和分发的主体和keytabs到集群主机.',//Important: Use the <b>Download CSV</b> button to obtain a list of the <b>required</b> principals and keytabs that are needed by Ambari to enable Kerberos in the cluster. <b>Do not proceed</b> until you have manually created and distributed the principals and keytabs to the cluster hosts
+  'admin.kerberos.wizard.step5.moreInfoNonManual.body': '使用 <b>下载 CSV 按钮</b>, 你可以下载,其中包含将自动Ambari创建的 principal和keytabs列表的csv文件.',//Using the <b>Download CSV button</b>, you can download a csv file which contains a list of the principals and keytabs that will automatically be created by Ambari
+  'admin.kerberos.wizard.step5.moreInfoManual.body': '重要提示：使用<b>下载CSV</b>按钮来获得<b>必要</b>的由Ambari启用Kerberos集群中的 principal和keytabs的列表。 <b>不要继续</b>,直到手动创建和分发的 principal和keytabs到集群主机.',//Important: Use the <b>Download CSV</b> button to obtain a list of the <b>required</b> principals and keytabs that are needed by Ambari to enable Kerberos in the cluster. <b>Do not proceed</b> until you have manually created and distributed the principals and keytabs to the cluster hosts
   'admin.kerberos.wizard.step5.kdc_type.label': 'KDC类型',//KDC Type
   'admin.kerberos.wizard.step5.kdc_host.label': 'KDC主机',//KDC Host
   'admin.kerberos.wizard.step5.realm.label': '区域名称',//Realm Name
@@ -1261,7 +1261,7 @@ Em.I18n.translations = {
   'admin.kerberos.disable.step1.task3.title': '启动服务',//Start Services
   'admin.kerberos.disable.unkerberize.header': 'Unkerberize集群',//Unkerberize cluster
   'admin.kerberos.disable.unkerberize.message': '你不能退出向导,集群是未采用Kerberos',//You cannot quit wizard while cluster is being unkerberized
-  'admin.kerberos.disable.inProgress': '请稍候集群正在不采用Kerberos',//Please wait while cluster is being unkerberized
+  'admin.kerberos.disable.inProgress': '请稍候集群正在禁用Kerberos',//Please wait while cluster is being unkerberized
   'admin.kerberos.disable.notice.completed': '服务在没有Kerberos环境中测试成功.',//Services have been successfully tested without kerberos environment
   'admin.kerberos.wizard.step1.notice.inProgress': '请稍候集群正在不采用Kerberos',//Please wait while cluster is being unkerberized
 
@@ -1322,29 +1322,30 @@ Em.I18n.translations = {
   'admin.highAvailability.wizard.rollback.header.title':'还原为非HA设置.',//Reverting Back to Non-HA Setup
 
   'admin.highAvailability.wizard.step5.task0.title':'停止所有的服务',//Stop All Services
-  'admin.highAvailability.wizard.step5.task1.title':'安装 其它的 NameNode',//Install Additional NameNode
-  'admin.highAvailability.wizard.step5.task2.title':'安装 JournalNodes',//Install JournalNodes
+  'admin.highAvailability.wizard.step5.task1.title':'安装Additional NameNode',//Install Additional NameNode
+  'admin.highAvailability.wizard.step5.task2.title':'安装JournalNodes',//Install JournalNodes
   'admin.highAvailability.wizard.step5.task3.title':'配置HDFS',//Reconfigure HDFS
   'admin.highAvailability.wizard.step5.task4.title':'启动JournalNodes',//Start JournalNodes
-  'admin.highAvailability.wizard.step5.task5.title':'禁用辅助的NameNode',//Disable Secondary NameNode
+  'admin.highAvailability.wizard.step5.task5.title':'禁用Secondary NameNode',//Disable Secondary NameNode
 
   'admin.highAvailability.wizard.step7.task0.title':'启动 ZooKeeper 服务',//Start ZooKeeper Servers
   'admin.highAvailability.wizard.step7.task1.title':'启动 NameNode',//Start NameNode
 
-  'admin.highAvailability.wizard.step9.task0.title':'启动其它NameNode',//Start Additional NameNode
+  'admin.highAvailability.wizard.step9.task0.title':'启动Additional NameNode',//Start Additional NameNode
   'admin.highAvailability.wizard.step9.task1.title':'安装故障转移控制器',//Install Failover Controllers
   'admin.highAvailability.wizard.step9.task2.title':'启动故障切换控制器',//Start Failover Controllers
   'admin.highAvailability.wizard.step9.task3.title':'安装 PXF',//Install PXF
   'admin.highAvailability.wizard.step9.task4.title':'配置 HBase',//Reconfigure HBase
   'admin.highAvailability.wizard.step9.task5.title':'配置 Accumulo',//Reconfigure Accumulo
   'admin.highAvailability.wizard.step9.task6.title':'配置 HAWQ',//Reconfigure HAWQ
-  'admin.highAvailability.wizard.step9.task7.title':'删除次要的NameNode',//Delete Secondary NameNode
-  'admin.highAvailability.wizard.step9.task8.title':'启动所有的服务',//Start All Services
+  'admin.highAvailability.wizard.step9.task7.title':'删除备用的NameNode',//Delete Secondary NameNode
+  'admin.highAvailability.wizard.step9.task8.title':'停止HDFS',//'Stop HDFS',
+  'admin.highAvailability.wizard.step9.task9.title':'启动所有的服务',//Start All Services
   'admin.highAvailability.wizard.step9.notice.completed':'NameNode的HA已成功启用.',//NameNode HA has been enabled successfully
 
-  'admin.highAvailability.wizard.step3.curNameNode': '<b>集群 NameNode:</b> ',//<b>Current NameNode:</b>
-  'admin.highAvailability.wizard.step3.addNameNode': '<b>其它的 NameNode:</b> ',//<b>Additional NameNode:</b>
-  'admin.highAvailability.wizard.step3.secNameNode': '<b>次要的 NameNode:</b> ',//<b>Secondary NameNode:</b>
+  'admin.highAvailability.wizard.step3.curNameNode': '<b>当前NameNode:</b> ',//<b>Current NameNode:</b>
+  'admin.highAvailability.wizard.step3.addNameNode': '<b>Additional NameNode:</b> ',//<b>Additional NameNode:</b>
+  'admin.highAvailability.wizard.step3.secNameNode': '<b>Secondary NameNode:</b> ',//<b>Secondary NameNode:</b>
   'admin.highAvailability.wizard.step3.journalNode': '<b>JournalNode:</b> ',//<b>JournalNode:</b>
   'admin.highAvailability.wizard.step3.toBeInstalled': '安装必须',//TO BE INSTALLED
   'admin.highAvailability.wizard.step3.toBeDeleted': '删除必须',//TO BE DELETED
@@ -1369,13 +1370,13 @@ Em.I18n.translations = {
   'admin.highAvailability.rollback.task4.title':'停止故障切换控制器',//Stop Failover Controllers
   'admin.highAvailability.rollback.task5.title':'删除故障转移控制器',//Delete Failover Controllers
   'admin.highAvailability.rollback.task6.title':'删除 PXF',//Delete PXF
-  'admin.highAvailability.rollback.task7.title':'停止其它的NameNode',//Stop Additional NameNode
+  'admin.highAvailability.rollback.task7.title':'停止Additional NameNode',//Stop Additional NameNode
   'admin.highAvailability.rollback.task8.title':'停止 NameNode',//Stop NameNode
   'admin.highAvailability.rollback.task9.title':'恢复 HDFS 配置',//Restore HDFS Configurations
   'admin.highAvailability.rollback.task10.title':'使用辅助NameNode',//Enable Secondary NameNode
   'admin.highAvailability.rollback.task11.title':'停止JournalNodes',//Stop JournalNodes
   'admin.highAvailability.rollback.task12.title':'删除 JournalNodes',//Delete JournalNodes
-  'admin.highAvailability.rollback.task13.title':'删除 其它 NameNode',//Delete Additional NameNode
+  'admin.highAvailability.rollback.task13.title':'删除Additional NameNode',//Delete Additional NameNode
   'admin.highAvailability.rollback.task14.title':'启动所有的服务',//Start All Services
   'admin.highAvailability.rollback.notice.inProgress':'请等待向导恢复到非HA设置.',//Please wait while the wizard reverts back to the non-HA setup
 
@@ -1415,7 +1416,7 @@ Em.I18n.translations = {
   'admin.highAvailability.wizard.step4.body':
   '<ol>' +
   '<li>登录到主机的NameNode  <b>{1}</b>.</li>' +
-  '<li>设置NameNode的安全模式（只读模式:' +
+  '<li>设置NameNode的安全模式（只读模式）:' +
   '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
   '<li>ONCE在安全模式下,创建一个检查点:' +
   '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
@@ -1447,7 +1448,7 @@ Em.I18n.translations = {
   '这样就可以自动执行故障切换的主备配置的ResourceManager.<br/><br/>' +//This allows for an Active-Standby ResourceManager configuration that automatically performs failover
   '<b>当向导使用NameNode HA时,你应该计划集群维护窗口和集群停机时间.</b>',//You should plan a cluster maintenance window and prepare for cluster downtime when enabling ResourceManager HA
   'admin.rm_highAvailability.wizard.step2.header': '选择主机',//Select Host
-  'admin.rm_highAvailability.wizard.step2.body': '选择运行额外的ResourceManager主机',//Select a host that will be running the additional ResourceManager
+  'admin.rm_highAvailability.wizard.step2.body': '选择运行additional ResourceManager',//Select a host that will be running the additional ResourceManager
   'admin.rm_highAvailability.wizard.step3.header': '审阅',
   'admin.rm_highAvailability.wizard.step3.confirm.host.body':'<b>确认您的主机的选择.</b>',//Confirm your host selections
   'admin.rm_highAvailability.wizard.step3.confirm.config.body':'<div class="alert alert-info">' +
@@ -1455,10 +1456,10 @@ Em.I18n.translations = {
   '下面列出了将被向导对启用ResourceManager的HA配置更改。这些信息对于<b>查看只有</b>的和不可编辑.' +//The following lists the configuration changes that will be made by the Wizard to enable ResourceManager HA. This information is for <b> review only </b> and is not editable
   '</div>',
   'admin.rm_highAvailability.wizard.step3.currentRM': '当前的ResourceManager',//Current ResourceManager
-  'admin.rm_highAvailability.wizard.step3.additionalRM': '额外的资源管理器',//Additional ResourceManager
+  'admin.rm_highAvailability.wizard.step3.additionalRM': 'Additional ResourceManager',//Additional ResourceManager
   'admin.rm_highAvailability.wizard.step4.header': '配置组件',//Configure Components
   'admin.rm_highAvailability.wizard.step4.task0.title': '停止所需的服务',//Stop Required Services
-  'admin.rm_highAvailability.wizard.step4.task1.title': '安装其他的ResourceManager',//Install Additional ResourceManager
+  'admin.rm_highAvailability.wizard.step4.task1.title': '安装Additional ResourceManager',//Install Additional ResourceManager
   'admin.rm_highAvailability.wizard.step4.task2.title': '配置YARN',//Reconfigure YARN
   'admin.rm_highAvailability.wizard.step4.task3.title': '配置HDFS',//Reconfigure HDFS
   'admin.rm_highAvailability.wizard.step4.task4.title': '配置HAWQ',//Reconfigure HAWQ
@@ -1481,10 +1482,10 @@ Em.I18n.translations = {
   '下面列出了将被向导对启用ResourceManager的HA配置更改。这些信息对于<b>查看只有</b>的和不可编辑.' +//The following lists the configuration changes that will be made by the Wizard to enable ResourceManager HA. This information is for <b> review only </b> and is not editable
   '</div>',
   'admin.rm_highAvailability.wizard.step3.currentRM': '当前的ResourceManager',//Current ResourceManager
-  'admin.rm_highAvailability.wizard.step3.additionalRM': '额外的资源管理器',//Additional ResourceManager
+  'admin.rm_highAvailability.wizard.step3.additionalRM': 'Additional ResourceManager',//Additional ResourceManager
   'admin.rm_highAvailability.wizard.step4.header': '配置组件',//Configure Components
   'admin.rm_highAvailability.wizard.step4.task0.title': '停止所需的服务',//Stop Required Services
-  'admin.rm_highAvailability.wizard.step4.task1.title': '安装其他的ResourceManager',//Install Additional ResourceManager
+  'admin.rm_highAvailability.wizard.step4.task1.title': '安装Additional ResourceManager',//Install Additional ResourceManager
   'admin.rm_highAvailability.wizard.step4.task2.title': '配置YARN',//Reconfigure YARN
   'admin.rm_highAvailability.wizard.step4.task3.title': '配置HDFS',//Reconfigure HDFS
   'admin.rm_highAvailability.wizard.step4.task4.title': '配置HAWQ',//Reconfigure HAWQ
@@ -1504,21 +1505,21 @@ Em.I18n.translations = {
   'admin.addSecurity.header': '启用安全向导',//Enable Security Wizard
   'admin.security.step1.header': '开始',//Get Started
   'admin.security.step2.header': '配置服务',//Configure Services
-  'admin.security.step3.header': '创建主体的KeyTabs',//Create Principals and Keytabs
+  'admin.security.step3.header': '创建 principal和KeyTabs',//Create Principals and Keytabs
   'admin.security.step4.header': '保存并应用此配置',//Save and Apply Configuration
   'admin.security.step1.body.header': '重要提示:在配置Ambari来管理您的支持Kerberos的集群之前  ' +//Before configuring Ambari to manage your Kerberos-enabled cluster,
   '您必须在集群上执行以下手动步骤。一定要记录每个主机的密钥表文件和校长为每个Hadoop的服务的位置 ' +//you must perform the following manual steps on your cluster. Be sure to record the location of the keytab files for each host and the principals for each Hadoop service.
   '这个信息是必需的,以便使用该向导。',// This information is required in order to use the wizard.
   'admin.security.step1.body.instruction1': '安装,配置和启动您的Kerberos KDC',//Install, configure and start your Kerberos KDC
   'admin.security.step1.body.instruction2': '安装并在集群中的每个主机上配置Kerberos客户端',//Install and configure the Kerberos client on every host in the cluster
-  'admin.security.step1.body.instruction3': '创建Hadoop的服务和主机Kerberos主体',//Create Kerberos principals for Hadoop services and hosts
-  'admin.security.step1.body.instruction4': '在相应的主机上对每一个主体和place生成KeyTabs',//Generate keytabs for each principal and place on the appropriate hosts
+  'admin.security.step1.body.instruction3': '创建Hadoop的服务和主机Kerberos principal',//Create Kerberos principals for Hadoop services and hosts
+  'admin.security.step1.body.instruction4': '在相应的主机上对每一个 principal和place生成KeyTabs',//Generate keytabs for each principal and place on the appropriate hosts
   'admin.security.step1.body.instruction5': 'YARN服务的<b>应用时间轴</b>Server组件将被 <span class="text-error"><b>删除</b></span>是这个HDP堆栈版本启用安全的一部分',//<b>Application Timeline Server</b> component of YARN service will be <span class="text-error"><b>deleted</b></span> as part of enabling security in this HDP stack version
   'admin.security.step2.body.header': '配置Kerberos安全性',//Configure Kerberos security properties
-  'admin.security.step3.notice': '您需要继续之前创建Kerberos主体和keytabs<br />'+//You need to create Kerberos principals and keytabs before proceeding.
-  ' 下载CSV文件,并用它来创建一个脚本来生成对指定的主机的校长和keytabs一旦主体和keytabs被创建' +//Download the CSV file and use it to create a script to generate the principals and keytabs on specified hosts Once the principals and keytabs have been created,
+  'admin.security.step3.notice': '您需要继续之前创建Kerberos principal和keytabs<br />'+//You need to create Kerberos principals and keytabs before proceeding.
+  ' 下载CSV文件,并用它来创建一个脚本来生成对指定的主机的校长和keytabs一旦 principal和keytabs被创建' +//Download the CSV file and use it to create a script to generate the principals and keytabs on specified hosts Once the principals and keytabs have been created,
   '请点击<i>应用</i>继续,如果您需要更改配置,单击<i>返回</i>.',// click on <i>Apply</i> to continue. If you need to make configuration changes, click <i>Back</i>
-  'admin.security.step3.table.principal': '主体',//Principal
+  'admin.security.step3.table.principal': 'Principal',//Principal
   'admin.security.step3.table.keytab': 'Keytab',
   'admin.security.step3.downloadCSV': '下载 CSV',//Download CSV
   'admin.security.step4.body.header': '应用Kerberos安全集群',//Applying kerberos security to the cluster
@@ -1745,8 +1746,8 @@ Em.I18n.translations = {
   'services.service.summary.nameNode':'NameNode Web UI',
   'services.service.summary.nameNodeUptime':'NameNode 运行时间',//NameNode Uptime
   'services.service.summary.nameNodeHeap':'NameNode Heap',
-  'services.service.summary.nameNode.active':'主动节点',//Active NameNode,
-  'services.service.summary.nameNode.standby':'备用的 NameNode',//Standby NameNode
+  'services.service.summary.nameNode.active':'活跃的NameNode',//Active NameNode,
+  'services.service.summary.nameNode.standby':'备用的NameNode',//Standby NameNode
   'services.service.summary.pendingUpgradeStatus':'更新状态',
   'services.service.summary.pendingUpgradeStatus.notFinalized':'更新未完成',
   'services.service.summary.pendingUpgradeStatus.notPending':'没有更新',
@@ -1986,7 +1987,7 @@ Em.I18n.translations = {
   'services.service.info.metrics.yarn.allocated.container.displayNames.pending': '挂起',
   'services.service.info.metrics.yarn.nodemanager.statuses':'NodeManagers',
   'services.service.info.metrics.yarn.nodemanager.statuses.displayNames.active':'有效的NodeManagers',
-  'services.service.info.metrics.yarn.nodemanager.statuses.displayNames.decommissioned':'停止使用的 NodeManagers',
+  'services.service.info.metrics.yarn.nodemanager.statuses.displayNames.decommissioned':'退役的 NodeManagers',
   'services.service.info.metrics.yarn.nodemanager.statuses.displayNames.lost':'丢失的 NodeManagers',
   'services.service.info.metrics.yarn.nodemanager.statuses.displayNames.rebooted':'重新启动 NodeManagers',
   'services.service.info.metrics.yarn.nodemanager.statuses.displayNames.unhealthy':'不正常的 NodeManagers',
@@ -2506,21 +2507,21 @@ Em.I18n.translations = {
   'hosts.host.manualKerberosWarning': '<br/><strong>因为Kerberos已手动安装在集群上,你必须创建/分配的principals和keytabs当此操作完成.</strong>',//Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished
   'hosts.host.deleteComponent.popup.deleteNimbus':'删除 <i>Storm Nimbus</i> 将要配置 <b>nimbus.seeds</b>, <b>topology.min.replication.count</b>, <b>topology.max.replication.wait.time.sec</b> properties if they are defined.',
   'hosts.host.storm.configs.save.note': '此配置是通过ambari在安装/删除组件的时候在storm的主机上创建',//This configuration is created by ambari while installing/deleting storm component on a host
-  'hosts.host.datanode.decommission':'停止使用DataNode',
+  'hosts.host.datanode.decommission':'退役DataNode',
   'hosts.host.datanode.recommission':'重新校验DataNode',
-  'hosts.host.nodemanager.decommission':'停止使用NodeManager',
+  'hosts.host.nodemanager.decommission':'退役NodeManager',
   'hosts.host.nodemanager.recommission':'重新校验NodeManager',
-  'hosts.host.tasktracker.decommission':'停止使用TaskTracker',
+  'hosts.host.tasktracker.decommission':'退役TaskTracker',
   'hosts.host.tasktracker.recommission':'重新校验TaskTracker',
   'hosts.host.tasktracker.restart':'重启TaskTracker',
-  'hosts.host.regionserver.decommission.batch1':'停止使用RegionServer - 在打开漏模式',//Decommission RegionServer - Turn drain mode on
-  'hosts.host.regionserver.decommission.batch2':'停止使用RegionServer - 停止RegionServer的',//Decommission RegionServer - Stop RegionServer
-  'hosts.host.regionserver.decommission.batch3':'停止使用RegionServer - 开漏模式关闭',//Decommission RegionServer - Turn drain mode off
+  'hosts.host.regionserver.decommission.batch1':'退役RegionServer - 在打开漏模式',//Decommission RegionServer - Turn drain mode on
+  'hosts.host.regionserver.decommission.batch2':'退役RegionServer - 停止RegionServer的',//Decommission RegionServer - Stop RegionServer
+  'hosts.host.regionserver.decommission.batch3':'退役RegionServer - 开漏模式关闭',//Decommission RegionServer - Turn drain mode off
   'hosts.host.hbase_regionserver.recommission':'重新校验RegionServer',//Recommission RegionServer
-  'hosts.host.hbase_regionserver.decommission':'停止使用RegionServer',
+  'hosts.host.hbase_regionserver.decommission':'退役RegionServer',
   'hosts.host.hbase_regionserver.decommission.warning':'最后RegionServer的不能被停用',//Last RegionServer can\'t be decommissioned
-  'hosts.host.decommissioned':'停用',//Decommissioned
-  'hosts.host.decommissioning':'正在停用',//Decommissioning
+  'hosts.host.decommissioned':'已退役',//Decommissioned
+  'hosts.host.decommissioning':'正在退役中',//Decommissioning
   'hosts.host.addComponent.HIVE_METASTORE':'添加 <i>Hive Metastore</i> 可能要 重新配置这样的属性:<ul><li>hive.metastore.uris</li><li>templeton.hive.properties</li></ul>',
   'hosts.host.addComponent.WEBHCAT_SERVER':'添加 <i>WebHCat Server</i> 可能要 重新配置这样的属性:<ul><li>hive.metastore.uris</li><li>templeton.hive.properties</li></ul>',
   'hosts.host.deleteComponent.popup.deleteHiveMetastore':'删除 <i>Hive Metastore</i> 可能要 重新配置这样的属性:<ul><li>hive.metastore.uris</li><li>templeton.hive.properties</li></ul>',
@@ -2568,7 +2569,7 @@ Em.I18n.translations = {
   'hosts.cant.do.popup.masterList.body.end':'要删除此主机.你必须首先将上面列出的所有主组件移动到另一个主机',//To delete this host, you must first move all the master components listed above to another host
   'hosts.cant.do.popup.nonDeletableList.body':'不支持下列{0}成分的缺失. ',//Deletion of the following {0} components is not supported
   'hosts.cant.do.popup.runningList.body':'下列组件正在运行该主机不能删除:',//This host cannot be deleted since the following components are running
-  'hosts.cant.do.popup.runningList.body.end':'删除这个主机,您必须首先停止所有上面列出的组件运行,如果这个主机有一个DataNode,它应该首先停止使用,以防止数据丢失.',//To delete this host, you must first stop all the running components listed above If this host has a DataNode, it should be decommissioned first to prevent data loss
+  'hosts.cant.do.popup.runningList.body.end':'删除这个主机,您必须首先停止所有上面列出的组件运行,如果这个主机有一个DataNode,它应该首先退役,以防止数据丢失.',//To delete this host, you must first stop all the running components listed above If this host has a DataNode, it should be decommissioned first to prevent data loss
   'hosts.add.header':'添加主机向导',//Add Host Wizard
   'hosts.add.exit.header':'退出',//Exit
   'hosts.add.exit.body':'你真的要退出添加主机向导?',//Do you really want to exit Add Host Wizard
@@ -2736,8 +2737,8 @@ Em.I18n.translations = {
   'dashboard.services.yarn.client':'YARN 客户端',
   'dashboard.services.yarn.resourceManager.uptime':'ResourceManager 运行时间',//ResourceManager Uptime
   'dashboard.services.yarn.resourceManager.active':'有效的ResourceManager',
-  'dashboard.services.yarn.resourceManager.standby':'待机中的 ResourceManager',
-  'dashboard.services.resourceManager.nodes.heap':'ResourceManager 堆',
+  'dashboard.services.yarn.resourceManager.standby':'备用的ResourceManager',
+  'dashboard.services.resourceManager.nodes.heap':'ResourceManager堆',
   'dashboard.services.yarn.nodeManagers.status': 'NodeManagers 状态',
   'dashboard.services.yarn.nodeManagers.status.msg': '{0}主动/{1}丢失/{2}不健康/{3}重启/{4}停用',//{0} active / {1} lost / {2} unhealthy / {3} rebooted / {4} decommissioned
   'dashboard.services.yarn.containers': '容器',//Containers
@@ -2851,7 +2852,7 @@ Em.I18n.translations = {
   'rollingrestart.dialog.title': '重启 {0}s',
   'rollingrestart.dialog.primary': '触发滚动重启',//Trigger Rolling Restart
   'rollingrestart.notsupported.hostComponent': '不支持{0}组件滚动重启',//Rolling restart not supported for {0} components
-  'rollingrestart.dialog.msg.restart': '这将在同一时间启动{0}的指定号码.',//This will restart a specified number of {0}s at a time
+  'rollingrestart.dialog.msg.restart': '这将在同一时间启动指定数的{0}.',//This will restart a specified number of {0}s at a time
   'rollingrestart.dialog.msg.noRestartHosts': '没有{0}做滚动重启',//There are no {0}s to do rolling restarts
   'rollingrestart.dialog.msg.maintainance': '注意:{0}{1}在维护模式下不会重新启动',//{0} {1} in Maintenance Mode will not be restarted
   'rollingrestart.dialog.msg.maintainance.plural': '注意: {0} {1}等在维护模式下不会重新启动',//{0} {1}s in Maintenance Mode will not be restarted
